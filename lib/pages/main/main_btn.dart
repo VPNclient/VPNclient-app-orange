@@ -72,6 +72,13 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
 
     if (connectionStatus == connectionStatusConnecting) {
       _animationController.repeat(reverse: true);
+
+      //TODO:move to right place
+      VPNclientEngine.ClearSubscriptions();
+      VPNclientEngine.addSubscription(subscriptionURL: "https://pastebin.com/raw/ZCYiJ98W");
+      await VPNclientEngine.updateSubscription(subscriptionIndex: 0);
+      //END TODO
+
       await VPNclientEngine.connect(subscriptionIndex: 0, serverIndex: 1);
       startTimer();
       setState(() {
