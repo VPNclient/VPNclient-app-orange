@@ -79,6 +79,15 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       await VPNclientEngine.updateSubscription(subscriptionIndex: 0);
       //END TODO
 
+
+      //TODO:move to right place
+      VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
+
+      VPNclientEngine.onPingResult.listen((result) {
+        print("Ping result: ${result.latencyInMs} ms");
+      });
+      //END TODO
+
       await VPNclientEngine.connect(subscriptionIndex: 0, serverIndex: 1);
       startTimer();
       setState(() {
