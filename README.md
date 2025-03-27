@@ -1,6 +1,6 @@
 # VPN Client Application
 
-VPN Client Application is VPN Client UI + VPN Client Controller
+VPN Client Application is VPN Client UI + VPN Client Engine
 
 Supported platforms
 * iOS 15+ (iPhone, iPad, MacOS M)
@@ -9,7 +9,7 @@ Supported platforms
 * Windows (later)
 * Ubuntu (later)
 
-![VPN Client Controller](https://raw.githubusercontent.com/VPNclient/.github/refs/heads/main/assets/vpnclient_scheme2.png)
+![VPN Client Engine](https://raw.githubusercontent.com/VPNclient/.github/refs/heads/main/assets/vpnclient_scheme2.png)
 
 ## Getting Started
 

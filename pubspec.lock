@@ -509,10 +509,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.3.1"
-  vpnclient_controller_flutter:
+  vpnclient_engine_flutter:
     dependency: "direct main"
     description:
-      path: "../VPNclient-controller-flutter"
+      path: "../VPNclient-engine-flutter"
       relative: true
     source: path
     version: "1.0.0+1"
