@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
-import 'package:vpnclient_engine_flutter/vpnclient_engine.dart';
+import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
