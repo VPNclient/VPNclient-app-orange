@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
-import 'package:vpnclient_controller_flutter/main.dart';
+import 'package:vpnclient_engine_flutter/main.dart';
 
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
@@ -72,7 +72,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
 
     if (connectionStatus == connectionStatusConnecting) {
       _animationController.repeat(reverse: true);
-      await Controller.connect();
+      await VPNclientEngine.connect();
       startTimer();
       setState(() {
         connectionStatus = connectionStatusConnected;
@@ -82,7 +82,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
     } else if (connectionStatus == connectionStatusDisconnecting) {
       _animationController.repeat(reverse: true);
       stopTimer();
-      await Controller.disconnect();
+      await VPNclientEngine.disconnect();
       setState(() {
         connectionStatus = connectionStatusDisconnected;
       });
