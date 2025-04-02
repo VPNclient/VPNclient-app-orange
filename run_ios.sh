@@ -1,1 +1,2 @@
-flutter run -d ios
+flutter run -d darwin
+#ios
