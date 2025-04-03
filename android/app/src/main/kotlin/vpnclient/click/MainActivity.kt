@@ -1,4 +1,4 @@
-package com.nativemind.vpnClient.vpn_client
+package vpnclient.click
 
 import io.flutter.embedding.android.FlutterActivity
 
