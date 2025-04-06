@@ -4,6 +4,11 @@ import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
 import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 
+///
+import 'package:flutter/services.dart';
+
+///
+
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
 
@@ -12,6 +17,8 @@ class MainBtn extends StatefulWidget {
 }
 
 class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
+  static const platform = MethodChannel('vpnclient_engine2');
+  
   String connectionStatus = connectionStatusDisconnected;
   String connectionTime = "00:00:00";
   Timer? _timer;
@@ -87,6 +94,9 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         print("Ping result: ${result.latencyInMs} ms");
       });
       //END TODO
+
+
+      final result = await platform.invokeMethod('startVPN');
 
       await VPNclientEngine.connect(subscriptionIndex: 0, serverIndex: 1);
       startTimer();
