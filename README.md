@@ -21,22 +21,21 @@ VPNclient App is architected in layers to separate the user interface from core 
 - **VPNclient Engine (Native Core):** The underlying C++ core that actually handles VPN functionality. It manages network tunnels, encryption, and protocol implementations. The engine integrates multiple VPN implementations (Xray, WireGuard, OpenVPN, etc.) and network drivers (TUN/TAP, proxies) under a common API. The engine runs natively on each platform for performance.
 
 ```mermaid
-graph LR
-    subgraph Flutter Application
-    UI[VPNclient App (Flutter UI)]
-    end
-    subgraph Flutter Plugin
-    Plugin[VPNclient Engine Flutter Plugin]
-    end
-    subgraph Native Core
-    Core[VPNclient Engine Library]
-    end
-    UI --> Plugin --> Core
-    Core --> iOS
-    Core --> Android
-    Core --> macOS
-    Core --> Windows
-    Core --> Linux
+flowchart LR
+ subgraph subGraph0["Flutter Application"]
+        UI@{ label: "VPNclient App (<span style=\"color:\">Flutter UI)</span>" }
+  end
+ subgraph subGraph1["Flutter Plugin"]
+        Plugin["VPNclient Engine Flutter"]
+  end
+ subgraph subGraph2["Native Core"]
+        Core["VPNclient Engine Library"]
+  end
+    UI --> Plugin
+    Plugin --> Core
+    Core --> iOS["iOS"] & Android["Android"] & macOS["macOS"] & Windows["Windows"] & Linux["Linux"]
+
+    UI@{ shape: rect}
 ```
 
 *Diagram: The Flutter UI calls into the VPNclient Engine via a Flutter plugin. The native engine runs on each supported platform (iOS, Android, etc.), handling low-level network operations.* 
