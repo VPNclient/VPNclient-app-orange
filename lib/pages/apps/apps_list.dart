@@ -39,7 +39,7 @@ class AppsListState extends State<AppsList> {
         _apps = widget.apps!;
         _isLoading = false;
       });
-      _saveSelectedApps(); // Сохраняем обновленный список
+      _saveSelectedApps();
     }
   }
 
@@ -90,13 +90,14 @@ class AppsListState extends State<AppsList> {
         },
       ]);
 
-      // Загружаем сохраненные состояния чекбоксов
       final prefs = await SharedPreferences.getInstance();
       final String? savedApps = prefs.getString('selected_apps');
       if (savedApps != null) {
         final List<dynamic> savedAppsList = jsonDecode(savedApps);
         for (var savedApp in savedAppsList) {
-          final index = appsList.indexWhere((app) => app['text'] == savedApp['text']);
+          final index = appsList.indexWhere(
+            (app) => app['text'] == savedApp['text'],
+          );
           if (index != -1) {
             appsList[index]['isActive'] = savedApp['isActive'];
           }
@@ -121,10 +122,10 @@ class AppsListState extends State<AppsList> {
 
   Future<void> _saveSelectedApps() async {
     final prefs = await SharedPreferences.getInstance();
-    final selectedApps = _apps.map((app) => {
-      'text': app['text'],
-      'isActive': app['isActive'],
-    }).toList();
+    final selectedApps =
+        _apps
+            .map((app) => {'text': app['text'], 'isActive': app['isActive']})
+            .toList();
     await prefs.setString('selected_apps', jsonEncode(selectedApps));
   }
 
@@ -146,8 +147,10 @@ class AppsListState extends State<AppsList> {
         }
       }
     });
-    _saveSelectedApps(); // Сохраняем изменения
-    debugPrint('Tapped app at index $index, new state: ${_apps[index]['isActive']}');
+    _saveSelectedApps();
+    debugPrint(
+      'Tapped app at index $index, new state: ${_apps[index]['isActive']}',
+    );
   }
 
   @override
@@ -160,24 +163,25 @@ class AppsListState extends State<AppsList> {
         color: Theme.of(context).colorScheme.surface,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: _isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(_apps.length, (index) {
-            return AppListItem(
-              icon: _apps[index]['icon'],
-              image: _apps[index]['image'],
-              text: _apps[index]['text'],
-              isSwitch: _apps[index]['isSwitch'],
-              isActive: _apps[index]['isActive'],
-              isEnabled: index == 0 || !_apps[0]['isActive'],
-              onTap: () => _onItemTapped(index),
-            );
-          }),
-        ),
-      ),
+      child:
+          _isLoading
+              ? const Center(child: CircularProgressIndicator())
+              : SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: List.generate(_apps.length, (index) {
+                    return AppListItem(
+                      icon: _apps[index]['icon'],
+                      image: _apps[index]['image'],
+                      text: _apps[index]['text'],
+                      isSwitch: _apps[index]['isSwitch'],
+                      isActive: _apps[index]['isActive'],
+                      isEnabled: index == 0 || !_apps[0]['isActive'],
+                      onTap: () => _onItemTapped(index),
+                    );
+                  }),
+                ),
+              ),
     );
   }
 }

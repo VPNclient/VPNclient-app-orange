@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppListItem extends StatelessWidget {
   final IconData? icon;
-  final dynamic image; // Теперь image может быть String или Uint8List
+  final dynamic image;
   final String text;
   final bool isSwitch;
   final bool isActive;
@@ -65,17 +65,10 @@ class AppListItem extends StatelessWidget {
                         ),
                       if (image != null)
                         image is String
-                            ? Image.asset(
-                          image!,
-                          width: 52,
-                          height: 52,
-                        )
-                            : Image.memory(
-                          image!,
-                          width: 52,
-                          height: 52,
-                        ),
-                      if (icon == null && image == null) const SizedBox(width: 16),
+                            ? Image.asset(image!, width: 52, height: 52)
+                            : Image.memory(image!, width: 52, height: 52),
+                      if (icon == null && image == null)
+                        const SizedBox(width: 16),
                       Container(
                         alignment: Alignment.center,
                         height: 52,
@@ -91,33 +84,33 @@ class AppListItem extends StatelessWidget {
                   ),
                   isSwitch
                       ? Transform.scale(
-                    scale: 0.7,
-                    child: CupertinoSwitch(
-                      value: isActive,
-                      onChanged: null,
-                      trackColor: Theme.of(context).colorScheme.onSecondary,
-                    ),
-                  )
+                        scale: 0.7,
+                        child: CupertinoSwitch(
+                          value: isActive,
+                          onChanged: null,
+                          trackColor: Theme.of(context).colorScheme.onSecondary,
+                        ),
+                      )
                       : Checkbox(
-                    value: isActive,
-                    onChanged: null,
-                    checkColor: Colors.white,
-                    fillColor: WidgetStateProperty.resolveWith((states) {
-                      if (!isActive) {
-                        return Theme.of(context).colorScheme.onSecondary;
-                      }
-                      return getColor(states);
-                    }),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    side: WidgetStateBorderSide.resolveWith((states) {
-                      return BorderSide(
-                        color: Theme.of(context).colorScheme.onSecondary,
-                        width: 0.0,
-                      );
-                    }),
-                  ),
+                        value: isActive,
+                        onChanged: null,
+                        checkColor: Colors.white,
+                        fillColor: WidgetStateProperty.resolveWith((states) {
+                          if (!isActive) {
+                            return Theme.of(context).colorScheme.onSecondary;
+                          }
+                          return getColor(states);
+                        }),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        side: WidgetStateBorderSide.resolveWith((states) {
+                          return BorderSide(
+                            color: Theme.of(context).colorScheme.onSecondary,
+                            width: 0.0,
+                          );
+                        }),
+                      ),
                 ],
               ),
             ),

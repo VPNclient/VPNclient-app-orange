@@ -97,7 +97,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       VPNclientEngine.ClearSubscriptions();
       VPNclientEngine.addSubscription(subscriptionURL: "https://pastebin.com/raw/ZCYiJ98W");
       await VPNclientEngine.updateSubscription(subscriptionIndex: 0);
-<<<<<<< Updated upstream
+// <<<<<<< Updated upstream
 
 
       //END TODO
@@ -135,9 +135,9 @@ if (await flutterV2ray.requestPermission()){
 ///
 
       //TODO:move to right place
-=======
-
->>>>>>> Stashed changes
+// =======
+//
+// >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
         print("Ping result: ${result.latencyInMs} ms");

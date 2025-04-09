@@ -21,7 +21,7 @@ class AppsPageState extends State<AppsPage> {
       final updatedApps = await showDialog<List<Map<String, dynamic>>>(
         context: context,
         builder: (BuildContext context) {
-          return SearchDialog(placeholder: 'Название приложения', apps: _apps);
+          return SearchDialog(placeholder: 'Название приложения', items: _apps, type: 1,);
         },
       );
 
