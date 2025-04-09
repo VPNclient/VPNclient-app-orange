@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-import '../../design/images.dart';
+class LocationWidget extends StatelessWidget {
+  final Map<String, dynamic>? selectedServer;
 
-class LocationWidget extends StatefulWidget {
-  const LocationWidget({super.key});
+  const LocationWidget({super.key, this.selectedServer});
 
-  @override
-  State<LocationWidget> createState() => LocationWidgetState();
-}
-
-class LocationWidgetState extends State<LocationWidget> {
   @override
   Widget build(BuildContext context) {
+    final String locationName = selectedServer?['text'] ?? '...';
+    final String iconPath =
+        selectedServer?['icon'] ?? 'assets/images/flags/auto.svg';
+
     return Container(
-      padding: const EdgeInsets.all(14),
       margin: const EdgeInsets.all(30),
+      padding: const EdgeInsets.only(left: 14),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.onSurface,
         borderRadius: BorderRadius.circular(12),
@@ -22,26 +22,34 @@ class LocationWidgetState extends State<LocationWidget> {
       child: Row(
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Ваша локация',
                 style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               Text(
-                'Германия',
+                locationName,
                 style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w400,
                   color: Theme.of(context).colorScheme.primary,
                 ),
               ),
             ],
           ),
           const Spacer(),
-          deFlag,
+          Column(
+            children: [
+              SizedBox(height: 20),
+              SvgPicture.asset(iconPath, width: 48, height: 48),
+            ],
+          ),
         ],
       ),
     );
