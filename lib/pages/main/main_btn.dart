@@ -78,11 +78,15 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
   }
 
   Future<void> _handleConnection() async {
+    if (connectionStatus != connectionStatusConnected &&
+        connectionStatus != connectionStatusDisconnected) {
+      return;
+    }
+
     setState(() {
       if (connectionStatus == connectionStatusConnected) {
         connectionStatus = connectionStatusDisconnecting;
-      }
-      if (connectionStatus == connectionStatusDisconnected) {
+      } else if (connectionStatus == connectionStatusDisconnected) {
         connectionStatus = connectionStatusConnecting;
       }
     });
@@ -90,10 +94,10 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
     if (connectionStatus == connectionStatusConnecting) {
       _animationController.repeat(reverse: true);
 
-      //TODO:move to right place
       VPNclientEngine.ClearSubscriptions();
       VPNclientEngine.addSubscription(subscriptionURL: "https://pastebin.com/raw/ZCYiJ98W");
       await VPNclientEngine.updateSubscription(subscriptionIndex: 0);
+<<<<<<< Updated upstream
 
 
       //END TODO
@@ -131,12 +135,13 @@ if (await flutterV2ray.requestPermission()){
 ///
 
       //TODO:move to right place
-      VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
+=======
 
+>>>>>>> Stashed changes
+      VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
         print("Ping result: ${result.latencyInMs} ms");
       });
-      //END TODO
 
 
       ///final result = await platform.invokeMethod('startVPN');
@@ -158,8 +163,6 @@ if (await flutterV2ray.requestPermission()){
       await _animationController.reverse();
       _animationController.stop();
     }
-
-
   }
 
   @override
