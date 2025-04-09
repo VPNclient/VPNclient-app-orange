@@ -4,8 +4,7 @@ import 'package:vpn_client/nav_bar.dart';
 import 'package:vpn_client/pages/main/location_widget.dart';
 import 'package:vpn_client/pages/main/stat_bar.dart';
 
-
-
+import '../apps/apps_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +36,6 @@ class HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               LocationWidget(),
-              NavBar(),
             ],
           )
         ],
