@@ -24,11 +24,6 @@ class AppListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color getColor(Set<WidgetState> states) {
-      const Set<WidgetState> interactiveStates = <WidgetState>{
-        WidgetState.pressed,
-        WidgetState.hovered,
-        WidgetState.focused,
-      };
       return Theme.of(context).colorScheme.primary;
     }
 
@@ -88,7 +83,7 @@ class AppListItem extends StatelessWidget {
                         child: CupertinoSwitch(
                           value: isActive,
                           onChanged: null,
-                          trackColor: Theme.of(context).colorScheme.onSecondary,
+                          inactiveTrackColor: Theme.of(context).colorScheme.onSecondary,
                         ),
                       )
                       : Checkbox(

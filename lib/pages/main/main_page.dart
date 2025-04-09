@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'package:vpn_client/pages/main/main_btn.dart';
 import 'package:vpn_client/pages/main/location_widget.dart';
 import 'package:vpn_client/pages/main/stat_bar.dart';
-import 'package:vpn_client/pages/servers/servers_list.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

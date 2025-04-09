@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vpn_client/pages/apps/apps_list.dart';
-import 'package:vpn_client/pages/main/main_btn.dart';
-import 'package:vpn_client/nav_bar.dart';
-import 'package:vpn_client/pages/main/location_widget.dart';
-import 'package:vpn_client/pages/main/stat_bar.dart';
 import 'package:vpn_client/search_dialog.dart';
 
 class AppsPage extends StatefulWidget {

@@ -5,9 +5,6 @@ import 'package:vpn_client/design/dimensions.dart';
 import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 
 ///
-import 'package:flutter/services.dart';
-
-///
 import 'package:flutter_v2ray/flutter_v2ray.dart';
 
 final FlutterV2ray flutterV2ray = FlutterV2ray(

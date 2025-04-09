@@ -73,7 +73,7 @@ class ServerListItem extends StatelessWidget {
                 child: Row(
                   children: [
                     Text(
-                      int.tryParse(ping) != null ? ping + ' ms' : ping,
+                      int.tryParse(ping) != null ? '$ping ms' : ping,
                       style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                     if (ping.isNotEmpty)
