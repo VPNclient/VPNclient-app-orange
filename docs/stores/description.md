@@ -1,5 +1,5 @@
 ## VPN Client (English)
-Mini VPN Client is a simple VPN utility that makes it easy to connect to your own proxy/VPN servers. It provides a simple solution to import your subscriptions/configurations and connect securely, without any login or registration required. 
+VPN Client is a simple VPN utility that makes it easy to connect to your own proxy/VPN servers. It provides a simple solution to import your subscriptions/configurations and connect securely, without any login or registration required. 
 
 
 Key Features:
@@ -9,7 +9,7 @@ Key Features:
 - Fast & Secure: Optimized for high-speed proxy connections with secure encryption. Enjoy stable performance for unrestricted internet access while keeping your data safe.
 - Privacy Focused: No user data collection. The app does not track or store personal information or logs – your configurations and usage stay on your device.
 - No Ads, No Fees: Completely free to use and open-source friendly. Mini VPN Client contains no advertisements or in-app purchases. It’s a handy tool for power users and VPN service admins alike.
-- [check this]For Power Users & Admins: Perfect for VPN administrators to share with their users. It’s open-source solution and can be customized for different panels or configurations as needed.
+- For Power Users & Admins: Ideal for VPN administrators and advanced users. The app is open-source and can be customized for different panels, configurations and services.
 
 Need a Branded Solution?
 Looking for a professional-grade, customizable VPN app with user accounts, payments, and full white-label support?
@@ -34,6 +34,7 @@ VPN Client — это лёгкая и удобная утилита для по�
 - Конфиденциальность: Приложение не собирает и не отслеживает пользовательские данные. Вся информация хранится только на вашем устройстве.
 - Без рекламы и платежей: Полностью бесплатно. Без рекламы и встроенных покупок. Идеально подходит как для опытных пользователей, так и для администраторов VPN-сервисов.
 - Для продвинутых пользователей и админов:** Отличный инструмент для распространения среди клиентов или кастомизации под ваш бренд. Является решением с открытым исходным кодом и поддерживает и адаптацию под любые задачи.
+- Для продвинутых пользователей и администраторов: Идеально подходит для VPN-администраторов и опытных пользователей. Приложение с открытым исходным кодом и может быть адаптировано под любые задачи, конфигурации, контролдьные панели и сервисы.
 
 Нужен брендированный клиент?
 Ищете профессиональное решение с аккаунтами, оплатой и полным white-label функционалом?  
