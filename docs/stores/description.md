@@ -1,4 +1,13 @@
 ## VPN Client (English)
+### Рекламный текст:
+Instant VPN access to your own servers. No login. No tracking. Just connect.
+
+VPN Client is your all-in-one tool to securely connect to private VPN and proxy servers. Built for power users and server admins, it supports Xray, V2Ray, OpenVPN, and WireGuard. Import your configuration in one tap via link or QR code and enjoy encrypted, high-speed browsing — completely ad-free and open-source friendly.
+
+Want a branded version with login and payment support?
+Check out VPN Client PRO – a full-featured white-label solution for VPN providers.
+
+### Description:
 VPN Client is a simple VPN utility that makes it easy to connect to your own proxy/VPN servers. It provides a simple solution to import your subscriptions/configurations and connect securely, without any login or registration required. 
 
 
@@ -23,7 +32,16 @@ All usage should comply with local laws – this app is meant for legal, persona
 
 
 ## VPN Client (Русский)
+### Реклаьный текст:
+VPN-доступ к вашим серверам — без входа, без отслеживания. Просто подключитесь.
 
+VPN Client — это универсальный инструмент для безопасного подключения к собственным VPN и прокси-серверам. Поддерживает Xray, V2Ray, OpenVPN и WireGuard. Импорт подписки или конфигурации — в одно касание, шифрованное соединение — в один тап. Полностью бесплатен, без рекламы, с открытым исходным кодом.
+
+Хотите брендированное решение с аккаунтами и оплатой?
+Ознакомьтесь с VPN Client PRO — white-label решением для VPN-провайдеров.
+
+
+### Description:
 VPN Client — это лёгкая и удобная утилита для подключения к вашим собственным VPN/прокси-серверам. Приложение позволяет быстро импортировать подписки или конфигурации и безопасно подключаться — без регистрации и входа в аккаунт.
 
 Основные возможности:
@@ -46,4 +64,11 @@ VPN Client не предоставляет VPN-серверы или платн�
 Использование приложения должно соответствовать законодательству вашей страны.
 Использование для обхода блокировок к нелегальному контенту запрещено.
 Приложение предназначено только для легального, личного и не коммерческого использования.
+
+### Ключевые слова App Store:
+VPN Client, V2Ray, XRay, VMess, VLESS, Shadowsocks, Trojan, SSH, SOCKS5/HTTP/HTTPS proxy.
+
+### Marketing URL:
+https://github.com/VPNclient
+
 
