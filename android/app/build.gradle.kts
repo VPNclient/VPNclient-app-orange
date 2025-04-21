@@ -18,7 +18,6 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "vpnclient.click"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
