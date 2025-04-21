@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
@@ -111,7 +112,7 @@ V2RayURL parser = FlutterV2ray.parseFromURL(link);
 
 
 // Get Server Delay
-print('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
 
 // Permission is not required if you using proxy only
 if (await flutterV2ray.requestPermission()){
@@ -137,7 +138,7 @@ if (await flutterV2ray.requestPermission()){
 // >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
-        print("Ping result: ${result.latencyInMs} ms");
+        log("Ping result: ${result.latencyInMs} ms");
       });
 
 
