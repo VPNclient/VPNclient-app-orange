@@ -6,7 +6,6 @@ import 'package:vpn_client/pages/servers/servers_list.dart';
 import 'package:vpn_client/search_dialog.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class ServersPage extends StatefulWidget {
   final Function(int) onNavBarTap;
   const ServersPage({super.key, required this.onNavBarTap});

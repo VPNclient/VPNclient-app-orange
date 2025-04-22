@@ -41,7 +41,7 @@ class ServerListItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-            color: Colors.grey.withAlpha((255 * 0.2).toInt()),
+              color: Colors.grey.withAlpha((255 * 0.2).toInt()),
               blurRadius: 10,
               offset: const Offset(0, 1),
             ),

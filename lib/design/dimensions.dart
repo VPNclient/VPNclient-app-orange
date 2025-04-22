@@ -24,7 +24,7 @@ class CustomString {
     return _localized('disconnecting');
   }
 
-  String get All_app{
+  String get All_app {
     return _localized('all_apps');
   }
 
@@ -37,18 +37,14 @@ class CustomString {
           'connecting': 'ПОДКЛЮЧЕНИЕ',
           'disconnecting': 'ОТКЛЮЧЕНИЕ',
           "all_apps": "Все приложения",
-          
-
         }[key]!;
       case 'th':
-        return{
+        return {
           "connected": "เชื่อมต่อแล้ว",
           "disconnected": "ไม่ได้เชื่อมต่อ",
           "connecting": "กำลังเชื่อมต่อ",
           "disconnecting": "กำลังตัดการเชื่อมต่อ",
           "all_apps": "แอปทั้งหมด",
-
-
         }[key]!;
       case 'en':
       default:
@@ -58,11 +54,11 @@ class CustomString {
           'connecting': 'CONNECTING',
           'disconnecting': 'DISCONNECTING',
           "all_apps": "All Applications",
-
         }[key]!;
     }
   }
 }
+
 // style
 const double elevation0 = 0;
 

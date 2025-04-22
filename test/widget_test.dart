@@ -3,20 +3,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 
 import 'package:vpn_client/main.dart';
-import 'package:vpn_client/theme_provider.dart'; 
+import 'package:vpn_client/theme_provider.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(
       MultiProvider(
         providers: [
-          ChangeNotifierProvider<ThemeProvider>(
-            create: (_) => ThemeProvider(),
-          ),
+          ChangeNotifierProvider<ThemeProvider>(create: (_) => ThemeProvider()),
         ],
-        child: const MaterialApp(
-          home: App(),
-        ),
+        child: const MaterialApp(home: App()),
       ),
     );
 

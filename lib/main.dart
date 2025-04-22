@@ -20,13 +20,13 @@ void main() {
 class App extends StatelessWidget {
   const App({super.key});
 
-  
-
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
-    var language = const Locale('th');//<-- You can change language here manually
+    var language = const Locale(
+      'th',
+    ); //<-- You can change language here manually
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -37,19 +37,13 @@ class App extends StatelessWidget {
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
 
-    
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const [
-        Locale('en'),
-        Locale('ru'),
-        Locale('th'), 
-        
-      ],
+      supportedLocales: const [Locale('en'), Locale('ru'), Locale('th')],
     );
   }
 }
