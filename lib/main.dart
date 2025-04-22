@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+
 import 'package:vpn_client/pages/apps/apps_page.dart';
 import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
@@ -17,17 +20,36 @@ void main() {
 class App extends StatelessWidget {
   const App({super.key});
 
+  
+
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+
+    var language = const Locale('th');//<-- You can change language here manually
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'VPN Client',
       theme: lightTheme,
       darkTheme: darkTheme,
+      locale: language,
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
+
+    
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ru'),
+        Locale('th'), 
+        
+      ],
     );
   }
 }

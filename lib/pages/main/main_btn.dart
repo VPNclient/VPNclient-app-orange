@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as dev;
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
@@ -19,17 +20,37 @@ final FlutterV2ray flutterV2ray = FlutterV2ray(
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
 
+
   @override
   State<MainBtn> createState() => MainBtnState();
 }
 
+
+
 class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
   ///static const platform = MethodChannel('vpnclient_engine2');
+  ///
+  late CustomString statusText;
+  late String connectionStatus;
+  late String connectionStatusDisconnected;
+  late String connectionStatusDisconnecting;
+  late String connectionStatusConnected;
+  late String connectionStatusConnecting;
 
-  String connectionStatus = connectionStatusDisconnected;
+  @override
+    void didChangeDependencies() {
+      super.didChangeDependencies();
+      final statusText = CustomString(context);
+          connectionStatus = statusText.disconnected;  
+          connectionStatusDisconnected = statusText.disconnected;
+          connectionStatusConnected = statusText.connected;
+          connectionStatusDisconnecting = statusText.disconnecting;
+          connectionStatusConnecting = statusText.connecting;
+  }
+
   String connectionTime = "00:00:00";
   Timer? _timer;
-  late AnimationController _animationController;
+  late AnimationController _animationController; 
   late Animation<double> _sizeAnimation;
 
   @override
@@ -111,7 +132,7 @@ V2RayURL parser = FlutterV2ray.parseFromURL(link);
 
 
 // Get Server Delay
-print('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+dev.log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms', name: 'ServerDelay');
 
 // Permission is not required if you using proxy only
 if (await flutterV2ray.requestPermission()){
@@ -137,7 +158,7 @@ if (await flutterV2ray.requestPermission()){
 // >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
-        print("Ping result: ${result.latencyInMs} ms");
+        dev.log("Ping result: ${result.latencyInMs} ms", name: 'PingLogger'); // <- Use dev.log instead of print.(It build to log meta data)
       });
 
 

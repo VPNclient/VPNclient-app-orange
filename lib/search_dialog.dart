@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vpn_client/pages/apps/apps_list_item.dart';
 import 'package:vpn_client/pages/servers/servers_list_item.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'dart:convert';
 
 class SearchDialog extends StatefulWidget {
@@ -124,7 +125,7 @@ class _SearchDialogState extends State<SearchDialog> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          'Поиск',
+                          AppLocalizations.of(context)!.search,
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
@@ -141,8 +142,8 @@ class _SearchDialogState extends State<SearchDialog> {
                             onPressed: () {
                               Navigator.of(context).pop(widget.items);
                             },
-                            child: const Text(
-                              'Готово',
+                            child: Text(
+                              AppLocalizations.of(context)!.done,
                               textAlign: TextAlign.center,
                               style: TextStyle(color: Colors.blue, fontSize: 16),
                             ),
@@ -157,8 +158,8 @@ class _SearchDialogState extends State<SearchDialog> {
                             onPressed: () {
                               Navigator.of(context).pop();
                             },
-                            child: const Text(
-                              'Отмена',
+                            child: Text(
+                              AppLocalizations.of(context)!.cancel,
                               textAlign: TextAlign.center,
                               style: TextStyle(color: Colors.blue, fontSize: 16),
                             ),
@@ -174,7 +175,7 @@ class _SearchDialogState extends State<SearchDialog> {
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.2),
+                      color: Colors.grey.withAlpha((255 * 0.2).toInt()),
                       blurRadius: 10,
                       offset: const Offset(0, 1),
                     ),
@@ -225,8 +226,8 @@ class _SearchDialogState extends State<SearchDialog> {
                   children: [
                     Container(
                       margin: const EdgeInsets.only(left: 20),
-                      child: const Text(
-                        'Недавно искали',
+                      child: Text(
+                       AppLocalizations.of(context)!.recently_searched,
                         style: TextStyle(color: Colors.grey),
                       ),
                     ),
@@ -284,7 +285,7 @@ class _SearchDialogState extends State<SearchDialog> {
                     ? _filteredItems.isEmpty
                     ? Center(
                   child: Text(
-                    'Ничего не найдено',
+                    AppLocalizations.of(context)!.nothing_found,
                     style: TextStyle(
                       color: Theme.of(context).colorScheme.primary,
                     ),
