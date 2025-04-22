@@ -6,7 +6,6 @@ import 'package:vpn_client/pages/main/location_widget.dart';
 import 'package:vpn_client/pages/main/stat_bar.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -54,8 +53,9 @@ class MainPageState extends State<MainPage> {
         backgroundColor: Theme.of(context).colorScheme.surface,
         elevation: 0,
       ),
-        body: SafeArea(// I change to SafeArea to prevent screen over flow
-          child: SingleChildScrollView(
+      body: SafeArea(
+        // I change to SafeArea to prevent screen over flow
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [

@@ -3,8 +3,6 @@ import 'package:vpn_client/pages/apps/apps_list.dart';
 import 'package:vpn_client/search_dialog.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-
-
 class AppsPage extends StatefulWidget {
   const AppsPage({super.key});
 
@@ -20,7 +18,11 @@ class AppsPageState extends State<AppsPage> {
       final updatedApps = await showDialog<List<Map<String, dynamic>>>(
         context: context,
         builder: (BuildContext context) {
-          return SearchDialog(placeholder: AppLocalizations.of(context)!.app_name , items: _apps, type: 1,);
+          return SearchDialog(
+            placeholder: AppLocalizations.of(context)!.app_name,
+            items: _apps,
+            type: 1,
+          );
         },
       );
 

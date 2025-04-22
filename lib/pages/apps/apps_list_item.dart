@@ -83,7 +83,8 @@ class AppListItem extends StatelessWidget {
                         child: CupertinoSwitch(
                           value: isActive,
                           onChanged: null,
-                          inactiveTrackColor: Theme.of(context).colorScheme.onSecondary,
+                          inactiveTrackColor:
+                              Theme.of(context).colorScheme.onSecondary,
                         ),
                       )
                       : Checkbox(

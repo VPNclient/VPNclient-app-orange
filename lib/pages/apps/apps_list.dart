@@ -36,15 +36,14 @@ class AppsListState extends State<AppsList> {
   bool _initialized = false;
 
   @override
-    void didChangeDependencies() {
-      super.didChangeDependencies();
-      if (!_initialized) {
-          final statusText = CustomString(context);
-          Text_All_Apps = statusText.All_app;
-          _loadApps();
-          _initialized = true;
-  }
-          
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_initialized) {
+      final statusText = CustomString(context);
+      Text_All_Apps = statusText.All_app;
+      _loadApps();
+      _initialized = true;
+    }
   }
 
   @override
@@ -63,7 +62,6 @@ class AppsListState extends State<AppsList> {
     setState(() {
       _isLoading = true;
     });
-      
 
     try {
       List<Map<String, dynamic>> appsList = [

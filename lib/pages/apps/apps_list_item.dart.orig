@@ -39,11 +39,11 @@ class AppListItem extends StatelessWidget {
             BoxShadow(
 <<<<<<< HEAD
               color: Colors.grey.withValues(alpha: 0.2),
-||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
-              color: Colors.grey.withOpacity(0.2),
-=======
+||||||| parent of f5f79a8 (fix quality check)
             color: Colors.grey.withAlpha((255 * 0.2).toInt()),
->>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
+=======
+              color: Colors.grey.withAlpha((255 * 0.2).toInt()),
+>>>>>>> f5f79a8 (fix quality check)
               blurRadius: 10,
               offset: const Offset(0, 1),
             ),
@@ -89,7 +89,8 @@ class AppListItem extends StatelessWidget {
                         child: CupertinoSwitch(
                           value: isActive,
                           onChanged: null,
-                          inactiveTrackColor: Theme.of(context).colorScheme.onSecondary,
+                          inactiveTrackColor:
+                              Theme.of(context).colorScheme.onSecondary,
                         ),
                       )
                       : Checkbox(
@@ -120,11 +121,11 @@ class AppListItem extends StatelessWidget {
                 decoration: BoxDecoration(
 <<<<<<< HEAD
                   color: Colors.grey.withValues(alpha: 0.4),
-||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
-                  color: Colors.grey.withOpacity(0.4),
-=======
+||||||| parent of f5f79a8 (fix quality check)
                  color: Colors.grey.withAlpha((255 * 0.2).toInt()),
->>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
+=======
+                  color: Colors.grey.withAlpha((255 * 0.2).toInt()),
+>>>>>>> f5f79a8 (fix quality check)
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
