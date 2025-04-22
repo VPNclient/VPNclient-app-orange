@@ -541,9 +541,11 @@ packages:
   vpnclient_engine_flutter:
     dependency: "direct main"
     description:
-      path: "../VPNclient-engine-flutter"
-      relative: true
-    source: path
+      path: "."
+      ref: c3bf79010c05a2474a24f763d428a61788a13e9b
+      resolved-ref: c3bf79010c05a2474a24f763d428a61788a13e9b
+      url: "https://github.com/VPNclient/VPNclient-engine-flutter.git"
+    source: git
     version: "0.0.1"
   web:
     dependency: transitive
