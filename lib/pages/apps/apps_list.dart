@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:vpn_client/design/dimensions.dart';
 import 'apps_list_item.dart';
 import 'dart:convert';
 
@@ -31,6 +32,21 @@ class AppsListState extends State<AppsList> {
     }
   }
 
+  late String Text_All_Apps;
+  bool _initialized = false;
+
+  @override
+    void didChangeDependencies() {
+      super.didChangeDependencies();
+      if (!_initialized) {
+          final statusText = CustomString(context);
+          Text_All_Apps = statusText.All_app;
+          _loadApps();
+          _initialized = true;
+  }
+          
+  }
+
   @override
   void didUpdateWidget(covariant AppsList oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -47,13 +63,14 @@ class AppsListState extends State<AppsList> {
     setState(() {
       _isLoading = true;
     });
+      
 
     try {
       List<Map<String, dynamic>> appsList = [
         {
           'icon': null,
           'image': null,
-          'text': 'Все приложения',
+          'text': Text_All_Apps,
           'isSwitch': true,
           'isActive': false,
         },

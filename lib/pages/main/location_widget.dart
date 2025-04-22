@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class LocationWidget extends StatelessWidget {
   final Map<String, dynamic>? selectedServer;
@@ -8,7 +10,7 @@ class LocationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String locationName = selectedServer?['text'] ?? '...';
+    //final String locationName = selectedServer?['text'] ?? '...';
     final String iconPath =
         selectedServer?['icon'] ?? 'assets/images/flags/auto.svg';
 
@@ -26,7 +28,7 @@ class LocationWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Ваша локация',
+                AppLocalizations.of(context)!.your_location,
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
@@ -34,7 +36,7 @@ class LocationWidget extends StatelessWidget {
                 ),
               ),
               Text(
-                locationName,
+                AppLocalizations.of(context)!.auto_select, // <-- I change to localized test but you can still use your variable 
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w400,

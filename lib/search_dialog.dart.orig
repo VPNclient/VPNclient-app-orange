@@ -175,7 +175,13 @@ class _SearchDialogState extends State<SearchDialog> {
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
+<<<<<<< HEAD
                       color: Colors.grey.withValues(alpha: 0.2),
+||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
+                      color: Colors.grey.withOpacity(0.2),
+=======
+                      color: Colors.grey.withAlpha((255 * 0.2).toInt()),
+>>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
                       blurRadius: 10,
                       offset: const Offset(0, 1),
                     ),

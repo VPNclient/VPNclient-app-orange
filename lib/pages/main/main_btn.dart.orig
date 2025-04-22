@@ -1,5 +1,10 @@
 import 'dart:async';
+<<<<<<< HEAD
 import 'dart:developer';
+||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
+=======
+import 'dart:developer' as dev;
+>>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
@@ -132,7 +137,13 @@ V2RayURL parser = FlutterV2ray.parseFromURL(link);
 
 
 // Get Server Delay
+<<<<<<< HEAD
 log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
+print('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+=======
+dev.log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms', name: 'ServerDelay');
+>>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
 
 // Permission is not required if you using proxy only
 if (await flutterV2ray.requestPermission()){
@@ -158,7 +169,13 @@ if (await flutterV2ray.requestPermission()){
 // >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
+<<<<<<< HEAD
         log("Ping result: ${result.latencyInMs} ms");
+||||||| parent of c1ee28a (Add localized support and clean up with flutter analyze)
+        print("Ping result: ${result.latencyInMs} ms");
+=======
+        dev.log("Ping result: ${result.latencyInMs} ms", name: 'PingLogger'); // <- Use dev.log instead of print.(It build to log meta data)
+>>>>>>> c1ee28a (Add localized support and clean up with flutter analyze)
       });
 
 
