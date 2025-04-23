@@ -17,7 +17,6 @@
 //     );
 //                                             <-- This test is designed for Flutter's default counter app, which are not using. So ours app doesn’t show '0' or '1', which leads to: error test
 
-
 //     expect(find.text('0'), findsOneWidget);
 //     expect(find.text('1'), findsNothing);
 
@@ -50,8 +49,9 @@ void main() {
     // Check that 'CONNECTED' or 'DISCONNECTED' appears on screen
     expect(
       find.byWidgetPredicate(
-        (widget) => widget is Text && 
-                    (widget.data == 'CONNECTED' || widget.data == 'DISCONNECTED'),
+        (widget) =>
+            widget is Text &&
+            (widget.data == 'CONNECTED' || widget.data == 'DISCONNECTED'),
       ),
       findsOneWidget,
     );
