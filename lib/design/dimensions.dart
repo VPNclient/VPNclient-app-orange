@@ -46,6 +46,14 @@ class CustomString {
           "disconnecting": "กำลังตัดการเชื่อมต่อ",
           "all_apps": "แอปทั้งหมด",
         }[key]!;
+      case 'zh':
+        return {
+          "connected": "已连接",
+          "disconnected": "已断开",
+          "connecting": "正在连接",
+          "disconnecting": "正在断开",
+          "all_apps": "所有应用",
+        }[key]!;
       case 'en':
       default:
         return {
@@ -58,6 +66,7 @@ class CustomString {
     }
   }
 }
+
 
 // style
 const double elevation0 = 0;
