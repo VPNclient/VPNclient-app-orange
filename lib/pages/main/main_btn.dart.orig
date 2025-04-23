@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:developer';
-import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:vpn_client/design/colors.dart';
 import 'package:vpn_client/design/dimensions.dart';
@@ -128,7 +127,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       V2RayURL parser = FlutterV2ray.parseFromURL(link);
 
       // Get Server Delay
-      log(
+      dev.log(
         '${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms',
         name: 'ServerDelay',
       );
@@ -149,7 +148,51 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       // Disconnect
       ///flutterV2ray.stopV2Ray();
 
+<<<<<<< HEAD
+// Get Server Delay
+log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+
+// Permission is not required if you using proxy only
+if (await flutterV2ray.requestPermission()){
+    flutterV2ray.startV2Ray(
+        remark: parser.remark,
+        // The use of parser.getFullConfiguration() is not mandatory,
+        // and you can enter the desired V2Ray configuration in JSON format
+        config: parser.getFullConfiguration(),
+        blockedApps: null,
+        bypassSubnets: null,
+        proxyOnly: false,
+    );
+}
+
+// Disconnect
+///flutterV2ray.stopV2Ray();
+
+///
+||||||| parent of f5f79a8 (fix quality check)
+// Get Server Delay
+dev.log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms', name: 'ServerDelay');
+
+// Permission is not required if you using proxy only
+if (await flutterV2ray.requestPermission()){
+    flutterV2ray.startV2Ray(
+        remark: parser.remark,
+        // The use of parser.getFullConfiguration() is not mandatory,
+        // and you can enter the desired V2Ray configuration in JSON format
+        config: parser.getFullConfiguration(),
+        blockedApps: null,
+        bypassSubnets: null,
+        proxyOnly: false,
+    );
+}
+
+// Disconnect
+///flutterV2ray.stopV2Ray();
+
+///
+=======
       ///
+>>>>>>> f5f79a8 (fix quality check)
 
       //TODO:move to right place
       // =======
@@ -157,10 +200,16 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       // >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
-        log(
+<<<<<<< HEAD
+        log("Ping result: ${result.latencyInMs} ms");
+||||||| parent of f5f79a8 (fix quality check)
+        dev.log("Ping result: ${result.latencyInMs} ms", name: 'PingLogger'); // <- Use dev.log instead of print.(It build to log meta data)
+=======
+        dev.log(
           "Ping result: ${result.latencyInMs} ms",
           name: 'PingLogger',
         ); // <- Use dev.log instead of print.(It build to log meta data)
+>>>>>>> f5f79a8 (fix quality check)
       });
 
       ///final result = await platform.invokeMethod('startVPN');
