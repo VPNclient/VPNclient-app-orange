@@ -32,7 +32,7 @@ class AppsListState extends State<AppsList> {
     }
   }
 
-  late String Text_All_Apps;
+  late String textallapps;
   bool _initialized = false;
 
   @override
@@ -40,7 +40,7 @@ class AppsListState extends State<AppsList> {
     super.didChangeDependencies();
     if (!_initialized) {
       final statusText = CustomString(context);
-      Text_All_Apps = statusText.All_app;
+      textallapps = statusText.allapp;
       _loadApps();
       _initialized = true;
     }
@@ -68,7 +68,7 @@ class AppsListState extends State<AppsList> {
         {
           'icon': null,
           'image': null,
-          'text': Text_All_Apps,
+          'text': textallapps,
           'isSwitch': true,
           'isActive': false,
         },

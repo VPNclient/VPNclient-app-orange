@@ -11,6 +11,10 @@ jobs:
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
       - run: flutter pub get
+
+      - name: Generate localization files
+        run: flutter gen-l10n
+        
       - run: dart format --set-exit-if-changed .
       - run: flutter analyze
       - name: Run Dart Code Metrics

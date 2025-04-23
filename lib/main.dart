@@ -24,16 +24,39 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
-    var language = const Locale(
-      'th',
-    ); //<-- You can change language here manually
+    // If you want to override it manually, do it here (or leave as null to use system):
+    // final Locale? manualLocale = const Locale('ru'); // ← override example
+    final Locale? manualLocale = null; // ← use system by default
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'VPN Client',
       theme: lightTheme,
       darkTheme: darkTheme,
-      locale: language,
+      locale: manualLocale,
+      localeResolutionCallback: (locale, supportedLocales) {
+        if (locale == null) return const Locale('en');
+
+        // Check for exact match
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale.languageCode &&
+              (supportedLocale.countryCode == null ||
+                  supportedLocale.countryCode == locale.countryCode)) {
+            return supportedLocale;
+          }
+        }
+
+        // If Chinese variants are not supported, fallback to zh
+        if (locale.languageCode == 'zh') {
+          return supportedLocales.contains(const Locale('zh'))
+              ? const Locale('zh')
+              : const Locale('en');
+        }
+
+        // Fallback to 'en' if not found
+        return const Locale('en');
+      },
+
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
 
@@ -43,7 +66,12 @@ class App extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const [Locale('en'), Locale('ru'), Locale('th')],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ru'),
+        Locale('th'),
+        Locale('zh'),
+      ],
     );
   }
 }

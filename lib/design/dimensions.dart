@@ -24,7 +24,7 @@ class CustomString {
     return _localized('disconnecting');
   }
 
-  String get All_app {
+  String get allapp {
     return _localized('all_apps');
   }
 
