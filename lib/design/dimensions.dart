@@ -67,7 +67,6 @@ class CustomString {
   }
 }
 
-
 // style
 const double elevation0 = 0;
 
