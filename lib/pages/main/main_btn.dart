@@ -148,50 +148,50 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       // Disconnect
       ///flutterV2ray.stopV2Ray();
 
-// Get Server Delay
-log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms');
+      // Get Server Delay
+      log(
+        '${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms',
+      );
 
-// Permission is not required if you using proxy only
-if (await flutterV2ray.requestPermission()){
-    flutterV2ray.startV2Ray(
-        remark: parser.remark,
-        // The use of parser.getFullConfiguration() is not mandatory,
-        // and you can enter the desired V2Ray configuration in JSON format
-        config: parser.getFullConfiguration(),
-        blockedApps: null,
-        bypassSubnets: null,
-        proxyOnly: false,
-    );
-}
+      // Permission is not required if you using proxy only
+      if (await flutterV2ray.requestPermission()) {
+        flutterV2ray.startV2Ray(
+          remark: parser.remark,
+          // The use of parser.getFullConfiguration() is not mandatory,
+          // and you can enter the desired V2Ray configuration in JSON format
+          config: parser.getFullConfiguration(),
+          blockedApps: null,
+          bypassSubnets: null,
+          proxyOnly: false,
+        );
+      }
 
-// Disconnect
-///flutterV2ray.stopV2Ray();
+      // Disconnect
+      ///flutterV2ray.stopV2Ray();
 
-///
-||||||| parent of f5f79a8 (fix quality check)
-// Get Server Delay
-dev.log('${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms', name: 'ServerDelay');
+      // Get Server Delay
+      dev.log(
+        '${flutterV2ray.getServerDelay(config: parser.getFullConfiguration())}ms',
+        name: 'ServerDelay',
+      );
 
-// Permission is not required if you using proxy only
-if (await flutterV2ray.requestPermission()){
-    flutterV2ray.startV2Ray(
-        remark: parser.remark,
-        // The use of parser.getFullConfiguration() is not mandatory,
-        // and you can enter the desired V2Ray configuration in JSON format
-        config: parser.getFullConfiguration(),
-        blockedApps: null,
-        bypassSubnets: null,
-        proxyOnly: false,
-    );
-}
+      // Permission is not required if you using proxy only
+      if (await flutterV2ray.requestPermission()) {
+        flutterV2ray.startV2Ray(
+          remark: parser.remark,
+          // The use of parser.getFullConfiguration() is not mandatory,
+          // and you can enter the desired V2Ray configuration in JSON format
+          config: parser.getFullConfiguration(),
+          blockedApps: null,
+          bypassSubnets: null,
+          proxyOnly: false,
+        );
+      }
 
-// Disconnect
-///flutterV2ray.stopV2Ray();
+      // Disconnect
+      ///flutterV2ray.stopV2Ray();
 
-///
-=======
       ///
->>>>>>> f5f79a8 (fix quality check)
 
       //TODO:move to right place
       // =======
