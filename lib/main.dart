@@ -3,15 +3,16 @@ import 'package:provider/provider.dart';
 import 'package:vpn_client/pages/apps/apps_page.dart';
 import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
+import 'package:vpn_client/pages/settings/settings_page.dart';
+import 'package:vpn_client/pages/speed/speed_page.dart';
+import 'package:vpn_client/providers/vpn_provider.dart';
 import 'package:vpn_client/theme_provider.dart';
 
 import 'design/colors.dart';
 import 'nav_bar.dart';
 
 void main() {
-  runApp(
-    ChangeNotifierProvider(create: (_) => ThemeProvider(), child: const App()),
-  );
+  runApp(MultiProvider(providers: [ChangeNotifierProvider(create: (_) => ThemeProvider()), ChangeNotifierProvider(create: (_) => VPNProvider())], child: const App()));
 }
 
 class App extends StatelessWidget {
@@ -50,8 +51,8 @@ class _MainScreenState extends State<MainScreen> {
       const AppsPage(),
       ServersPage(onNavBarTap: _handleNavBarTap),
       const MainPage(),
-      const PlaceholderPage(text: 'Speed Page'),
-      const PlaceholderPage(text: 'Settings Page'),
+      const SpeedPage(),
+      const SettingsPage(),
     ];
   }
 
@@ -68,17 +69,8 @@ class _MainScreenState extends State<MainScreen> {
       bottomNavigationBar: NavBar(
         initialIndex: _currentIndex,
         onItemTapped: _handleNavBarTap,
+        selectedColor: Theme.of(context).colorScheme.primary,
       ),
     );
-  }
-}
-
-class PlaceholderPage extends StatelessWidget {
-  final String text;
-  const PlaceholderPage({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(child: Text(text));
   }
 }
