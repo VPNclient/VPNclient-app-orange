@@ -102,13 +102,6 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         subscriptionURL: "https://pastebin.com/raw/ZCYiJ98W",
       );
       await VPNclientEngine.updateSubscription(subscriptionIndex: 0);
-      // <<<<<<< Updated upstream
-
-      //END TODO
-
-      // =======
-      //
-      // >>>>>>> Stashed changes
       VPNclientEngine.pingServer(subscriptionIndex: 0, index: 1);
       VPNclientEngine.onPingResult.listen((result) {
         log(
