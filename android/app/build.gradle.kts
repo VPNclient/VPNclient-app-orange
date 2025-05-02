@@ -16,7 +16,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace = "click.vpnclient.vpnclient"
+    namespace = "click.vpnclient"
     compileSdk = flutter.compileSdkVersion
 
     compileOptions {
@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "click.vpnclient.vpnclient"
+        applicationId = "click.vpnclient"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

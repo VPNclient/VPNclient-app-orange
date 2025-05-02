@@ -48,7 +48,7 @@ There are two ways to get VPNclient App:
 
 ### Install a Pre-built Release (End Users)
 VPNclient App is in active development and available in beta form:
-- **Android:** Download via Google Play [VPNclient on Google Play](https://play.google.com/store/apps/details?id=click.vpnclient.vpnclient) (or join the testing program). Requires Android 6.0 or higher.
+- **Android:** Download via Google Play [VPNclient on Google Play](https://play.google.com/store/apps/details?id=click.vpnclient) (or join the testing program). Requires Android 6.0 or higher.
 - **iOS:** Download via App Store – [VPNclient on App Store](https://testflight.apple.com/join/KQr4SeS7). Requires iOS 15.6 or higher.
 
 After installing, simply launch the app. On first launch, you may be prompted to accept VPN permissions (Android) or install a VPN profile (iOS) – these are required to create the VPN tunnel.
