@@ -53,7 +53,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: macos-app
-          path: build/macos/Build/Products/Release
+          path: build/macos/Build/Products/Release/VPN\ Client.app
   build-windows:
     name: Build Windows
     runs-on: windows-latest
