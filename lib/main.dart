@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'package:vpn_client/pages/apps/apps_page.dart';
 import 'package:vpn_client/pages/main/main_page.dart';
+import 'package:vpn_client/pages/settings/settings_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
 import 'package:vpn_client/theme_provider.dart';
 import 'package:vpn_client/vpn_state.dart';
@@ -102,7 +103,7 @@ class _MainScreenState extends State<MainScreen> {
       ServersPage(onNavBarTap: _handleNavBarTap),
       const MainPage(),
       const PlaceholderPage(text: 'Speed Page'),
-      const PlaceholderPage(text: 'Settings Page'),
+      const SettingsPage(),
     ];
   }
 
