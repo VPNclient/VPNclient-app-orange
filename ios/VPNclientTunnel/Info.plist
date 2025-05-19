@@ -4,6 +4,15 @@
 <dict>
 	<key>NSExtension</key>
 	<dict>
+	    <key>com.apple.developer.networking.vpn.api</key>
+        <array>
+            <string>allow-vpn</string>
+        </array>
+        <key>UIBackgroundModes</key>
+        <array>
+            <string>fetch</string>
+            <string>remote-notification</string>
+        </array>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.networkextension.packet-tunnel</string>
 		<key>NSExtensionPrincipalClass</key>
