@@ -15,7 +15,8 @@ import 'nav_bar.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Locale userLocale = ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
+  Locale userLocale =
+      ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
   await LocalizationService.load(userLocale);
 
   runApp(
