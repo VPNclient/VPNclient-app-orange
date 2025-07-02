@@ -65,13 +65,15 @@ class MainPageState extends State<MainPage> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const StatBar(),
-            const MainBtn(),
-            LocationWidget(selectedServer: _selectedServer),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const StatBar(),
+              const MainBtn(),
+              LocationWidget(selectedServer: _selectedServer),
+            ],
+          ),
         ),
       ),
     );

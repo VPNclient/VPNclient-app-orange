@@ -158,7 +158,7 @@ class _SearchDialogState extends State<SearchDialog> {
                               LocalizationService.to('done'),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.blue,
+                                color: Colors.orange,
                                 fontSize: 16,
                               ),
                             ),
@@ -177,7 +177,7 @@ class _SearchDialogState extends State<SearchDialog> {
                               LocalizationService.to('cancel'),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.blue,
+                                color: Colors.orange,
                                 fontSize: 16,
                               ),
                             ),
