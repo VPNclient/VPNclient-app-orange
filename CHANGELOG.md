@@ -20,6 +20,16 @@
 - Enhanced state initialization and lifecycle management
 - Improved layout responsiveness and SafeArea integration
 
+### Merged
+- Merged branch `dodonov`: updated dependencies, improved l10n configuration, changed Android status bar style
+- Merged branch `feat/setting_page+adapter_telegrambot`: added settings page adapter, improved localization, updated plugin registrants, switched to JSON localization assets
+- Merged branch `bugfix/localization-no-synthetic-package`: resolved localization package issues, merged latest development changes
+- Merged branch `bugfix/vpnclient-engine-dependency`: improved VPN engine dependency handling, resolved localization and UI conflicts
+
+### Conflict Resolution
+- Resolved multiple merge conflicts in pubspec.yaml, pubspec.lock, localization files, and generated plugin registrants
+- Kept latest HEAD versions for all major Dart and localization files to ensure stability and consistency
+
 ## [1.0.12] - 2025-01-XX
 
 ### Added
