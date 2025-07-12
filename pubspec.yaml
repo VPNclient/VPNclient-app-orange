@@ -22,6 +22,7 @@ dependencies:
       url: https://github.com/VPNclient/VPNclient-engine-flutter.git
       ref: c3bf79010c05a2474a24f763d428a61788a13e9b
   cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
