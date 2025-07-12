@@ -4,12 +4,16 @@ import 'package:vpn_client/design/colors.dart';
 import 'package:flutter_v2ray/flutter_v2ray.dart';
 import 'package:vpn_client/localization_service.dart';
 import 'package:vpn_client/vpn_state.dart';
+import 'package:vpn_client/l10n/app_localizations.dart';
+import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 
 final FlutterV2ray flutterV2ray = FlutterV2ray(
   onStatusChanged: (status) {
     // Handle status changes if needed
   },
 );
+
+enum VpnConnectionState { connected, disconnected, connecting, disconnecting }
 
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
@@ -19,6 +23,31 @@ class MainBtn extends StatefulWidget {
 }
 
 class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
+  ///static const platform = MethodChannel('vpnclient_engine2');
+  ///
+  late VpnConnectionState _vpnState;
+  late String connectionStatusDisconnected;
+  late String connectionStatusDisconnecting;
+  late String connectionStatusConnected;
+  late String connectionStatusConnecting;
+  bool _initialized = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Initialize localized strings once
+    connectionStatusDisconnected = AppLocalizations.of(context)!.disconnected;
+    connectionStatusConnected = AppLocalizations.of(context)!.connected;
+    connectionStatusDisconnecting = AppLocalizations.of(context)!.disconnecting;
+    connectionStatusConnecting = AppLocalizations.of(context)!.connecting;
+    if (!_initialized) {
+      _vpnState = VpnConnectionState.disconnected;
+      _initialized = true;
+    }
+  }
+
+  String connectionTime = "00:00:00";
+  Timer? _timer;
   late AnimationController _animationController;
   late Animation<double> _sizeAnimation;
 
@@ -57,6 +86,37 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       ConnectionStatus.disconnecting: LocalizationService.to('disconnecting'),
       ConnectionStatus.connecting: LocalizationService.to('connecting'),
     }[vpnState.connectionStatus]!;
+  }
+
+  void startTimer() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      final now = DateTime.now();
+      final duration = now.difference(_timer!.start);
+      setState(() {
+        connectionTime = duration.toString().substring(2, 7);
+      });
+    });
+  }
+
+  void stopTimer() {
+    _timer?.cancel();
+    setState(() {
+      connectionTime = "00:00:00";
+      _vpnState = VpnConnectionState.disconnected;
+    });
+  }
+
+  String get currentStatusText {
+    switch (_vpnState) {
+      case VpnConnectionState.connected:
+        return connectionStatusConnected;
+      case VpnConnectionState.disconnected:
+        return connectionStatusDisconnected;
+      case VpnConnectionState.connecting:
+        return connectionStatusConnecting;
+      case VpnConnectionState.disconnecting:
+        return connectionStatusDisconnecting;
+    }
   }
 
   Future<void> _toggleConnection(BuildContext context) async {
@@ -108,7 +168,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
             fontSize: 40,
             fontWeight: FontWeight.w600,
             color:
-                vpnState.connectionStatus == ConnectionStatus.connected
+                _vpnState == VpnConnectionState.connected
                     ? Theme.of(context).colorScheme.primary
                     : Theme.of(context).colorScheme.secondary,
           ),
@@ -123,7 +183,10 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
                 width: 150,
                 height: 150,
                 decoration: BoxDecoration(
-                  color: Colors.grey[300],
+                  color:
+                      Theme.of(context)
+                          .colorScheme
+                          .surfaceContainerHighest, // Usar cor do tema conforme sugestão do linter
                   shape: BoxShape.circle,
                 ),
               ),
@@ -155,11 +218,11 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         ),
         const SizedBox(height: 20),
         Text(
-          connectionStatusText(context),
+          currentStatusText,
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
-            color: Colors.black,
+            color: Theme.of(context).textTheme.bodyLarge?.color,
           ),
         ),
       ],
