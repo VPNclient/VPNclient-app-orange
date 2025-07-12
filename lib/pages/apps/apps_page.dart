@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:vpn_client/pages/apps/apps_list.dart';
 import 'package:vpn_client/search_dialog.dart';
+<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
+=======
+import 'package:vpn_client/localization_service.dart';
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 class AppsPage extends StatefulWidget {
   const AppsPage({super.key});

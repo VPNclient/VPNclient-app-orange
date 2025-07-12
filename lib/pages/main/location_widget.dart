@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
+=======
+import 'package:vpn_client/localization_service.dart';
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 class LocationWidget extends StatelessWidget {
   final Map<String, dynamic>? selectedServer;
@@ -27,7 +31,11 @@ class LocationWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
+<<<<<<< HEAD
                 AppLocalizations.of(context).your_location,
+=======
+                LocalizationService.to('your_location'),
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,

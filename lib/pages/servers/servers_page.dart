@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vpn_client/pages/servers/servers_list.dart';
 import 'package:vpn_client/search_dialog.dart';
+<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
+=======
+import 'package:vpn_client/localization_service.dart';
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 class ServersPage extends StatefulWidget {
   final Function(int) onNavBarTap;

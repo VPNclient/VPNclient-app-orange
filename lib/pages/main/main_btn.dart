@@ -86,6 +86,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       ConnectionStatus.disconnecting: LocalizationService.to('disconnecting'),
       ConnectionStatus.connecting: LocalizationService.to('connecting'),
     }[vpnState.connectionStatus]!;
+<<<<<<< HEAD
   }
 
   void startTimer() {
@@ -117,6 +118,8 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       case VpnConnectionState.disconnecting:
         return connectionStatusDisconnecting;
     }
+=======
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
   }
 
   Future<void> _toggleConnection(BuildContext context) async {
@@ -218,7 +221,11 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         ),
         const SizedBox(height: 20),
         Text(
+<<<<<<< HEAD
           currentStatusText,
+=======
+          connectionStatusText(context),
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,

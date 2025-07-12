@@ -1,17 +1,33 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/l10n/app_localizations.dart';
+=======
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
 import 'package:provider/provider.dart';
 import 'package:vpn_client/pages/apps/apps_page.dart';
+import 'dart:ui' as ui;
 import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/settings/setting_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
 import 'package:vpn_client/theme_provider.dart';
+<<<<<<< HEAD
+=======
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:vpn_client/vpn_state.dart';
+import 'package:vpn_client/localization_service.dart';
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 import 'design/colors.dart';
 import 'nav_bar.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Locale userLocale =
+      ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
+  await LocalizationService.load(userLocale);
+
   runApp(
     ChangeNotifierProvider(create: (_) => ThemeProvider(), child: const App()),
   );
@@ -25,13 +41,19 @@ class App extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final Locale? manualLocale = null;
     return MaterialApp(
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       debugShowCheckedModeBanner: false,
       title: 'VPN Client',
       theme: lightTheme,
       darkTheme: darkTheme,
       locale: manualLocale,
-      localeResolutionCallback: (locale, supportedLocales) {
+      localeResolutionCallback: (locale, _) {
         if (locale == null) return const Locale('en');
+<<<<<<< HEAD
         for (var supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale.languageCode &&
               (supportedLocale.countryCode == null ||
@@ -43,11 +65,19 @@ class App extends StatelessWidget {
           return supportedLocales.contains(const Locale('zh'))
               ? const Locale('zh')
               : const Locale('en');
+=======
+
+        // Check for exact match
+        final supported = ['en', 'ru', 'th', 'zh'];
+        if (supported.contains(locale.languageCode)) {
+          return Locale(locale.languageCode);
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
         }
         return const Locale('en');
       },
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
+<<<<<<< HEAD
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -60,6 +90,8 @@ class App extends StatelessWidget {
         Locale('th'),
         Locale('zh'),
       ],
+=======
+>>>>>>> origin/feat/setting_page+adapter_telegrambot
     );
   }
 }
