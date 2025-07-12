@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vpn_client/pages/apps/apps_list_item.dart';
 import 'package:vpn_client/pages/servers/servers_list_item.dart';
-<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
 import 'package:vpn_client/core/constants/storage_keys.dart';
-=======
 import 'package:vpn_client/localization_service.dart';
->>>>>>> origin/feat/setting_page+adapter_telegrambot
 import 'dart:convert';
 
 class SearchDialog extends StatefulWidget {
@@ -155,7 +152,6 @@ class _SearchDialogState extends State<SearchDialog> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-<<<<<<< HEAD
                     Center(
                       child: Text(
                         AppLocalizations.of(context)!.search,
@@ -163,23 +159,10 @@ class _SearchDialogState extends State<SearchDialog> {
                           fontSize: 24,
                           fontWeight: FontWeight.w600,
                           color: Theme.of(context).colorScheme.primary,
-=======
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          LocalizationService.to('search'),
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w600,
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                         ),
                       ),
                     ),
                     if (_searchDialogType == 1)
-<<<<<<< HEAD
                       Align(
                         alignment: Alignment.centerRight,
                         child: TextButton(
@@ -191,28 +174,11 @@ class _SearchDialogState extends State<SearchDialog> {
                             style: TextStyle(
                               color: Theme.of(context).colorScheme.primary,
                               fontSize: 16,
-=======
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop(widget.items);
-                            },
-                            child: Text(
-                              LocalizationService.to('done'),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 16,
-                              ),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                             ),
                           ),
                         ),
                       ),
                     if (_searchDialogType == 2)
-<<<<<<< HEAD
                       Align(
                         alignment: Alignment.centerLeft,
                         child: TextButton(
@@ -224,22 +190,6 @@ class _SearchDialogState extends State<SearchDialog> {
                             style: TextStyle(
                               color: Theme.of(context).colorScheme.primary,
                               fontSize: 16,
-=======
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Text(
-                              LocalizationService.to('cancel'),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 16,
-                              ),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                             ),
                           ),
                         ),
@@ -306,7 +256,6 @@ class _SearchDialogState extends State<SearchDialog> {
                 ),
               ),
               const SizedBox(height: 7),
-<<<<<<< HEAD
               if (isQueryEmpty && _recentlySearchedItems.isNotEmpty)
                 Flexible(
                   child: SingleChildScrollView(
@@ -363,42 +312,6 @@ class _SearchDialogState extends State<SearchDialog> {
                                       _recentlySearchedItems[index],
                                     );
                                   },
-=======
-              // Отображаем недавно измененные элементы
-              if (showRecentSearches)
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.only(left: 20),
-                      child: Text(
-                        LocalizationService.to('recently_searched'),
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 14),
-                      child: Column(
-                        children: List.generate(_recentlySearchedItems.length, (
-                          index,
-                        ) {
-                          final item = _recentlySearchedItems[index];
-                          if (_searchDialogType == 1) {
-                            return AppListItem(
-                              icon: item['icon'],
-                              image: item['image'],
-                              text: item['text'],
-                              isSwitch: item['isSwitch'] ?? false,
-                              isActive: item['isActive'] ?? false,
-                              isEnabled: true,
-                              onTap: () {
-                                setState(() {
-                                  _recentlySearchedItems[index]['isActive'] =
-                                      !_recentlySearchedItems[index]['isActive'];
-                                });
-                                final originalIndex = widget.items.indexWhere(
-                                  (i) => i['text'] == item['text'],
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                                 );
                               } else {
                                 return ServerListItem(
@@ -425,7 +338,7 @@ class _SearchDialogState extends State<SearchDialog> {
                         ? _filteredItems.isEmpty
                             ? Center(
                               child: Text(
-                                LocalizationService.to('nothing_found'),
+                                AppLocalizations.of(context)!.nothing_found,
                                 style: TextStyle(
                                   color: Theme.of(context).colorScheme.primary,
                                 ),

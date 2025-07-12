@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/l10n/app_localizations.dart';
-=======
->>>>>>> origin/feat/setting_page+adapter_telegrambot
 import 'package:provider/provider.dart';
 import 'package:vpn_client/pages/apps/apps_page.dart';
 import 'dart:ui' as ui;
@@ -11,12 +8,8 @@ import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/settings/setting_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
 import 'package:vpn_client/theme_provider.dart';
-<<<<<<< HEAD
-=======
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/localization_service.dart';
->>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 import 'design/colors.dart';
 import 'nav_bar.dart';
@@ -53,7 +46,6 @@ class App extends StatelessWidget {
       locale: manualLocale,
       localeResolutionCallback: (locale, _) {
         if (locale == null) return const Locale('en');
-<<<<<<< HEAD
         for (var supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale.languageCode &&
               (supportedLocale.countryCode == null ||
@@ -65,19 +57,11 @@ class App extends StatelessWidget {
           return supportedLocales.contains(const Locale('zh'))
               ? const Locale('zh')
               : const Locale('en');
-=======
-
-        // Check for exact match
-        final supported = ['en', 'ru', 'th', 'zh'];
-        if (supported.contains(locale.languageCode)) {
-          return Locale(locale.languageCode);
->>>>>>> origin/feat/setting_page+adapter_telegrambot
         }
         return const Locale('en');
       },
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
-<<<<<<< HEAD
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -90,8 +74,6 @@ class App extends StatelessWidget {
         Locale('th'),
         Locale('zh'),
       ],
-=======
->>>>>>> origin/feat/setting_page+adapter_telegrambot
     );
   }
 }

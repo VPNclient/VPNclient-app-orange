@@ -22,6 +22,7 @@
   "disconnected": "DISCONNECTED",
   "reconnecting": "RECONNECTING",
   "connecting": "CONNECTING",
+<<<<<<< HEAD
   "disconnecting": "DISCONNECTING",
   "settings": "Settings",
   "version": "Version",
@@ -38,4 +39,7 @@
   "connection_reset": "Connection settings have been reset",
   "failed_open_telegram": "Failed to open Telegram bot",
   "about_app": "About App"
+=======
+  "disconnecting": "DISCONNECTING"
+>>>>>>> origin/bugfix/vpnclient-engine-dependency
 }

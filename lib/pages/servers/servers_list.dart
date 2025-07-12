@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vpn_client/pages/servers/servers_list_item.dart';
-<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
-=======
-import 'package:vpn_client/localization_service.dart';
->>>>>>> origin/feat/setting_page+adapter_telegrambot
 import 'dart:convert';
 import 'package:vpn_client/core/constants/storage_keys.dart';
 
@@ -90,42 +86,25 @@ class ServersListState extends State<ServersList> {
       List<Map<String, dynamic>> serversList = [
         {
           'icon': 'assets/images/flags/auto.svg',
-<<<<<<< HEAD
           'text': localizations.auto_select,
           'ping': localizations.fastest,
-=======
-          'text': LocalizationService.to('auto_select'),
-          'ping': LocalizationService.to('fastest'),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
           'isActive': true,
         },
         {
           'icon': 'assets/images/flags/Kazahstan.svg',
-<<<<<<< HEAD
           'text': localizations.kazakhstan,
-=======
-          'text': LocalizationService.to('kazakhstan'),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
           'ping': '48',
           'isActive': false,
         },
         {
           'icon': 'assets/images/flags/Turkey.svg',
-<<<<<<< HEAD
           'text': localizations.turkey,
-=======
-          'text': LocalizationService.to('turkey'),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
           'ping': '142',
           'isActive': false,
         },
         {
           'icon': 'assets/images/flags/Poland.svg',
-<<<<<<< HEAD
           'text': localizations.poland,
-=======
-          'text': LocalizationService.to('poland'),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
           'ping': '298',
           'isActive': false,
         },
@@ -242,16 +221,11 @@ class ServersListState extends State<ServersList> {
                           bottom: 5,
                         ), // Adicionado espaçamento
                         child: Text(
-<<<<<<< HEAD
                           AppLocalizations.of(context)!.selected_server,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 14, // Consistência de tamanho
                           ),
-=======
-                          LocalizationService.to('selected_server'),
-                          style: TextStyle(color: Colors.grey),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                         ),
                       ),
                       ...activeServers.map((server) {
@@ -272,16 +246,11 @@ class ServersListState extends State<ServersList> {
                           bottom: 5,
                         ), // Adicionado espaçamento
                         child: Text(
-<<<<<<< HEAD
                           AppLocalizations.of(context)!.all_servers,
                           style: TextStyle(
                             color: Theme.of(context).colorScheme.secondary,
                             fontSize: 14, // Consistência de tamanho
                           ),
-=======
-                          LocalizationService.to('all_servers'),
-                          style: TextStyle(color: Colors.grey),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
                         ),
                       ),
                       ...inactiveServers.map((server) {

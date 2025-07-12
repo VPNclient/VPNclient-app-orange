@@ -4,11 +4,7 @@ import 'dart:convert';
 import 'package:vpn_client/pages/main/main_btn.dart';
 import 'package:vpn_client/pages/main/location_widget.dart';
 import 'package:vpn_client/pages/main/stat_bar.dart';
-<<<<<<< HEAD
 import 'package:vpn_client/l10n/app_localizations.dart';
-=======
-import 'package:vpn_client/localization_service.dart';
->>>>>>> origin/feat/setting_page+adapter_telegrambot
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -59,11 +55,7 @@ class MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-<<<<<<< HEAD
         title: Text(AppLocalizations.of(context).appName),
-=======
-        title: Text(LocalizationService.to('app_name')),
->>>>>>> origin/feat/setting_page+adapter_telegrambot
         centerTitle: true,
         titleTextStyle: TextStyle(
           color: Theme.of(context).colorScheme.primary,
