@@ -21,6 +21,7 @@
 - Improved layout responsiveness and SafeArea integration
 
 ### Merged
+- Merged branch `development`: updated VPN link configuration to use 5.35.98.91
 - Merged branch `dodonov`: updated dependencies, improved l10n configuration, changed Android status bar style
 - Merged branch `feat/setting_page+adapter_telegrambot`: added settings page adapter, improved localization, updated plugin registrants, switched to JSON localization assets
 - Merged branch `bugfix/localization-no-synthetic-package`: resolved localization package issues, merged latest development changes
