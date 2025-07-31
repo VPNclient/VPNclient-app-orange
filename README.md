@@ -104,6 +104,21 @@ This project is licensed under the **VPNclient Extended GNU General Public Licen
 
 ⚠️ *Note:* The "extended GPL v3" license includes additional conditions (in accordance with GPLv3 Section 7) specific to the VPNclient project. By using or distributing this software, you agree to comply with these additional terms as well. 
 
+## 🌍 Supported Languages
+- 🇷🇺 Russian  
+- 🇺🇦 Ukrainian  
+- 🇺🇸 English  
+- 🇲🇲 Burmese  
+- 🇨🇳 Chinese  
+- 🇯🇵 Japanese  
+- 🇹🇭 Thai  
+- 🇮🇳 Hindi  
+- 🇸🇦 Arabic  
+- 🇩🇪 German  
+- 🇰🇭 Khmer (Cambodia)  
+- 🇵🇱 Polish  
+- 🇱🇦 Lao
+
 ## 📬 Support and Contact
 
 - **Issues and Bugs:** If you encounter a bug or have a question, please open an issue on the [GitHub issue tracker](https://github.com/VPNclient/VPNclient-app/issues). We aim to respond and address issues promptly. Before opening a new issue, you can search existing ones in case it’s already reported or resolved.
