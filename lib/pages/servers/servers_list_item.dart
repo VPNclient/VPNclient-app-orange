@@ -41,16 +41,19 @@ class ServerListItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              color: Theme.of(
-                context,
-              ).shadowColor.withAlpha((255 * 0.1).round()), // Usar cor do tema
+
+              color: Colors.grey.withAlpha(51),
+
+           
               blurRadius: 10,
               offset: const Offset(0, 1),
             ),
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.all(0),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 12,
+          ), // add some padding
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -59,41 +62,35 @@ class ServerListItem extends StatelessWidget {
                   if (icon != null)
                     SvgPicture.asset(icon!, width: 52, height: 52),
                   if (icon == null) const SizedBox(width: 16),
+                  const SizedBox(width: 8), // spacing between icon and text
                   Container(
                     alignment: Alignment.center,
                     height: 52,
-                    child: Text(
-                      text,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color:
-                            Theme.of(
-                              context,
-                            ).colorScheme.primary, // Usar cor do tema
+
+                    child: Flexible(
+                      // Let text flexibly use remaining space
+                      child: Text(
+                        text,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
                   ),
                 ],
               ),
-              Container(
-                alignment: Alignment.center,
-                height: 52,
-                child: Row(
-                  children: [
-                    Text(
-                      int.tryParse(ping) != null ? '$ping ms' : ping,
-                      style: TextStyle(
-                        fontSize: 14,
-                        color:
-                            Theme.of(
-                              context,
-                            ).colorScheme.secondary, // Usar cor do tema
-                      ),
-                    ),
-                    if (ping.isNotEmpty)
-                      Image.asset(pingImage, width: 52, height: 52),
-                  ],
-                ),
+              Row(
+                children: [
+                  Text(
+                    int.tryParse(ping) != null ? '$ping ms' : ping,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(fontSize: 14, color: Colors.grey),
+                  ),
+                  if (ping.isNotEmpty)
+                    Image.asset(pingImage, width: 52, height: 52),
+                ],
               ),
             ],
           ),

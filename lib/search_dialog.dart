@@ -163,33 +163,44 @@ class _SearchDialogState extends State<SearchDialog> {
                       ),
                     ),
                     if (_searchDialogType == 1)
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop(widget.items);
-                          },
-                          child: Text(
-                            AppLocalizations.of(context)!.done,
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.primary,
-                              fontSize: 16,
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop(widget.items);
+                            },
+                            child: Text(
+                              LocalizationService.to('done'),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: 16,
+                              ),
+
                             ),
                           ),
                         ),
                       ),
                     if (_searchDialogType == 2)
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            AppLocalizations.of(context)!.cancel,
-                            style: TextStyle(
-                              color: Theme.of(context).colorScheme.primary,
-                              fontSize: 16,
+
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              LocalizationService.to('cancel'),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.orange,
+                                fontSize: 16,
+                              ),
+
+                   
                             ),
                           ),
                         ),

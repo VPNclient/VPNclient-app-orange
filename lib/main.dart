@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:vpn_client/l10n/app_localizations.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:vpn_client/pages/apps/apps_page.dart';
 import 'dart:ui' as ui;
 import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/settings/setting_page.dart';
@@ -10,6 +8,7 @@ import 'package:vpn_client/pages/servers/servers_page.dart';
 import 'package:vpn_client/theme_provider.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/localization_service.dart';
+// import 'package:vpn_client/pages/apps/apps_page.dart';
 
 import 'design/colors.dart';
 import 'nav_bar.dart';
@@ -21,6 +20,10 @@ void main() async {
       ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
   await LocalizationService.load(userLocale);
 
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(
     ChangeNotifierProvider(create: (_) => ThemeProvider(), child: const App()),
   );
@@ -85,16 +88,16 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _currentIndex = 2;
+  int _currentIndex = 1;
   late List<Widget> _pages;
   @override
   void initState() {
     super.initState();
     _pages = [
-      const AppsPage(),
+      // const AppsPage(),
       ServersPage(onNavBarTap: _handleNavBarTap),
       const MainPage(),
-      const PlaceholderPage(text: 'Speed Page'),
+      // const PlaceholderPage(text: 'Speed Page'),
       SettingPage(onNavBarTap: _handleNavBarTap),
     ];
   }
