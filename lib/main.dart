@@ -6,7 +6,6 @@ import 'package:vpn_client/pages/main/main_page.dart';
 import 'package:vpn_client/pages/settings/setting_page.dart';
 import 'package:vpn_client/pages/servers/servers_page.dart';
 import 'package:vpn_client/theme_provider.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/localization_service.dart';
 // import 'package:vpn_client/pages/apps/apps_page.dart';
@@ -26,13 +25,7 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
-        ChangeNotifierProvider(create: (_) => VpnState()),
-      ],
-      child: const App(),
-    ),
+    ChangeNotifierProvider(create: (_) => ThemeProvider(), child: const App()),
   );
 }
 
@@ -42,11 +35,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-
-    // If you want to override it manually, do it here (or leave as null to use system):
-    // final Locale? manualLocale = const Locale('ru'); // ← override example
-    final Locale? manualLocale = null; // ← use system by default
-
+    final Locale? manualLocale = null;
     return MaterialApp(
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -60,26 +49,40 @@ class App extends StatelessWidget {
       locale: manualLocale,
       localeResolutionCallback: (locale, _) {
         if (locale == null) return const Locale('en');
-
-        // Check for exact match
-        final supported = ['en', 'ru', 'th', 'zh'];
-        if (supported.contains(locale.languageCode)) {
-          return Locale(locale.languageCode);
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale.languageCode &&
+              (supportedLocale.countryCode == null ||
+                  supportedLocale.countryCode == locale.countryCode)) {
+            return supportedLocale;
+          }
         }
-
-        // Fallback to 'en' if not found
+        if (locale.languageCode == 'zh') {
+          return supportedLocales.contains(const Locale('zh'))
+              ? const Locale('zh')
+              : const Locale('en');
+        }
         return const Locale('en');
       },
-
       themeMode: themeProvider.themeMode,
       home: const MainScreen(),
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('ru'),
+        Locale('th'),
+        Locale('zh'),
+      ],
     );
   }
 }
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
-
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
@@ -87,7 +90,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 1;
   late List<Widget> _pages;
-
   @override
   void initState() {
     super.initState();
@@ -99,13 +101,11 @@ class _MainScreenState extends State<MainScreen> {
       SettingPage(onNavBarTap: _handleNavBarTap),
     ];
   }
-
   void _handleNavBarTap(int index) {
     setState(() {
       _currentIndex = index;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -121,7 +121,6 @@ class _MainScreenState extends State<MainScreen> {
 class PlaceholderPage extends StatelessWidget {
   final String text;
   const PlaceholderPage({super.key, required this.text});
-
   @override
   Widget build(BuildContext context) {
     return Center(child: Text(text));

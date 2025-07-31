@@ -37,11 +37,14 @@ class ServerListItem extends StatelessWidget {
         height: 52,
         margin: const EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Theme.of(context).colorScheme.onSurface, // Usar cor do tema
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
+
               color: Colors.grey.withAlpha(51),
+
+           
               blurRadius: 10,
               offset: const Offset(0, 1),
             ),
@@ -63,6 +66,7 @@ class ServerListItem extends StatelessWidget {
                   Container(
                     alignment: Alignment.center,
                     height: 52,
+
                     child: Flexible(
                       // Let text flexibly use remaining space
                       child: Text(
