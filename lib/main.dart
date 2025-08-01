@@ -25,6 +25,7 @@ void main() async {
   try {
     userLocale = ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
   } catch (e) {
+    print('Error getting system locale: $e');
     userLocale = const Locale('en'); // Fallback to English
   }
   await LocalizationService.load(userLocale);
@@ -67,16 +68,22 @@ class App extends StatelessWidget {
       darkTheme: darkTheme,
       locale: manualLocale,
       localeResolutionCallback: (locale, _) {
-        if (locale == null) return const Locale('en');
+        try {
+          if (locale == null) return const Locale('en');
 
-        // Check for exact match
-        final supported = ['en', 'ru', 'th', 'zh'];
-        if (supported.contains(locale.languageCode)) {
-          return Locale(locale.languageCode);
+          // Check for exact match
+          final supported = ['en', 'ru', 'th', 'zh'];
+          if (supported.contains(locale.languageCode)) {
+            return Locale(locale.languageCode);
+          }
+
+          // Fallback to 'en' if not found
+          return const Locale('en');
+        } catch (e) {
+          // Log error and return default locale
+          print('Error resolving locale: $e');
+          return const Locale('en');
         }
-
-        // Fallback to 'en' if not found
-        return const Locale('en');
       },
 
       themeMode: themeProvider.themeMode,
