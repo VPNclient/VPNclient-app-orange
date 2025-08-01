@@ -4,6 +4,7 @@ import 'package:vpn_client/design/colors.dart';
 import 'package:flutter_v2ray/flutter_v2ray.dart';
 import 'package:vpn_client/localization_service.dart';
 import 'package:vpn_client/vpn_state.dart';
+import 'package:vpn_client/services/config_service.dart';
 
 final FlutterV2ray flutterV2ray = FlutterV2ray(
   onStatusChanged: (status) {
@@ -66,8 +67,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       case ConnectionStatus.disconnected:
         vpnState.setConnectionStatus(ConnectionStatus.connecting);
         _animationController.repeat(reverse: true);
-        String link =
-            "vless://c61daf3e-83ff-424f-a4ff-5bfcb46f0b30@45.77.190.146:8443?encryption=none&flow=&security=reality&sni=www.gstatic.com&fp=chrome&pbk=rLCmXWNVoRBiknloDUsbNS5ONjiI70v-BWQpWq0HCQ0&sid=108108108108#%F0%9F%87%BA%F0%9F%87%B8+%F0%9F%99%8F+USA+%231";
+        String link = ConfigService.mainSubscriptionUrl;
         V2RayURL parser = FlutterV2ray.parseFromURL(link);
 
         if (await flutterV2ray.requestPermission()) {
