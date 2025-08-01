@@ -9,6 +9,7 @@ import 'package:vpn_client/theme_provider.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/localization_service.dart';
+import 'package:vpn_client/services/config_service.dart';
 // import 'package:vpn_client/pages/apps/apps_page.dart';
 
 import 'design/colors.dart';
@@ -17,8 +18,15 @@ import 'nav_bar.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  Locale userLocale =
-      ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
+  // Инициализация конфигурации
+  await ConfigService.initialize();
+
+  Locale userLocale;
+  try {
+    userLocale = ui.PlatformDispatcher.instance.locale; // <-- Get the system locale
+  } catch (e) {
+    userLocale = const Locale('en'); // Fallback to English
+  }
   await LocalizationService.load(userLocale);
 
   await SystemChrome.setPreferredOrientations([
