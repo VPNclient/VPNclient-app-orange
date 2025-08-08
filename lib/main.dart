@@ -15,7 +15,7 @@ import 'package:vpn_client/services/deep_link_service.dart';
 import 'package:vpn_client/pages/onboarding/onboarding_screen.dart';
 // import 'package:vpn_client/pages/apps/apps_page.dart';
 
-import 'design/colors.dart';
+import 'theme/app_theme_export.dart';
 import 'nav_bar.dart';
 
 void main() async {
@@ -88,8 +88,9 @@ class _AppState extends State<App> {
       ],
       debugShowCheckedModeBanner: false,
       title: 'VPN Client',
-      theme: lightTheme,
-      darkTheme: darkTheme,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: themeProvider.themeMode,
       locale: manualLocale,
       localeResolutionCallback: (locale, _) {
         try {
