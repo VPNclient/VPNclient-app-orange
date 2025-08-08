@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../services/onboarding_service.dart';
+import '../../services/config_service.dart';
 
 class OnboardingScreen extends StatefulWidget {
   final OnboardingService onboardingService;
@@ -26,18 +27,22 @@ class _OnboardingScreenState extends State<OnboardingScreen>
       // Шаг 1: Подключение к телеграм боту
       OnboardingStep(
         title: 'Welcome',
-        description: 'To connect, go to the telegram bot',
-        telegramBot: '@super_hitbot',
+        description: ConfigService.requiresTelegramBot 
+          ? 'To connect, go to the telegram bot to get your unique subscription'
+          : 'To connect, go to the telegram bot (optional)',
+        telegramBot: '@' + ConfigService.telegramBotUsername,
         icon: Icons.telegram,
         color: const Color(0xFF0088CC),
-        showSkip: true,
+        showSkip: ConfigService.isTelegramBotOptional,
         isWelcome: true,
       ),
       
       // Шаг 2: Настройки успешно получены
       OnboardingStep(
         title: 'Settings Received',
-        description: 'Your settings have been successfully received',
+        description: ConfigService.requiresTelegramBot
+          ? 'Your unique subscription has been successfully received'
+          : 'Your settings have been successfully received',
         icon: Icons.check_circle,
         color: const Color(0xFF4CAF50),
         isLast: true,
@@ -126,12 +131,12 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   }
 
   Future<void> _openTelegramBot() async {
-    final botUrl = 'https://t.me/super_hitbot';
+    final botUrl = 'https://t.me/' + ConfigService.telegramBotUsername;
     if (await canLaunchUrl(Uri.parse(botUrl))) {
       await launchUrl(Uri.parse(botUrl), mode: LaunchMode.externalApplication);
     } else {
       // Fallback to web browser
-      final webUrl = 'https://web.telegram.org/k/#@super_hitbot';
+      final webUrl = 'https://web.telegram.org/k/#@' + ConfigService.telegramBotUsername;
       if (await canLaunchUrl(Uri.parse(webUrl))) {
         await launchUrl(Uri.parse(webUrl), mode: LaunchMode.externalApplication);
       }
@@ -285,9 +290,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
             ),
           ),
           const SizedBox(height: 16),
-          const Text(
-            'SUPER HIT',
-            style: TextStyle(
+          Text(
+            ConfigService.appDisplayName,
+            style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Color(0xFF0088CC),

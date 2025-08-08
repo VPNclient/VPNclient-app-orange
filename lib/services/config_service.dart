@@ -70,6 +70,39 @@ class ConfigService {
     return dotenv.env['APP_VERSION'] ?? '1.0.12';
   }
 
+  /// Получить URL телеграм бота
+  static String get telegramBotUrl {
+    return dotenv.env['TELEGRAM_BOT_URL'] ?? 't.me/vpnclientbot';
+  }
+
+  /// Получить username телеграм бота (без @)
+  static String get telegramBotUsername {
+    final url = telegramBotUrl;
+    if (url.startsWith('t.me/')) {
+      return url.substring(5);
+    } else if (url.startsWith('@')) {
+      return url.substring(1);
+    }
+    return url;
+  }
+
+  /// Получить полный URL телеграм бота для открытия
+  static String get telegramBotFullUrl {
+    final username = telegramBotUsername;
+    return 'https://t.me/$username';
+  }
+
+  /// Получить URL телеграм бота для веб-версии
+  static String get telegramBotWebUrl {
+    final username = telegramBotUsername;
+    return 'https://web.telegram.org/k/#@$username';
+  }
+
+  /// Получить название приложения для отображения
+  static String get appDisplayName {
+    return dotenv.env['APP_NAME'] ?? 'VPNclient';
+  }
+
   /// Проверить, загружена ли конфигурация
   static bool get isConfigured {
     return dotenv.env.isNotEmpty;
