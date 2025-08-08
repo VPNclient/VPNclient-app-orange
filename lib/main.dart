@@ -10,6 +10,9 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/localization_service.dart';
 import 'package:vpn_client/services/config_service.dart';
+import 'package:vpn_client/services/onboarding_service.dart';
+import 'package:vpn_client/services/deep_link_service.dart';
+import 'package:vpn_client/pages/onboarding/onboarding_screen.dart';
 // import 'package:vpn_client/pages/apps/apps_page.dart';
 
 import 'design/colors.dart';
@@ -39,18 +42,39 @@ void main() async {
       providers: [
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => VpnState()),
+        ChangeNotifierProvider(create: (_) {
+          final onboardingService = OnboardingService();
+          onboardingService.initialize();
+          return onboardingService;
+        }),
       ],
       child: const App(),
     ),
   );
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  @override
+  void initState() {
+    super.initState();
+    // Инициализация deep link сервиса после построения виджета
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final onboardingService = Provider.of<OnboardingService>(context, listen: false);
+      DeepLinkService().initialize(onboardingService);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    final onboardingService = Provider.of<OnboardingService>(context);
 
     // If you want to override it manually, do it here (or leave as null to use system):
     // final Locale? manualLocale = const Locale('ru'); // ← override example
@@ -87,7 +111,12 @@ class App extends StatelessWidget {
       },
 
       themeMode: themeProvider.themeMode,
-      home: const MainScreen(),
+      home: onboardingService.shouldShowOnboarding()
+          ? OnboardingScreen(onboardingService: onboardingService)
+          : const MainScreen(),
+      routes: {
+        '/main': (context) => const MainScreen(),
+      },
     );
   }
 }
