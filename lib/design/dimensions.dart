@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class CustomString {
   final BuildContext context;
@@ -78,5 +79,6 @@ const double fontSize17 = 17;
 const double fontSize24 = 24;
 const double fontSize40 = 40;
 
-const String connectionTgUrl = 't.me/vpn_client_bot';
-const String supportTgUrl = 't.me/vpn_client_support';
+// Telegram URLs - теперь используются переменные окружения
+String get connectionTgUrl => dotenv.env['TELEGRAM_BOT_URL'] ?? 't.me/VPNclientBot';
+String get supportTgUrl => dotenv.env['TELEGRAM_SUPPORT_URL'] ?? 't.me/@vpnclient_support';
