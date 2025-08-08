@@ -18,17 +18,7 @@ class ConfigService {
     return dotenv.env['SUBSCRIPTION_URL_MAIN'] ?? _defaultSubscriptionUrl;
   }
 
-  /// Получить резервный URL подписки
-  static String? get backupSubscriptionUrl {
-    final url = dotenv.env['SUBSCRIPTION_URL_BACKUP'];
-    return url?.isNotEmpty == true ? url : null;
-  }
 
-  /// Получить премиум URL подписки
-  static String? get premiumSubscriptionUrl {
-    final url = dotenv.env['SUBSCRIPTION_URL_PREMIUM'];
-    return url?.isNotEmpty == true ? url : null;
-  }
 
   /// Получить все доступные URL подписок
   static List<String> get allSubscriptionUrls {
@@ -36,16 +26,6 @@ class ConfigService {
     
     // Основная подписка
     urls.add(mainSubscriptionUrl);
-    
-    // Резервная подписка
-    if (backupSubscriptionUrl != null) {
-      urls.add(backupSubscriptionUrl!);
-    }
-    
-    // Премиум подписка
-    if (premiumSubscriptionUrl != null) {
-      urls.add(premiumSubscriptionUrl!);
-    }
     
     return urls;
   }
@@ -101,6 +81,29 @@ class ConfigService {
   /// Получить название приложения для отображения
   static String get appDisplayName {
     return dotenv.env['APP_NAME'] ?? 'VPNclient';
+  }
+
+  /// Проверить, есть ли захардкоженная ссылка на подписку
+  static bool get hasHardcodedSubscription {
+    final mainUrl = dotenv.env['SUBSCRIPTION_URL_MAIN'];
+    
+    // Проверяем, что есть непустая ссылка на подписку
+    final hasSubscription = (mainUrl?.isNotEmpty == true && mainUrl != _defaultSubscriptionUrl);
+    
+    print('ConfigService: hasHardcodedSubscription = $hasSubscription');
+    print('ConfigService: mainUrl = $mainUrl');
+    
+    return hasSubscription;
+  }
+
+  /// Проверить, требуется ли получение подписки через Telegram бот
+  static bool get requiresTelegramBot {
+    return !hasHardcodedSubscription;
+  }
+
+  /// Проверить, является ли Telegram бот опциональным
+  static bool get isTelegramBotOptional {
+    return hasHardcodedSubscription;
   }
 
   /// Проверить, загружена ли конфигурация
