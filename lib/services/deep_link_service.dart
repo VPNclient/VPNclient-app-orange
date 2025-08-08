@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uni_links/uni_links.dart';
+import 'package:app_links/app_links.dart';
 import 'dart:async';
 import 'onboarding_service.dart';
 
@@ -10,6 +10,7 @@ class DeepLinkService {
 
   StreamSubscription? _subscription;
   OnboardingService? _onboardingService;
+  final AppLinks _appLinks = AppLinks();
 
   /// Инициализация сервиса
   void initialize(OnboardingService onboardingService) {
@@ -18,18 +19,21 @@ class DeepLinkService {
   }
 
   /// Инициализация слушателя deep links
-  void _initDeepLinkListener() {
+  void _initDeepLinkListener() async {
     // Обработка deep links при запуске приложения
-    getInitialLink().then((String? link) {
-      if (link != null) {
-        _handleDeepLink(link);
+    try {
+      final Uri? initialLink = await _appLinks.getInitialAppLink();
+      if (initialLink != null) {
+        _handleDeepLink(initialLink.toString());
       }
-    });
+    } catch (e) {
+      print('Error getting initial app link: $e');
+    }
 
     // Обработка deep links во время работы приложения
-    _subscription = linkStream.listen((String? link) {
-      if (link != null) {
-        _handleDeepLink(link);
+    _subscription = _appLinks.uriLinkStream.listen((Uri? uri) {
+      if (uri != null) {
+        _handleDeepLink(uri.toString());
       }
     }, onError: (err) {
       print('Deep link error: $err');

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'config_service.dart';
 
 /// Сервис для управления onboarding в VPN Client
 /// Позволяет показывать вводный экран для новых пользователей
@@ -56,11 +57,6 @@ class OnboardingService extends ChangeNotifier {
     _currentStep = step;
     _isNavigating = false;
     notifyListeners();
-  } catch (e) {
-    // В случае ошибки сбрасываем флаг навигации
-    _isNavigating = false;
-    notifyListeners();
-    rethrow;
   }
   
   /// Завершение onboarding
@@ -111,9 +107,25 @@ class OnboardingService extends ChangeNotifier {
     notifyListeners();
   }
   
-  /// Проверка, нужно ли показывать onboarding
+  /// Проверить, нужно ли показывать onboarding
   bool shouldShowOnboarding() {
+    // Если есть захардкоженная подписка, onboarding не нужен
+    if (ConfigService.hasHardcodedSubscription) {
+      return false;
+    }
+    
+    // Если подписка не захардкожена, показываем onboarding
     return !_isOnboardingCompleted || _lastOnboardingVersion != '1.0.0';
+  }
+
+  /// Проверить, можно ли пропустить onboarding
+  bool canSkipOnboarding() {
+    return ConfigService.isTelegramBotOptional;
+  }
+
+  /// Проверить, является ли onboarding обязательным
+  bool get isOnboardingRequired {
+    return ConfigService.requiresTelegramBot;
   }
   
   /// Сброс onboarding (для тестирования)
