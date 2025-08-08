@@ -1,0 +1,480 @@
+{
+  "@@locale": "ar",
+  "appTitle": "عميل VPN",
+  "appDescription": "اتصال VPN آمن وسريع",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "متصل",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "غير متصل",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "جاري الاتصال",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "جاري قطع الاتصال",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "جميع التطبيقات",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "الرئيسية",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "الخوادم",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "الإعدادات",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "اتصال",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "قطع الاتصال",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "اختر الخادم",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "اتصال تلقائي",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "مفتاح الطوارئ",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "البروتوكول",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "اللغة",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "المظهر",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "الوضع الداكن",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "الوضع الفاتح",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "مظهر النظام",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "حول",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "الإصدار",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "رجوع",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "حفظ",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "إلغاء",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "موافق",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "خطأ",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "نجح",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "جاري التحميل...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "لا توجد بيانات",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "إعادة المحاولة",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "إغلاق",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "مساعدة",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "البرنامج التعليمي",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "تعلم كيفية استخدام التطبيق",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "حالة الاتصال",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "الخادم الحالي",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "استجابة",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "السرعة",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "رفع",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "تحميل",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "استخدام البيانات",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "اليوم",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "هذا الشهر",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "المجموع",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "قائمة الخوادم",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "موصى به",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "جميع الخوادم",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "البحث في الخوادم...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "لا توجد خوادم متاحة",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "غير متاح",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "متاح",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "صيانة",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "فشل الاتصال",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "نجح الاتصال",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "نجح قطع الاتصال",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "خطأ في الشبكة",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "لا يمكن الوصول إلى الخادم",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "انتهت مهلة الاتصال",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "مطلوب إذن",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "مطلوب إذن VPN للاتصال",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "مطلوب إذن الموقع لاختيار الخادم الأمثل",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "مطلوب إذن الإشعارات لإشعارات الاتصال",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "سياسة الخصوصية",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "شروط الخدمة",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "الدعم",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "اتصل بالدعم",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "التعليقات",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "قيّم التطبيق",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "شارك التطبيق",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "تصدير السجلات",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "مسح السجلات",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "السجلات",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "التشخيص",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "تشغيل التشخيص",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "اكتمل التشخيص",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "فشل التشخيص",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "اختبار الاتصال",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "اختبار السرعة",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "اختبار الاستجابة",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "نتائج الاختبار",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "نجح الاختبار",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "فشل الاختبار",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "الاختبار قيد التنفيذ",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "اكتمل الاختبار",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "خطأ في الاختبار",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "انتهت مهلة الاختبار",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "خطأ شبكة الاختبار",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "خطأ خادم الاختبار",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "خطأ اختبار غير معروف",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "إعادة اختبار",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "إلغاء الاختبار",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "إعادة تشغيل الاختبار",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "إيقاف الاختبار",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "بدء الاختبار",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "إعادة تعيين الاختبار"
+} 

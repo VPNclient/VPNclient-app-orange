@@ -1,0 +1,480 @@
+{
+  "@@locale": "ko",
+  "appTitle": "VPN 클라이언트",
+  "appDescription": "안전하고 빠른 VPN 연결",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "연결됨",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "연결 해제됨",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "연결 중",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "연결 해제 중",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "모든 애플리케이션",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "홈",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "서버",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "설정",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "연결",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "연결 해제",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "서버 선택",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "자동 연결",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "킬 스위치",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "프로토콜",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "언어",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "테마",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "다크 모드",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "라이트 모드",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "시스템 테마",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "정보",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "버전",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "뒤로",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "저장",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "취소",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "확인",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "오류",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "성공",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "로딩 중...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "데이터 없음",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "다시 시도",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "닫기",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "도움말",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "튜토리얼",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "앱 사용법을 배우세요",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "연결 상태",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "현재 서버",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "핑",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "속도",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "업로드",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "다운로드",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "데이터 사용량",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "오늘",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "이번 달",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "총계",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "서버 목록",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "추천",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "모든 서버",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "서버 검색...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "사용 가능한 서버가 없습니다",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "사용 불가",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "사용 가능",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "점검 중",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "연결 실패",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "연결 성공",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "연결 해제 성공",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "네트워크 오류",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "서버에 도달할 수 없습니다",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "연결 시간 초과",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "권한이 필요합니다",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "연결을 위해 VPN 권한이 필요합니다",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "최적의 서버 선택을 위해 위치 권한이 필요합니다",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "연결 알림을 위해 알림 권한이 필요합니다",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "개인정보 처리방침",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "서비스 약관",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "지원",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "지원팀에 문의",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "피드백",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "앱 평가",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "앱 공유",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "로그 내보내기",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "로그 지우기",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "로그",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "진단",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "진단 실행",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "진단 완료",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "진단 실패",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "연결 테스트",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "속도 테스트",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "핑 테스트",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "테스트 결과",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "테스트 통과",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "테스트 실패",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "테스트 진행 중",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "테스트 완료",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "테스트 오류",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "테스트 시간 초과",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "테스트 네트워크 오류",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "테스트 서버 오류",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "테스트 알 수 없는 오류",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "테스트 다시 시도",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "테스트 취소",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "테스트 재시작",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "테스트 중지",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "테스트 시작",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "테스트 재설정"
+} 

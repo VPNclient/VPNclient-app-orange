@@ -1,0 +1,480 @@
+{
+  "@@locale": "hi",
+  "appTitle": "VPN क्लाइंट",
+  "appDescription": "सुरक्षित और तेज़ VPN कनेक्शन",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "कनेक्टेड",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "डिस्कनेक्टेड",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "कनेक्टिंग",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "डिस्कनेक्टिंग",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "सभी एप्लिकेशन",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "होम",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "सर्वर",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "सेटिंग्स",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "कनेक्ट",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "डिस्कनेक्ट",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "सर्वर चुनें",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "ऑटो कनेक्ट",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "किल स्विच",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "प्रोटोकॉल",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "भाषा",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "थीम",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "डार्क मोड",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "लाइट मोड",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "सिस्टम थीम",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "के बारे में",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "वर्जन",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "वापस",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "सहेजें",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "रद्द करें",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "ठीक है",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "त्रुटि",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "सफल",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "लोड हो रहा है...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "कोई डेटा नहीं",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "पुनः प्रयास करें",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "बंद करें",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "सहायता",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "ट्यूटोरियल",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "ऐप का उपयोग करना सीखें",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "कनेक्शन स्थिति",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "वर्तमान सर्वर",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "पिंग",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "गति",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "अपलोड",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "डाउनलोड",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "डेटा उपयोग",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "आज",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "इस महीने",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "कुल",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "सर्वर सूची",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "अनुशंसित",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "सभी सर्वर",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "सर्वर खोजें...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "कोई सर्वर उपलब्ध नहीं",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "अनुपलब्ध",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "उपलब्ध",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "रखरखाव",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "कनेक्शन विफल",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "कनेक्शन सफल",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "डिस्कनेक्शन सफल",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "नेटवर्क त्रुटि",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "सर्वर पहुंच योग्य नहीं",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "कनेक्शन टाइमआउट",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "अनुमति आवश्यक",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "कनेक्शन के लिए VPN अनुमति आवश्यक",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "इष्टतम सर्वर चयन के लिए स्थान अनुमति आवश्यक",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "कनेक्शन सूचनाओं के लिए सूचना अनुमति आवश्यक",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "गोपनीयता नीति",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "सेवा की शर्तें",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "समर्थन",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "समर्थन से संपर्क करें",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "प्रतिक्रिया",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "ऐप रेट करें",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "ऐप साझा करें",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "लॉग निर्यात करें",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "लॉग साफ़ करें",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "लॉग",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "निदान",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "निदान चलाएं",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "निदान पूरा",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "निदान विफल",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "कनेक्शन परीक्षण",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "गति परीक्षण",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "पिंग परीक्षण",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "परीक्षण परिणाम",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "परीक्षण पास",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "परीक्षण विफल",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "परीक्षण प्रगति में",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "परीक्षण पूरा",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "परीक्षण त्रुटि",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "परीक्षण टाइमआउट",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "परीक्षण नेटवर्क त्रुटि",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "परीक्षण सर्वर त्रुटि",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "अज्ञात परीक्षण त्रुटि",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "परीक्षण पुनः प्रयास",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "परीक्षण रद्द करें",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "परीक्षण पुनः प्रारंभ",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "परीक्षण रोकें",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "परीक्षण प्रारंभ",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "परीक्षण रीसेट"
+} 

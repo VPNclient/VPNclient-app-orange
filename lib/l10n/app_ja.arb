@@ -1,0 +1,480 @@
+{
+  "@@locale": "ja",
+  "appTitle": "VPNクライアント",
+  "appDescription": "安全で高速なVPN接続",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "接続済み",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "切断済み",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "接続中",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "切断中",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "すべてのアプリ",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "ホーム",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "サーバー",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "設定",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "接続",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "切断",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "サーバー選択",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "自動接続",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "キルスイッチ",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "プロトコル",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "言語",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "テーマ",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "ダークモード",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "ライトモード",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "システムテーマ",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "アプリについて",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "バージョン",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "戻る",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "保存",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "キャンセル",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "OK",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "エラー",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "成功",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "読み込み中...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "データなし",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "再試行",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "閉じる",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "ヘルプ",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "チュートリアル",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "アプリの使い方を学ぶ",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "接続状態",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "現在のサーバー",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "Ping",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "速度",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "アップロード",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "ダウンロード",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "データ使用量",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "今日",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "今月",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "合計",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "サーバーリスト",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "おすすめ",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "すべてのサーバー",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "サーバーを検索...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "サーバーが利用できません",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "利用不可",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "利用可能",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "メンテナンス",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "接続に失敗しました",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "接続に成功しました",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "切断に成功しました",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "ネットワークエラー",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "サーバーに到達できません",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "接続タイムアウト",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "権限が必要です",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "接続にはVPN権限が必要です",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "最適なサーバー選択には位置情報権限が必要です",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "接続通知には通知権限が必要です",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "プライバシーポリシー",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "利用規約",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "サポート",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "サポートに連絡",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "フィードバック",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "アプリを評価",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "アプリを共有",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "ログをエクスポート",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "ログをクリア",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "ログ",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "診断",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "診断を実行",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "診断完了",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "診断に失敗しました",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "接続テスト",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "速度テスト",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "Pingテスト",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "テスト結果",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "テスト合格",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "テスト失敗",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "テスト実行中",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "テスト完了",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "テストエラー",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "テストタイムアウト",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "テストネットワークエラー",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "テストサーバーエラー",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "テスト不明エラー",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "テスト再試行",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "テストキャンセル",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "テスト再開",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "テスト停止",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "テスト開始",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "テストリセット"
+} 

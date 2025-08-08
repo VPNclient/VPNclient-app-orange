@@ -1,0 +1,480 @@
+{
+  "@@locale": "it",
+  "appTitle": "Client VPN",
+  "appDescription": "Connessione VPN sicura e veloce",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "CONNESSO",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "DISCONNESSO",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "CONNESSIONE",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "DISCONNESSIONE",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "Tutte le applicazioni",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "Home",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "Server",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "Impostazioni",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "Connetti",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "Disconnetti",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "Seleziona server",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "Connessione automatica",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "Interruttore di emergenza",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "Protocollo",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "Lingua",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "Tema",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "Modalità scura",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "Modalità chiara",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "Tema di sistema",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "Informazioni",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "Versione",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "Indietro",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "Salva",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "Annulla",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "OK",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "Errore",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "Successo",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "Caricamento...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "Nessun dato",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "Riprova",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "Chiudi",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "Aiuto",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "Tutorial",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "Impara a usare l'applicazione",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "Stato connessione",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "Server attuale",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "Ping",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "Velocità",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "Upload",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "Download",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "Uso dati",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "Oggi",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "Questo mese",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "Totale",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "Lista server",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "Consigliato",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "Tutti i server",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "Cerca server...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "Nessun server disponibile",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "Non disponibile",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "Disponibile",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "Manutenzione",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "Connessione fallita",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "Connessione riuscita",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "Disconnessione riuscita",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "Errore di rete",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "Server irraggiungibile",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "Timeout connessione",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "Permesso richiesto",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "Permesso VPN richiesto per la connessione",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "Permesso posizione richiesto per la selezione ottimale del server",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "Permesso notifiche richiesto per le notifiche di connessione",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "Informativa sulla privacy",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "Termini di servizio",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "Supporto",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "Contatta supporto",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "Feedback",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "Valuta app",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "Condividi app",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "Esporta log",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "Cancella log",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "Log",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "Diagnostica",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "Esegui diagnostica",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "Diagnostica completata",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "Diagnostica fallita",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "Test connessione",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "Test velocità",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "Test ping",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "Risultati test",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "Test superato",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "Test fallito",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "Test in corso",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "Test completato",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "Errore test",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "Timeout test",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "Errore rete test",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "Errore server test",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "Errore test sconosciuto",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "Riprova test",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "Annulla test",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "Riavvia test",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "Ferma test",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "Avvia test",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "Ripristina test"
+} 
