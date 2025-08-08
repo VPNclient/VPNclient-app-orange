@@ -80,6 +80,80 @@ If you want to try the latest version or modify the app, you can build it yourse
 	```
 	This will launch the app on an emulator or connected device. You can also build release APKs or app bundles using `flutter build apk` / `flutter build appbundle` (Android). There is also a lot of other option to build, you can use `flutter build -h` to list all avaliable options.
 
+## 🔧 Environment Configuration
+
+This project uses environment variables for configuration. Follow these steps to set up your environment:
+
+### 1. Copy Environment Template
+
+Copy the example environment file to create your own configuration:
+
+```bash
+cp env.example .env
+```
+
+### 2. Configure Environment Variables
+
+Edit the `.env` file with your specific configuration values:
+
+```bash
+# VPN Subscription URLs
+SUBSCRIPTION_URL_MAIN=https://your-vpn-subscription-url.com
+
+# Server Configuration
+DEFAULT_SERVER_AUTO=true
+
+# Application Settings
+APP_NAME=VPN Client
+
+# Telegram Configuration
+TELEGRAM_BOT_URL=t.me/VPNclientBot
+
+# Development Settings
+DEBUG_MODE=false
+ENABLE_LOGGING=true
+
+# Feature Flags
+ENABLE_ANALYTICS=false
+```
+
+### 3. Two Modes of Operation
+
+The application supports two modes of operation based on your subscription configuration:
+
+#### Mode 1: Hardcoded Subscription (Optional Telegram Bot)
+If you have a hardcoded subscription URL in your `.env` file:
+- **Telegram Bot**: Optional - users can skip the onboarding process
+- **Onboarding**: Shows a welcome screen with optional Telegram bot access
+- **User Flow**: Users can either get a unique subscription via Telegram bot or proceed directly with the hardcoded subscription
+
+#### Mode 2: No Hardcoded Subscription (Required Telegram Bot)
+If no subscription URLs are configured in `.env`:
+- **Telegram Bot**: Required - users must complete the onboarding process
+- **Onboarding**: Mandatory - users cannot proceed without getting a unique subscription
+- **User Flow**: Users must visit the Telegram bot to receive their unique subscription before using the app
+
+### 4. Environment Variables Reference
+
+| Variable | Description | Required | Default |
+|----------|-------------|----------|---------|
+| `SUBSCRIPTION_URL_MAIN` | Main VPN subscription URL | No* | - |
+| `DEFAULT_SERVER_AUTO` | Enable auto server selection | No | true |
+| `APP_NAME` | Application name | No | "VPN Client" |
+| `TELEGRAM_BOT_URL` | Telegram bot URL for onboarding | No | "t.me/vpnclientbot" |
+| `DEBUG_MODE` | Enable debug mode | No | false |
+| `ENABLE_LOGGING` | Enable logging | No | true |
+| `ENABLE_ANALYTICS` | Enable analytics | No | false |
+
+*Note: If no subscription URLs are provided, the Telegram bot becomes mandatory for onboarding.
+
+### 5. Security Notes
+
+- **Never commit the `.env` file to version control**
+- The `.env` file is already added to `.gitignore`
+- Use `env.example` as a template for your configuration
+- Keep sensitive data like API keys and subscription URLs secure
+
 ## Usage Guide
 
 Once the VPNclient App is installed and running, using it is straightforward:
