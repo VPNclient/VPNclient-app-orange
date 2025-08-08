@@ -150,7 +150,7 @@ class AppTheme {
       ),
 
       // Диалоги
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: AppColors.lightCardBackground,
         elevation: AppDimensions.cardElevation,
         shape: RoundedRectangleBorder(
@@ -413,7 +413,7 @@ class AppTheme {
       ),
 
       // Диалоги
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: AppColors.darkCardBackground,
         elevation: AppDimensions.cardElevation,
         shape: RoundedRectangleBorder(
