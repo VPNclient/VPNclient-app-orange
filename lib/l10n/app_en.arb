@@ -1,0 +1,1140 @@
+{
+  "@@locale": "en",
+  "appTitle": "VPN Client",
+  "appDescription": "Secure and fast VPN connection",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "CONNECTED",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "DISCONNECTED",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "CONNECTING",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "DISCONNECTING",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "All Applications",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "Home",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "Servers",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "Settings",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "Connect",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "Disconnect",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "Select Server",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "Auto Connect",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "Kill Switch",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "Protocol",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "Language",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "Theme",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "Dark Mode",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "Light Mode",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "System Theme",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "About",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "Version",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "Back",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "Save",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "Cancel",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "OK",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "Error",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "Success",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "Loading...",
+  
+  "@no_data": {
+    "description": "No data available"
+  },
+  "no_data": "No data available",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "Retry",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "Close",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "Help",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "Tutorial",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "Learn how to use the app",
+  
+  "@connection_status": {
+    "description": "Connection status"
+  },
+  "connection_status": "Connection Status",
+  
+  "@current_server": {
+    "description": "Current server"
+  },
+  "current_server": "Current Server",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "Ping",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "Speed",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "Upload",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "Download",
+  
+  "@data_usage": {
+    "description": "Data usage"
+  },
+  "data_usage": "Data Usage",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "Today",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "This Month",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "Total",
+  
+  "@server_list": {
+    "description": "Server list"
+  },
+  "server_list": "Server List",
+  
+  "@recommended": {
+    "description": "Recommended servers"
+  },
+  "recommended": "Recommended",
+  
+  "@all_servers": {
+    "description": "All servers"
+  },
+  "all_servers": "All Servers",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "Search servers...",
+  
+  "@no_servers": {
+    "description": "No servers available"
+  },
+  "no_servers": "No servers available",
+  
+  "@server_offline": {
+    "description": "Server offline status"
+  },
+  "server_offline": "Offline",
+  
+  "@server_online": {
+    "description": "Server online status"
+  },
+  "server_online": "Online",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance status"
+  },
+  "server_maintenance": "Maintenance",
+  
+  "@connection_failed": {
+    "description": "Connection failed message"
+  },
+  "connection_failed": "Connection failed",
+  
+  "@connection_successful": {
+    "description": "Connection successful message"
+  },
+  "connection_successful": "Connection successful",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful message"
+  },
+  "disconnection_successful": "Disconnection successful",
+  
+  "@network_error": {
+    "description": "Network error message"
+  },
+  "network_error": "Network error",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable message"
+  },
+  "server_unreachable": "Server unreachable",
+  
+  "@timeout_error": {
+    "description": "Timeout error message"
+  },
+  "timeout_error": "Connection timeout",
+  
+  "@permission_required": {
+    "description": "Permission required message"
+  },
+  "permission_required": "Permission required",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required message"
+  },
+  "vpn_permission_required": "VPN permission is required to connect",
+  
+  "@location_permission_required": {
+    "description": "Location permission required message"
+  },
+  "location_permission_required": "Location permission is required for optimal server selection",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required message"
+  },
+  "notification_permission_required": "Notification permission is required for connection alerts",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy"
+  },
+  "privacy_policy": "Privacy Policy",
+  
+  "@terms_of_service": {
+    "description": "Terms of service"
+  },
+  "terms_of_service": "Terms of Service",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "Support",
+  
+  "@contact_support": {
+    "description": "Contact support"
+  },
+  "contact_support": "Contact Support",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "Feedback",
+  
+  "@rate_app": {
+    "description": "Rate app"
+  },
+  "rate_app": "Rate App",
+  
+  "@share_app": {
+    "description": "Share app"
+  },
+  "share_app": "Share App",
+  
+  "@export_logs": {
+    "description": "Export logs"
+  },
+  "export_logs": "Export Logs",
+  
+  "@clear_logs": {
+    "description": "Clear logs"
+  },
+  "clear_logs": "Clear Logs",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "Logs",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "Diagnostics",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics"
+  },
+  "run_diagnostics": "Run Diagnostics",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete"
+  },
+  "diagnostics_complete": "Diagnostics Complete",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed"
+  },
+  "diagnostics_failed": "Diagnostics Failed",
+  
+  "@connection_test": {
+    "description": "Connection test"
+  },
+  "connection_test": "Connection Test",
+  
+  "@speed_test": {
+    "description": "Speed test"
+  },
+  "speed_test": "Speed Test",
+  
+  "@ping_test": {
+    "description": "Ping test"
+  },
+  "ping_test": "Ping Test",
+  
+  "@test_results": {
+    "description": "Test results"
+  },
+  "test_results": "Test Results",
+  
+  "@test_passed": {
+    "description": "Test passed"
+  },
+  "test_passed": "Test Passed",
+  
+  "@test_failed": {
+    "description": "Test failed"
+  },
+  "test_failed": "Test Failed",
+  
+  "@test_in_progress": {
+    "description": "Test in progress"
+  },
+  "test_in_progress": "Test in Progress",
+  
+  "@test_complete": {
+    "description": "Test complete"
+  },
+  "test_complete": "Test Complete",
+  
+  "@test_error": {
+    "description": "Test error"
+  },
+  "test_error": "Test Error",
+  
+  "@test_timeout": {
+    "description": "Test timeout"
+  },
+  "test_timeout": "Test Timeout",
+  
+  "@test_network_error": {
+    "description": "Test network error"
+  },
+  "test_network_error": "Test Network Error",
+  
+  "@test_server_error": {
+    "description": "Test server error"
+  },
+  "test_server_error": "Test Server Error",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error"
+  },
+  "test_unknown_error": "Test Unknown Error",
+  
+  "@test_retry": {
+    "description": "Test retry"
+  },
+  "test_retry": "Test Retry",
+  
+  "@test_cancel": {
+    "description": "Test cancel"
+  },
+  "test_cancel": "Test Cancel",
+  
+  "@test_restart": {
+    "description": "Test restart"
+  },
+  "test_restart": "Test Restart",
+  
+  "@test_stop": {
+    "description": "Test stop"
+  },
+  "test_stop": "Test Stop",
+  
+  "@test_start": {
+    "description": "Test start"
+  },
+  "test_start": "Test Start",
+  
+  "@test_reset": {
+    "description": "Test reset"
+  },
+  "test_reset": "Test Reset",
+  
+  "@test_clear": {
+    "description": "Test clear"
+  },
+  "test_clear": "Test Clear",
+  
+  "@test_export": {
+    "description": "Test export"
+  },
+  "test_export": "Test Export",
+  
+  "@test_import": {
+    "description": "Test import"
+  },
+  "test_import": "Test Import",
+  
+  "@test_backup": {
+    "description": "Test backup"
+  },
+  "test_backup": "Test Backup",
+  
+  "@test_restore": {
+    "description": "Test restore"
+  },
+  "test_restore": "Test Restore",
+  
+  "@test_sync": {
+    "description": "Test sync"
+  },
+  "test_sync": "Test Sync",
+  
+  "@test_upload": {
+    "description": "Test upload"
+  },
+  "test_upload": "Test Upload",
+  
+  "@test_download": {
+    "description": "Test download"
+  },
+  "test_download": "Test Download",
+  
+  "@test_install": {
+    "description": "Test install"
+  },
+  "test_install": "Test Install",
+  
+  "@test_uninstall": {
+    "description": "Test uninstall"
+  },
+  "test_uninstall": "Test Uninstall",
+  
+  "@test_update": {
+    "description": "Test update"
+  },
+  "test_update": "Test Update",
+  
+  "@test_upgrade": {
+    "description": "Test upgrade"
+  },
+  "test_upgrade": "Test Upgrade",
+  
+  "@test_downgrade": {
+    "description": "Test downgrade"
+  },
+  "test_downgrade": "Test Downgrade",
+  
+  "@test_rollback": {
+    "description": "Test rollback"
+  },
+  "test_rollback": "Test Rollback",
+  
+  "@test_configure": {
+    "description": "Test configure"
+  },
+  "test_configure": "Test Configure",
+  
+  "@test_optimize": {
+    "description": "Test optimize"
+  },
+  "test_optimize": "Test Optimize",
+  
+  "@test_repair": {
+    "description": "Test repair"
+  },
+  "test_repair": "Test Repair",
+  
+  "@test_clean": {
+    "description": "Test clean"
+  },
+  "test_clean": "Test Clean",
+  
+  "@test_validate": {
+    "description": "Test validate"
+  },
+  "test_validate": "Test Validate",
+  
+  "@test_verify": {
+    "description": "Test verify"
+  },
+  "test_verify": "Test Verify",
+  
+  "@test_check": {
+    "description": "Test check"
+  },
+  "test_check": "Test Check",
+  
+  "@test_scan": {
+    "description": "Test scan"
+  },
+  "test_scan": "Test Scan",
+  
+  "@test_monitor": {
+    "description": "Test monitor"
+  },
+  "test_monitor": "Test Monitor",
+  
+  "@test_log": {
+    "description": "Test log"
+  },
+  "test_log": "Test Log",
+  
+  "@test_debug": {
+    "description": "Test debug"
+  },
+  "test_debug": "Test Debug",
+  
+  "@test_trace": {
+    "description": "Test trace"
+  },
+  "test_trace": "Test Trace",
+  
+  "@test_profile": {
+    "description": "Test profile"
+  },
+  "test_profile": "Test Profile",
+  
+  "@test_benchmark": {
+    "description": "Test benchmark"
+  },
+  "test_benchmark": "Test Benchmark",
+  
+  "@test_stress": {
+    "description": "Test stress"
+  },
+  "test_stress": "Test Stress",
+  
+  "@test_load": {
+    "description": "Test load"
+  },
+  "test_load": "Test Load",
+  
+  "@test_performance": {
+    "description": "Test performance"
+  },
+  "test_performance": "Test Performance",
+  
+  "@test_security": {
+    "description": "Test security"
+  },
+  "test_security": "Test Security",
+  
+  "@test_compatibility": {
+    "description": "Test compatibility"
+  },
+  "test_compatibility": "Test Compatibility",
+  
+  "@test_reliability": {
+    "description": "Test reliability"
+  },
+  "test_reliability": "Test Reliability",
+  
+  "@test_stability": {
+    "description": "Test stability"
+  },
+  "test_stability": "Test Stability",
+  
+  "@test_availability": {
+    "description": "Test availability"
+  },
+  "test_availability": "Test Availability",
+  
+  "@test_scalability": {
+    "description": "Test scalability"
+  },
+  "test_scalability": "Test Scalability",
+  
+  "@test_maintainability": {
+    "description": "Test maintainability"
+  },
+  "test_maintainability": "Test Maintainability",
+  
+  "@test_portability": {
+    "description": "Test portability"
+  },
+  "test_portability": "Test Portability",
+  
+  "@test_usability": {
+    "description": "Test usability"
+  },
+  "test_usability": "Test Usability",
+  
+  "@test_accessibility": {
+    "description": "Test accessibility"
+  },
+  "test_accessibility": "Test Accessibility",
+  
+  "@test_internationalization": {
+    "description": "Test internationalization"
+  },
+  "test_internationalization": "Test Internationalization",
+  
+  "@test_localization": {
+    "description": "Test localization"
+  },
+  "test_localization": "Test Localization",
+  
+  "@test_customization": {
+    "description": "Test customization"
+  },
+  "test_customization": "Test Customization",
+  
+  "@test_configuration": {
+    "description": "Test configuration"
+  },
+  "test_configuration": "Test Configuration",
+  
+  "@test_setup": {
+    "description": "Test setup"
+  },
+  "test_setup": "Test Setup",
+  
+  "@test_teardown": {
+    "description": "Test teardown"
+  },
+  "test_teardown": "Test Teardown",
+  
+  "@test_initialization": {
+    "description": "Test initialization"
+  },
+  "test_initialization": "Test Initialization",
+  
+  "@test_cleanup": {
+    "description": "Test cleanup"
+  },
+  "test_cleanup": "Test Cleanup",
+  
+  "@test_finalization": {
+    "description": "Test finalization"
+  },
+  "test_finalization": "Test Finalization",
+  
+  "@test_termination": {
+    "description": "Test termination"
+  },
+  "test_termination": "Test Termination",
+  
+  "@test_abort": {
+    "description": "Test abort"
+  },
+  "test_abort": "Test Abort",
+  
+  "@test_suspend": {
+    "description": "Test suspend"
+  },
+  "test_suspend": "Test Suspend",
+  
+  "@test_resume": {
+    "description": "Test resume"
+  },
+  "test_resume": "Test Resume",
+  
+  "@test_pause": {
+    "description": "Test pause"
+  },
+  "test_pause": "Test Pause",
+  
+  "@test_continue": {
+    "description": "Test continue"
+  },
+  "test_continue": "Test Continue",
+  
+  "@test_skip": {
+    "description": "Test skip"
+  },
+  "test_skip": "Test Skip",
+  
+  "@test_ignore": {
+    "description": "Test ignore"
+  },
+  "test_ignore": "Test Ignore",
+  
+  "@test_disable": {
+    "description": "Test disable"
+  },
+  "test_disable": "Test Disable",
+  
+  "@test_enable": {
+    "description": "Test enable"
+  },
+  "test_enable": "Test Enable",
+  
+  "@test_activate": {
+    "description": "Test activate"
+  },
+  "test_activate": "Test Activate",
+  
+  "@test_deactivate": {
+    "description": "Test deactivate"
+  },
+  "test_deactivate": "Test Deactivate",
+  
+  "@test_lock": {
+    "description": "Test lock"
+  },
+  "test_lock": "Test Lock",
+  
+  "@test_unlock": {
+    "description": "Test unlock"
+  },
+  "test_unlock": "Test Unlock",
+  
+  "@test_secure": {
+    "description": "Test secure"
+  },
+  "test_secure": "Test Secure",
+  
+  "@test_unsecure": {
+    "description": "Test unsecure"
+  },
+  "test_unsecure": "Test Unsecure",
+  
+  "@test_encrypt": {
+    "description": "Test encrypt"
+  },
+  "test_encrypt": "Test Encrypt",
+  
+  "@test_decrypt": {
+    "description": "Test decrypt"
+  },
+  "test_decrypt": "Test Decrypt",
+  
+  "@test_hash": {
+    "description": "Test hash"
+  },
+  "test_hash": "Test Hash",
+  
+  "@test_sign": {
+    "description": "Test sign"
+  },
+  "test_sign": "Test Sign",
+  
+  "@test_verify_signature": {
+    "description": "Test verify signature"
+  },
+  "test_verify_signature": "Test Verify Signature",
+  
+  "@test_authenticate": {
+    "description": "Test authenticate"
+  },
+  "test_authenticate": "Test Authenticate",
+  
+  "@test_authorize": {
+    "description": "Test authorize"
+  },
+  "test_authorize": "Test Authorize",
+  
+  "@test_validate_token": {
+    "description": "Test validate token"
+  },
+  "test_validate_token": "Test Validate Token",
+  
+  "@test_refresh_token": {
+    "description": "Test refresh token"
+  },
+  "test_refresh_token": "Test Refresh Token",
+  
+  "@test_revoke_token": {
+    "description": "Test revoke token"
+  },
+  "test_revoke_token": "Test Revoke Token",
+  
+  "@test_generate_key": {
+    "description": "Test generate key"
+  },
+  "test_generate_key": "Test Generate Key",
+  
+  "@test_import_key": {
+    "description": "Test import key"
+  },
+  "test_import_key": "Test Import Key",
+  
+  "@test_export_key": {
+    "description": "Test export key"
+  },
+  "test_export_key": "Test Export Key",
+  
+  "@test_backup_key": {
+    "description": "Test backup key"
+  },
+  "test_backup_key": "Test Backup Key",
+  
+  "@test_restore_key": {
+    "description": "Test restore key"
+  },
+  "test_restore_key": "Test Restore Key",
+  
+  "@test_delete_key": {
+    "description": "Test delete key"
+  },
+  "test_delete_key": "Test Delete Key",
+  
+  "@test_rotate_key": {
+    "description": "Test rotate key"
+  },
+  "test_rotate_key": "Test Rotate Key",
+  
+  "@test_expire_key": {
+    "description": "Test expire key"
+  },
+  "test_expire_key": "Test Expire Key",
+  
+  "@test_renew_key": {
+    "description": "Test renew key"
+  },
+  "test_renew_key": "Test Renew Key",
+  
+  "@test_revoke_key": {
+    "description": "Test revoke key"
+  },
+  "test_revoke_key": "Test Revoke Key",
+  
+  "@test_suspend_key": {
+    "description": "Test suspend key"
+  },
+  "test_suspend_key": "Test Suspend Key",
+  
+  "@test_resume_key": {
+    "description": "Test resume key"
+  },
+  "test_resume_key": "Test Resume Key",
+  
+  "@test_activate_key": {
+    "description": "Test activate key"
+  },
+  "test_activate_key": "Test Activate Key",
+  
+  "@test_deactivate_key": {
+    "description": "Test deactivate key"
+  },
+  "test_deactivate_key": "Test Deactivate Key",
+  
+  "@test_lock_key": {
+    "description": "Test lock key"
+  },
+  "test_lock_key": "Test Lock Key",
+  
+  "@test_unlock_key": {
+    "description": "Test unlock key"
+  },
+  "test_unlock_key": "Test Unlock Key",
+  
+  "@test_secure_key": {
+    "description": "Test secure key"
+  },
+  "test_secure_key": "Test Secure Key",
+  
+  "@test_unsecure_key": {
+    "description": "Test unsecure key"
+  },
+  "test_unsecure_key": "Test Unsecure Key",
+  
+  "@test_encrypt_key": {
+    "description": "Test encrypt key"
+  },
+  "test_encrypt_key": "Test Encrypt Key",
+  
+  "@test_decrypt_key": {
+    "description": "Test decrypt key"
+  },
+  "test_decrypt_key": "Test Decrypt Key",
+  
+  "@test_hash_key": {
+    "description": "Test hash key"
+  },
+  "test_hash_key": "Test Hash Key",
+  
+  "@test_sign_key": {
+    "description": "Test sign key"
+  },
+  "test_sign_key": "Test Sign Key",
+  
+  "@test_verify_key_signature": {
+    "description": "Test verify key signature"
+  },
+  "test_verify_key_signature": "Test Verify Key Signature",
+  
+  "@test_authenticate_key": {
+    "description": "Test authenticate key"
+  },
+  "test_authenticate_key": "Test Authenticate Key",
+  
+  "@test_authorize_key": {
+    "description": "Test authorize key"
+  },
+  "test_authorize_key": "Test Authorize Key",
+  
+  "@test_validate_key_token": {
+    "description": "Test validate key token"
+  },
+  "test_validate_key_token": "Test Validate Key Token",
+  
+  "@test_refresh_key_token": {
+    "description": "Test refresh key token"
+  },
+  "test_refresh_key_token": "Test Refresh Key Token",
+  
+  "@test_revoke_key_token": {
+    "description": "Test revoke key token"
+  },
+  "test_revoke_key_token": "Test Revoke Key Token",
+  
+  "@test_generate_key_pair": {
+    "description": "Test generate key pair"
+  },
+  "test_generate_key_pair": "Test Generate Key Pair",
+  
+  "@test_import_key_pair": {
+    "description": "Test import key pair"
+  },
+  "test_import_key_pair": "Test Import Key Pair",
+  
+  "@test_export_key_pair": {
+    "description": "Test export key pair"
+  },
+  "test_export_key_pair": "Test Export Key Pair",
+  
+  "@test_backup_key_pair": {
+    "description": "Test backup key pair"
+  },
+  "test_backup_key_pair": "Test Backup Key Pair",
+  
+  "@test_restore_key_pair": {
+    "description": "Test restore key pair"
+  },
+  "test_restore_key_pair": "Test Restore Key Pair",
+  
+  "@test_delete_key_pair": {
+    "description": "Test delete key pair"
+  },
+  "test_delete_key_pair": "Test Delete Key Pair",
+  
+  "@test_rotate_key_pair": {
+    "description": "Test rotate key pair"
+  },
+  "test_rotate_key_pair": "Test Rotate Key Pair",
+  
+  "@test_expire_key_pair": {
+    "description": "Test expire key pair"
+  },
+  "test_expire_key_pair": "Test Expire Key Pair",
+  
+  "@test_renew_key_pair": {
+    "description": "Test renew key pair"
+  },
+  "test_renew_key_pair": "Test Renew Key Pair",
+  
+  "@test_revoke_key_pair": {
+    "description": "Test revoke key pair"
+  },
+  "test_revoke_key_pair": "Test Revoke Key Pair",
+  
+  "@test_suspend_key_pair": {
+    "description": "Test suspend key pair"
+  },
+  "test_suspend_key_pair": "Test Suspend Key Pair",
+  
+  "@test_resume_key_pair": {
+    "description": "Test resume key pair"
+  },
+  "test_resume_key_pair": "Test Resume Key Pair",
+  
+  "@test_activate_key_pair": {
+    "description": "Test activate key pair"
+  },
+  "test_activate_key_pair": "Test Activate Key Pair",
+  
+  "@test_deactivate_key_pair": {
+    "description": "Test deactivate key pair"
+  },
+  "test_deactivate_key_pair": "Test Deactivate Key Pair",
+  
+  "@test_lock_key_pair": {
+    "description": "Test lock key pair"
+  },
+  "test_lock_key_pair": "Test Lock Key Pair",
+  
+  "@test_unlock_key_pair": {
+    "description": "Test unlock key pair"
+  },
+  "test_unlock_key_pair": "Test Unlock Key Pair",
+  
+  "@test_secure_key_pair": {
+    "description": "Test secure key pair"
+  },
+  "test_secure_key_pair": "Test Secure Key Pair",
+  
+  "@test_unsecure_key_pair": {
+    "description": "Test unsecure key pair"
+  },
+  "test_unsecure_key_pair": "Test Unsecure Key Pair",
+  
+  "@test_encrypt_key_pair": {
+    "description": "Test encrypt key pair"
+  },
+  "test_encrypt_key_pair": "Test Encrypt Key Pair",
+  
+  "@test_decrypt_key_pair": {
+    "description": "Test decrypt key pair"
+  },
+  "test_decrypt_key_pair": "Test Decrypt Key Pair",
+  
+  "@test_hash_key_pair": {
+    "description": "Test hash key pair"
+  },
+  "test_hash_key_pair": "Test Hash Key Pair",
+  
+  "@test_sign_key_pair": {
+    "description": "Test sign key pair"
+  },
+  "test_sign_key_pair": "Test Sign Key Pair",
+  
+  "@test_verify_key_pair_signature": {
+    "description": "Test verify key pair signature"
+  },
+  "test_verify_key_pair_signature": "Test Verify Key Pair Signature",
+  
+  "@test_authenticate_key_pair": {
+    "description": "Test authenticate key pair"
+  },
+  "test_authenticate_key_pair": "Test Authenticate Key Pair",
+  
+  "@test_authorize_key_pair": {
+    "description": "Test authorize key pair"
+  },
+  "test_authorize_key_pair": "Test Authorize Key Pair",
+  
+  "@test_validate_key_pair_token": {
+    "description": "Test validate key pair token"
+  },
+  "test_validate_key_pair_token": "Test Validate Key Pair Token",
+  
+  "@test_refresh_key_pair_token": {
+    "description": "Test refresh key pair token"
+  },
+  "test_refresh_key_pair_token": "Test Refresh Key Pair Token",
+  
+  "@test_revoke_key_pair_token": {
+    "description": "Test revoke key pair token"
+  },
+  "test_revoke_key_pair_token": "Test Revoke Key Pair Token"
+} 
