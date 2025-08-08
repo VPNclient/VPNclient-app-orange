@@ -171,11 +171,13 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: TextButton(
-                      onPressed: _skipOnboarding,
-                      child: const Text(
+                      onPressed: ConfigService.isTelegramBotOptional ? _skipOnboarding : null,
+                      child: Text(
                         'Skip',
                         style: TextStyle(
-                          color: Color(0xFF6C757D),
+                          color: ConfigService.isTelegramBotOptional 
+                            ? const Color(0xFF6C757D)
+                            : const Color(0xFF6C757D).withOpacity(0.3),
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -248,8 +250,11 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              currentStepData.isWelcome ? 'Go to telegram bot' : 
-                              currentStepData.isLast ? 'Get Started' : 'Next',
+                              currentStepData.isWelcome 
+                                ? (ConfigService.requiresTelegramBot 
+                                    ? 'Go to telegram bot' 
+                                    : 'Go to telegram bot (optional)')
+                                : (currentStepData.isLast ? 'Get Started' : 'Next'),
                               style: const TextStyle(
                                 fontWeight: FontWeight.w600,
                               ),

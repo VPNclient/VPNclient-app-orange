@@ -60,11 +60,10 @@ class ServerListItem extends StatelessWidget {
                     SvgPicture.asset(icon!, width: 52, height: 52),
                   if (icon == null) const SizedBox(width: 16),
                   const SizedBox(width: 8), // spacing between icon and text
-                  Container(
-                    alignment: Alignment.center,
-                    height: 52,
-                    child: Flexible(
-                      // Let text flexibly use remaining space
+                  Expanded(
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 52,
                       child: Text(
                         text,
                         overflow: TextOverflow.ellipsis,
