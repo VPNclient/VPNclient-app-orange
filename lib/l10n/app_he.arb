@@ -1,0 +1,480 @@
+{
+  "@@locale": "he",
+  "appTitle": "לקוח VPN",
+  "appDescription": "חיבור VPN מאובטח ומהיר",
+  
+  "@connected": {
+    "description": "VPN connected status"
+  },
+  "connected": "מחובר",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
+  "disconnected": "מנותק",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
+  "connecting": "מתחבר",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
+  "disconnecting": "מתנתק",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
+  "all_apps": "כל האפליקציות",
+  
+  "@home": {
+    "description": "Home tab"
+  },
+  "home": "בית",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
+  "servers": "שרתים",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
+  "settings": "הגדרות",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
+  "connect": "התחבר",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
+  "disconnect": "נתק",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
+  "select_server": "בחר שרת",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
+  "auto_connect": "התחברות אוטומטית",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
+  "kill_switch": "מפסק חירום",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
+  "protocol": "פרוטוקול",
+  
+  "@language": {
+    "description": "Language setting"
+  },
+  "language": "שפה",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
+  "theme": "ערכת נושא",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
+  "dark_mode": "מצב כהה",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
+  "light_mode": "מצב בהיר",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
+  "system_theme": "ערכת נושא מערכת",
+  
+  "@about": {
+    "description": "About section"
+  },
+  "about": "אודות",
+  
+  "@version": {
+    "description": "Version text"
+  },
+  "version": "גרסה",
+  
+  "@back": {
+    "description": "Back button"
+  },
+  "back": "חזור",
+  
+  "@save": {
+    "description": "Save button"
+  },
+  "save": "שמור",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "cancel": "ביטול",
+  
+  "@ok": {
+    "description": "OK button"
+  },
+  "ok": "אישור",
+  
+  "@error": {
+    "description": "Error text"
+  },
+  "error": "שגיאה",
+  
+  "@success": {
+    "description": "Success text"
+  },
+  "success": "הצלחה",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
+  "loading": "טוען...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
+  "no_data": "אין נתונים",
+  
+  "@retry": {
+    "description": "Retry button"
+  },
+  "retry": "נסה שוב",
+  
+  "@close": {
+    "description": "Close button"
+  },
+  "close": "סגור",
+  
+  "@help": {
+    "description": "Help text"
+  },
+  "help": "עזרה",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
+  "tutorial": "מדריך",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
+  "tutorial_description": "למד כיצד להשתמש באפליקציה",
+  
+  "@connection_status": {
+    "description": "Connection status text"
+  },
+  "connection_status": "סטטוס חיבור",
+  
+  "@current_server": {
+    "description": "Current server text"
+  },
+  "current_server": "שרת נוכחי",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
+  "ping": "פינג",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
+  "speed": "מהירות",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
+  "upload": "העלאה",
+  
+  "@download": {
+    "description": "Download text"
+  },
+  "download": "הורדה",
+  
+  "@data_usage": {
+    "description": "Data usage text"
+  },
+  "data_usage": "שימוש בנתונים",
+  
+  "@today": {
+    "description": "Today text"
+  },
+  "today": "היום",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
+  "this_month": "החודש",
+  
+  "@total": {
+    "description": "Total text"
+  },
+  "total": "סה\"כ",
+  
+  "@server_list": {
+    "description": "Server list text"
+  },
+  "server_list": "רשימת שרתים",
+  
+  "@recommended": {
+    "description": "Recommended text"
+  },
+  "recommended": "מומלץ",
+  
+  "@all_servers": {
+    "description": "All servers text"
+  },
+  "all_servers": "כל השרתים",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
+  "search_servers": "חפש שרתים...",
+  
+  "@no_servers": {
+    "description": "No servers available text"
+  },
+  "no_servers": "אין שרתים זמינים",
+  
+  "@server_offline": {
+    "description": "Server offline text"
+  },
+  "server_offline": "לא זמין",
+  
+  "@server_online": {
+    "description": "Server online text"
+  },
+  "server_online": "זמין",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance text"
+  },
+  "server_maintenance": "תחזוקה",
+  
+  "@connection_failed": {
+    "description": "Connection failed text"
+  },
+  "connection_failed": "החיבור נכשל",
+  
+  "@connection_successful": {
+    "description": "Connection successful text"
+  },
+  "connection_successful": "החיבור הצליח",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful text"
+  },
+  "disconnection_successful": "הניתוק הצליח",
+  
+  "@network_error": {
+    "description": "Network error text"
+  },
+  "network_error": "שגיאת רשת",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable text"
+  },
+  "server_unreachable": "השרת לא נגיש",
+  
+  "@timeout_error": {
+    "description": "Timeout error text"
+  },
+  "timeout_error": "פג תוקף החיבור",
+  
+  "@permission_required": {
+    "description": "Permission required text"
+  },
+  "permission_required": "נדרשת הרשאה",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required text"
+  },
+  "vpn_permission_required": "נדרשת הרשאת VPN לחיבור",
+  
+  "@location_permission_required": {
+    "description": "Location permission required text"
+  },
+  "location_permission_required": "נדרשת הרשאת מיקום לבחירת שרת אופטימלי",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required text"
+  },
+  "notification_permission_required": "נדרשת הרשאת התראות להתראות חיבור",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy text"
+  },
+  "privacy_policy": "מדיניות פרטיות",
+  
+  "@terms_of_service": {
+    "description": "Terms of service text"
+  },
+  "terms_of_service": "תנאי שירות",
+  
+  "@support": {
+    "description": "Support text"
+  },
+  "support": "תמיכה",
+  
+  "@contact_support": {
+    "description": "Contact support text"
+  },
+  "contact_support": "צור קשר עם התמיכה",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
+  "feedback": "משוב",
+  
+  "@rate_app": {
+    "description": "Rate app text"
+  },
+  "rate_app": "דרג אפליקציה",
+  
+  "@share_app": {
+    "description": "Share app text"
+  },
+  "share_app": "שתף אפליקציה",
+  
+  "@export_logs": {
+    "description": "Export logs text"
+  },
+  "export_logs": "ייצא לוגים",
+  
+  "@clear_logs": {
+    "description": "Clear logs text"
+  },
+  "clear_logs": "נקה לוגים",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
+  "logs": "לוגים",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
+  "diagnostics": "אבחון",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics text"
+  },
+  "run_diagnostics": "הפעל אבחון",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete text"
+  },
+  "diagnostics_complete": "האבחון הושלם",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed text"
+  },
+  "diagnostics_failed": "האבחון נכשל",
+  
+  "@connection_test": {
+    "description": "Connection test text"
+  },
+  "connection_test": "בדיקת חיבור",
+  
+  "@speed_test": {
+    "description": "Speed test text"
+  },
+  "speed_test": "בדיקת מהירות",
+  
+  "@ping_test": {
+    "description": "Ping test text"
+  },
+  "ping_test": "בדיקת פינג",
+  
+  "@test_results": {
+    "description": "Test results text"
+  },
+  "test_results": "תוצאות הבדיקה",
+  
+  "@test_passed": {
+    "description": "Test passed text"
+  },
+  "test_passed": "הבדיקה עברה",
+  
+  "@test_failed": {
+    "description": "Test failed text"
+  },
+  "test_failed": "הבדיקה נכשלה",
+  
+  "@test_in_progress": {
+    "description": "Test in progress text"
+  },
+  "test_in_progress": "הבדיקה מתבצעת",
+  
+  "@test_complete": {
+    "description": "Test complete text"
+  },
+  "test_complete": "הבדיקה הושלמה",
+  
+  "@test_error": {
+    "description": "Test error text"
+  },
+  "test_error": "שגיאת בדיקה",
+  
+  "@test_timeout": {
+    "description": "Test timeout text"
+  },
+  "test_timeout": "פג תוקף הבדיקה",
+  
+  "@test_network_error": {
+    "description": "Test network error text"
+  },
+  "test_network_error": "שגיאת רשת בבדיקה",
+  
+  "@test_server_error": {
+    "description": "Test server error text"
+  },
+  "test_server_error": "שגיאת שרת בבדיקה",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error text"
+  },
+  "test_unknown_error": "שגיאת בדיקה לא ידועה",
+  
+  "@test_retry": {
+    "description": "Test retry text"
+  },
+  "test_retry": "נסה בדיקה שוב",
+  
+  "@test_cancel": {
+    "description": "Test cancel text"
+  },
+  "test_cancel": "בטל בדיקה",
+  
+  "@test_restart": {
+    "description": "Test restart text"
+  },
+  "test_restart": "הפעל בדיקה מחדש",
+  
+  "@test_stop": {
+    "description": "Test stop text"
+  },
+  "test_stop": "עצור בדיקה",
+  
+  "@test_start": {
+    "description": "Test start text"
+  },
+  "test_start": "התחל בדיקה",
+  
+  "@test_reset": {
+    "description": "Test reset text"
+  },
+  "test_reset": "אפס בדיקה"
+} 
