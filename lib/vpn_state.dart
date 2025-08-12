@@ -1,14 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_v2ray/flutter_v2ray.dart';
-
-enum ConnectionStatus {
-  disconnected,
-  connected,
-  reconnecting,
-  disconnecting,
-  connecting,
-}
+import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 
 class VpnState with ChangeNotifier {
   ConnectionStatus _connectionStatus = ConnectionStatus.disconnected;
@@ -19,8 +11,10 @@ class VpnState with ChangeNotifier {
   String get connectionTimeText => _connectionTimeText;
 
   VpnState() {
-    // Initializing V2Ray when creating a provider
-    FlutterV2ray(onStatusChanged: (status) {}).initializeV2Ray();
+    // Initialize VPN client engine
+    VpnclientEngineFlutter.initialize(onStatusChanged: (status) {
+      setConnectionStatus(status);
+    });
   }
 
   void setConnectionStatus(ConnectionStatus status) {
