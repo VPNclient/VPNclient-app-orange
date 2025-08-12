@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vpn_client/pages/apps/apps_list_item.dart';
 import 'package:vpn_client/pages/servers/servers_list_item.dart';
 import 'package:vpn_client/localization_service.dart';
+import 'package:vpn_client/theme/app_colors.dart';
 import 'dart:convert';
 
 class SearchDialog extends StatefulWidget {
@@ -103,6 +104,7 @@ class _SearchDialogState extends State<SearchDialog> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     final isQueryEmpty = _searchController.text.isEmpty;
     final hasRecentSearches = _recentlySearchedItems.isNotEmpty;
 
@@ -117,7 +119,9 @@ class _SearchDialogState extends State<SearchDialog> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.surface,
+          color: isDark 
+              ? AppColors.darkBackgroundPrimary 
+              : AppColors.lightBackgroundPrimary,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(20),
             topRight: Radius.circular(20),
@@ -141,7 +145,9 @@ class _SearchDialogState extends State<SearchDialog> {
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
-                            color: Theme.of(context).colorScheme.primary,
+                            color: isDark 
+                                ? AppColors.darkTextPrimary 
+                                : AppColors.lightTextPrimary,
                           ),
                         ),
                       ],
@@ -158,8 +164,9 @@ class _SearchDialogState extends State<SearchDialog> {
                               LocalizationService.to('done'),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.orange,
+                                color: AppColors.primary,
                                 fontSize: 16,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -177,8 +184,9 @@ class _SearchDialogState extends State<SearchDialog> {
                               LocalizationService.to('cancel'),
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: Colors.orange,
+                                color: AppColors.primary,
                                 fontSize: 16,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                           ),
@@ -189,11 +197,15 @@ class _SearchDialogState extends State<SearchDialog> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
+                  color: isDark 
+                      ? AppColors.darkCardBackground 
+                      : AppColors.lightCardBackground,
+                  borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withAlpha((255 * 0.2).toInt()),
+                      color: isDark 
+                          ? AppColors.darkCardShadow.withOpacity(0.2)
+                          : AppColors.lightCardShadow.withOpacity(0.2),
                       blurRadius: 10,
                       offset: const Offset(0, 1),
                     ),
@@ -202,54 +214,64 @@ class _SearchDialogState extends State<SearchDialog> {
                 margin: const EdgeInsets.symmetric(horizontal: 14),
                 child: TextField(
                   style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
+                    color: isDark 
+                        ? AppColors.darkTextPrimary 
+                        : AppColors.lightTextPrimary,
                   ),
                   controller: _searchController,
                   decoration: InputDecoration(
                     hintText: widget.placeholder,
-                    hintStyle: const TextStyle(color: Colors.grey),
+                    hintStyle: TextStyle(
+                      color: isDark 
+                          ? AppColors.darkTextTertiary 
+                          : AppColors.lightTextTertiary,
+                    ),
                     suffixIcon: Icon(
                       Icons.search,
-                      color: Theme.of(context).colorScheme.primary,
+                      color: isDark 
+                          ? AppColors.darkTextSecondary 
+                          : AppColors.lightTextSecondary,
                     ),
-                    fillColor: Colors.white,
+                    fillColor: isDark 
+                        ? AppColors.darkCardBackground 
+                        : AppColors.lightCardBackground,
                     filled: true,
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.grey.shade300,
-                        width: 0,
-                      ),
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(
-                        color: Colors.grey.shade300,
-                        width: 0,
-                      ),
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(12),
                       borderSide: BorderSide(
-                        color: Colors.grey.shade300,
-                        width: 0,
+                        color: AppColors.primary,
+                        width: 2,
                       ),
                     ),
-                    contentPadding: const EdgeInsets.all(14),
+                    contentPadding: const EdgeInsets.all(16),
                   ),
                 ),
               ),
-              const SizedBox(height: 7),
+              const SizedBox(height: 16),
               // Отображаем недавно измененные элементы
               if (showRecentSearches)
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(left: 20),
+                      margin: const EdgeInsets.only(left: 20, bottom: 12),
                       child: Text(
                         LocalizationService.to('recently_searched'),
-                        style: TextStyle(color: Colors.grey),
+                        style: TextStyle(
+                          color: isDark 
+                              ? AppColors.darkTextSecondary 
+                              : AppColors.lightTextSecondary,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     ),
                     Container(
@@ -310,11 +332,28 @@ class _SearchDialogState extends State<SearchDialog> {
                     showFilteredItems
                         ? _filteredItems.isEmpty
                             ? Center(
-                              child: Text(
-                                LocalizationService.to('nothing_found'),
-                                style: TextStyle(
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.search_off,
+                                    size: 64,
+                                    color: isDark 
+                                        ? AppColors.darkTextTertiary 
+                                        : AppColors.lightTextTertiary,
+                                  ),
+                                  const SizedBox(height: 16),
+                                  Text(
+                                    LocalizationService.to('nothing_found'),
+                                    style: TextStyle(
+                                      color: isDark 
+                                          ? AppColors.darkTextSecondary 
+                                          : AppColors.lightTextSecondary,
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ],
                               ),
                             )
                             : ListView.builder(
@@ -378,7 +417,9 @@ class _SearchDialogState extends State<SearchDialog> {
                   child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: 40,
-                    color: Theme.of(context).colorScheme.surface,
+                    color: isDark 
+                        ? AppColors.darkBackgroundPrimary 
+                        : AppColors.lightBackgroundPrimary,
                   ),
                 ),
               ),

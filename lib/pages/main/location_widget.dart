@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:vpn_client/localization_service.dart';
+import 'package:vpn_client/theme/app_colors.dart';
 
 class LocationWidget extends StatelessWidget {
   final Map<String, dynamic>? selectedServer;
@@ -9,6 +10,7 @@ class LocationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     final String locationName = selectedServer?['text'] ?? '...';
     final String iconPath =
         selectedServer?['icon'] ?? 'assets/images/flags/auto.svg';
@@ -17,8 +19,19 @@ class LocationWidget extends StatelessWidget {
       margin: const EdgeInsets.all(30),
       padding: const EdgeInsets.only(left: 14),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.onSurface,
+        color: isDark 
+            ? AppColors.darkCardBackground 
+            : AppColors.lightCardBackground,
         borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: isDark 
+                ? AppColors.darkCardShadow.withOpacity(0.2)
+                : AppColors.lightCardShadow.withOpacity(0.2),
+            blurRadius: 10,
+            offset: const Offset(0, 1),
+          ),
+        ],
       ),
       child: Row(
         children: [
@@ -31,15 +44,19 @@ class LocationWidget extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w400,
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: isDark 
+                      ? AppColors.darkTextSecondary 
+                      : AppColors.lightTextSecondary,
                 ),
               ),
               Text(
                 locationName,
                 style: TextStyle(
                   fontSize: 17,
-                  fontWeight: FontWeight.w400,
-                  color: Theme.of(context).colorScheme.primary,
+                  fontWeight: FontWeight.w600,
+                  color: isDark 
+                      ? AppColors.darkTextPrimary 
+                      : AppColors.lightTextPrimary,
                 ),
               ),
             ],

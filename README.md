@@ -117,27 +117,31 @@ ENABLE_LOGGING=true
 ENABLE_ANALYTICS=false
 ```
 
-### 3. Two Modes of Operation
+### 3. Onboarding Configuration
 
-The application supports two modes of operation based on your subscription configuration:
+The application supports flexible onboarding configuration based on your subscription and onboarding settings:
 
-#### Mode 1: Hardcoded Subscription (Optional Telegram Bot)
-If you have a hardcoded subscription URL in your `.env` file:
-- **Telegram Bot**: Optional - users can skip the onboarding process
-- **Onboarding**: Shows a welcome screen with optional Telegram bot access
-- **User Flow**: Users can either get a unique subscription via Telegram bot or proceed directly with the hardcoded subscription
+#### Scenario 1: No SUBSCRIPTION_URL_MAIN Configured
+- **Onboarding**: **Mandatory** - users must complete the onboarding process
+- **Telegram Bot**: **Required** - users must get a unique subscription via Telegram bot
+- **User Flow**: Users cannot proceed without getting a unique subscription
 
-#### Mode 2: No Hardcoded Subscription (Required Telegram Bot)
-If no subscription URLs are configured in `.env`:
-- **Telegram Bot**: Required - users must complete the onboarding process
-- **Onboarding**: Mandatory - users cannot proceed without getting a unique subscription
-- **User Flow**: Users must visit the Telegram bot to receive their unique subscription before using the app
+#### Scenario 2: SUBSCRIPTION_URL_MAIN Configured + ONBOARDING="ALWAYS"
+- **Onboarding**: **Optional** - shows welcome screen but can be skipped
+- **Telegram Bot**: **Optional** - users can skip onboarding and use hardcoded subscription
+- **User Flow**: Users can either get a unique subscription via Telegram bot or proceed directly
+
+#### Scenario 3: SUBSCRIPTION_URL_MAIN Configured + ONBOARDING="HIDE"
+- **Onboarding**: **Hidden** - onboarding screen is completely hidden
+- **Telegram Bot**: **Not shown** - users go directly to main app
+- **User Flow**: Users start directly with the hardcoded subscription
 
 ### 4. Environment Variables Reference
 
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `SUBSCRIPTION_URL_MAIN` | Main VPN subscription URL | No* | - |
+| `ONBOARDING` | Onboarding behavior (ALWAYS/HIDE) | No | "ALWAYS" |
 | `DEFAULT_SERVER_AUTO` | Enable auto server selection | No | true |
 | `APP_NAME` | Application name | No | "VPN Client" |
 | `TELEGRAM_BOT_URL` | Telegram bot URL for onboarding | No | "t.me/vpnclientbot" |
@@ -145,7 +149,7 @@ If no subscription URLs are configured in `.env`:
 | `ENABLE_LOGGING` | Enable logging | No | true |
 | `ENABLE_ANALYTICS` | Enable analytics | No | false |
 
-*Note: If no subscription URLs are provided, the Telegram bot becomes mandatory for onboarding.
+*Note: If no subscription URLs are provided, onboarding becomes mandatory and the Telegram bot is required.
 
 ### 5. Security Notes
 

@@ -109,23 +109,18 @@ class OnboardingService extends ChangeNotifier {
   
   /// Проверить, нужно ли показывать onboarding
   bool shouldShowOnboarding() {
-    // Если есть захардкоженная подписка, onboarding не нужен
-    if (ConfigService.hasHardcodedSubscription) {
-      return false;
-    }
-    
-    // Если подписка не захардкожена, показываем onboarding
-    return !_isOnboardingCompleted || _lastOnboardingVersion != '1.0.0';
+    // Используем новую логику из ConfigService
+    return ConfigService.shouldShowOnboarding && (!_isOnboardingCompleted || _lastOnboardingVersion != '1.0.0');
   }
 
   /// Проверить, можно ли пропустить onboarding
   bool canSkipOnboarding() {
-    return ConfigService.isTelegramBotOptional;
+    return ConfigService.canSkipOnboarding;
   }
 
   /// Проверить, является ли onboarding обязательным
   bool get isOnboardingRequired {
-    return ConfigService.requiresTelegramBot;
+    return !ConfigService.canSkipOnboarding;
   }
   
   /// Сброс onboarding (для тестирования)

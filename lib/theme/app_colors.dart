@@ -122,6 +122,17 @@ class AppColors {
   static const Color vpnConnecting = connecting; // Оранжевый для подключения
   static const Color vpnDisconnecting = disconnecting; // Оранжевый для отключения
 
+  // Цвета для индикаторов скорости и качества соединения
+  static const Color speedExcellent = Color(0xFF10B981); // Зеленый для отличной скорости (< 50ms)
+  static const Color speedGood = Color(0xFFF59E0B); // Оранжевый для хорошей скорости (50-100ms)
+  static const Color speedFair = Color(0xFFF59E0B); // Оранжевый для удовлетворительной скорости (100-200ms)
+  static const Color speedPoor = Color(0xFFEF4444); // Красный для плохой скорости (> 200ms)
+
+  // Цвета для индикаторов загрузки/выгрузки
+  static const Color downloadActive = Color(0xFF3B82F6); // Синий для активной загрузки
+  static const Color uploadActive = Color(0xFF8B5CF6); // Фиолетовый для активной выгрузки
+  static const Color pingActive = Color(0xFF10B981); // Зеленый для активного пинга
+
   // Цвета для градиентов (светлая тема)
   static const List<Color> lightBackgroundGradient = [
     lightBackgroundPrimary,

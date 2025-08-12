@@ -110,8 +110,6 @@ class _AppState extends State<App> {
           return const Locale('en');
         }
       },
-
-      themeMode: themeProvider.themeMode,
       home: onboardingService.shouldShowOnboarding()
           ? OnboardingScreen(onboardingService: onboardingService)
           : const MainScreen(),

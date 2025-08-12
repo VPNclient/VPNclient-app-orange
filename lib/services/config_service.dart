@@ -83,6 +83,11 @@ class ConfigService {
     return dotenv.env['APP_NAME'] ?? 'VPNclient';
   }
 
+  /// Получить настройки onboarding
+  static String get onboardingMode {
+    return dotenv.env['ONBOARDING']?.toUpperCase() ?? 'ALWAYS';
+  }
+
   /// Проверить, есть ли захардкоженная ссылка на подписку
   static bool get hasHardcodedSubscription {
     final mainUrl = dotenv.env['SUBSCRIPTION_URL_MAIN'];
@@ -104,6 +109,43 @@ class ConfigService {
   /// Проверить, является ли Telegram бот опциональным
   static bool get isTelegramBotOptional {
     return hasHardcodedSubscription;
+  }
+
+  /// Проверить, нужно ли показывать onboarding
+  static bool get shouldShowOnboarding {
+    // Если SUBSCRIPTION_URL_MAIN не настроен, onboarding обязателен
+    if (!hasHardcodedSubscription) {
+      return true;
+    }
+    
+    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="HIDE", onboarding не показывается
+    if (hasHardcodedSubscription && onboardingMode == 'HIDE') {
+      return false;
+    }
+    
+    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="ALWAYS", можно пропустить onboarding
+    if (hasHardcodedSubscription && onboardingMode == 'ALWAYS') {
+      return true;
+    }
+    
+    // По умолчанию показываем onboarding
+    return true;
+  }
+
+  /// Проверить, можно ли пропустить onboarding
+  static bool get canSkipOnboarding {
+    // Если SUBSCRIPTION_URL_MAIN не настроен, пропустить нельзя
+    if (!hasHardcodedSubscription) {
+      return false;
+    }
+    
+    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="ALWAYS", можно пропустить
+    if (hasHardcodedSubscription && onboardingMode == 'ALWAYS') {
+      return true;
+    }
+    
+    // В остальных случаях пропустить нельзя
+    return false;
   }
 
   /// Проверить, загружена ли конфигурация

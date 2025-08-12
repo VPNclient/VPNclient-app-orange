@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vpn_client/theme/app_colors.dart';
 
 class ServerListItem extends StatelessWidget {
   final String? icon;
@@ -19,14 +20,22 @@ class ServerListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    
     String pingImage = 'assets/images/ping_status_1.png';
+    Color pingColor = AppColors.speedExcellent;
+    
     if (ping.isNotEmpty) {
       final int? pingValue = int.tryParse(ping);
       if (pingValue != null) {
         if (pingValue > 200) {
           pingImage = 'assets/images/ping_status_3.png';
+          pingColor = AppColors.speedPoor;
         } else if (pingValue > 100) {
           pingImage = 'assets/images/ping_status_2.png';
+          pingColor = AppColors.speedFair;
+        } else if (pingValue > 50) {
+          pingColor = AppColors.speedGood;
         }
       }
     }
@@ -37,11 +46,18 @@ class ServerListItem extends StatelessWidget {
         height: 52,
         margin: const EdgeInsets.symmetric(vertical: 8),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: isActive 
+              ? (isDark ? AppColors.darkCardBackground : AppColors.lightCardBackground)
+              : (isDark ? AppColors.darkSurfaceLight : AppColors.lightSurfaceLight),
           borderRadius: BorderRadius.circular(10),
+          border: isActive 
+              ? Border.all(color: AppColors.primary, width: 2)
+              : null,
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withAlpha(51),
+              color: isDark 
+                  ? AppColors.darkCardShadow.withOpacity(0.2)
+                  : AppColors.lightCardShadow.withOpacity(0.2),
               blurRadius: 10,
               offset: const Offset(0, 1),
             ),
@@ -50,7 +66,7 @@ class ServerListItem extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: 12,
-          ), // add some padding
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -59,7 +75,7 @@ class ServerListItem extends StatelessWidget {
                   if (icon != null)
                     SvgPicture.asset(icon!, width: 52, height: 52),
                   if (icon == null) const SizedBox(width: 16),
-                  const SizedBox(width: 8), // spacing between icon and text
+                  const SizedBox(width: 8),
                   Expanded(
                     child: Container(
                       alignment: Alignment.center,
@@ -67,9 +83,12 @@ class ServerListItem extends StatelessWidget {
                       child: Text(
                         text,
                         overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 14,
-                          color: Colors.black,
+                          fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
+                          color: isActive 
+                              ? AppColors.primary
+                              : (isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary),
                         ),
                       ),
                     ),
@@ -81,7 +100,12 @@ class ServerListItem extends StatelessWidget {
                   Text(
                     int.tryParse(ping) != null ? '$ping ms' : ping,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(fontSize: 14, color: Colors.grey),
+                    style: TextStyle(
+                      fontSize: 14, 
+                      color: isActive 
+                          ? AppColors.primary
+                          : pingColor,
+                    ),
                   ),
                   if (ping.isNotEmpty)
                     Image.asset(pingImage, width: 52, height: 52),

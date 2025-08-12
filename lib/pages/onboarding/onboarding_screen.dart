@@ -33,7 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         telegramBot: '@' + ConfigService.telegramBotUsername,
         icon: Icons.telegram,
         color: const Color(0xFF0088CC),
-        showSkip: ConfigService.isTelegramBotOptional,
+        showSkip: ConfigService.canSkipOnboarding,
         isWelcome: true,
       ),
       
