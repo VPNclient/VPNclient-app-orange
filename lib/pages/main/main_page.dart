@@ -5,6 +5,7 @@ import 'package:vpn_client/pages/main/main_btn.dart';
 import 'package:vpn_client/pages/main/location_widget.dart';
 import 'package:vpn_client/pages/main/stat_bar.dart';
 import 'package:vpn_client/localization_service.dart';
+import 'package:vpn_client/services/config_service.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -69,7 +70,7 @@ class MainPageState extends State<MainPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const StatBar(),
+              if (ConfigService.showStatBar) const StatBar(),
               const MainBtn(),
               LocationWidget(selectedServer: _selectedServer),
             ],

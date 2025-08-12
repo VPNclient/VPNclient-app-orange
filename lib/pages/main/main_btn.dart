@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:vpn_client/design/colors.dart';
-import 'package:flutter_v2ray/flutter_v2ray.dart';
+import 'package:vpnclient_engine_flutter/vpnclient_engine_flutter.dart';
 import 'package:vpn_client/localization_service.dart';
 import 'package:vpn_client/vpn_state.dart';
 import 'package:vpn_client/services/config_service.dart';
 
-final FlutterV2ray flutterV2ray = FlutterV2ray(
-  onStatusChanged: (status) {
-    // Handle status changes if needed
-  },
-);
 
 class MainBtn extends StatefulWidget {
   const MainBtn({super.key});
@@ -57,6 +52,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       ConnectionStatus.reconnecting: LocalizationService.to('reconnecting'),
       ConnectionStatus.disconnecting: LocalizationService.to('disconnecting'),
       ConnectionStatus.connecting: LocalizationService.to('connecting'),
+      ConnectionStatus.error: LocalizationService.to('error'),
     }[vpnState.connectionStatus]!;
   }
 
@@ -67,32 +63,38 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       case ConnectionStatus.disconnected:
         vpnState.setConnectionStatus(ConnectionStatus.connecting);
         _animationController.repeat(reverse: true);
+        
         String link = ConfigService.mainSubscriptionUrl;
-        V2RayURL parser = FlutterV2ray.parseFromURL(link);
-
-        if (await flutterV2ray.requestPermission()) {
-          await flutterV2ray.startV2Ray(
-            remark: parser.remark,
-            config: parser.getFullConfiguration(),
-            blockedApps: null,
-            bypassSubnets: null,
-            proxyOnly: false,
-          );
+        if (await VpnclientEngineFlutter.requestPermissions(EngineType.auto)) {
+          bool success = await VpnclientEngineFlutter.connect(EngineType.auto, link);
+          
+          if (success) {
+            vpnState.startTimer();
+            vpnState.setConnectionStatus(ConnectionStatus.connected);
+            await _animationController.forward();
+            _animationController.stop();
+          } else {
+            vpnState.setConnectionStatus(ConnectionStatus.error);
+            _animationController.stop();
+          }
+        } else {
+          vpnState.setConnectionStatus(ConnectionStatus.error);
+          _animationController.stop();
         }
-
-        vpnState.startTimer();
-        vpnState.setConnectionStatus(ConnectionStatus.connected);
-        await _animationController.forward();
-        _animationController.stop();
+        
       case ConnectionStatus.connected:
-        vpnState.setConnectionStatus(ConnectionStatus.disconnecting);
+        vpnState.setConnectionStatus(ConnectionStatus.connecting);
         _animationController.repeat(reverse: true);
-        await flutterV2ray.stopV2Ray();
+        await VpnclientEngineFlutter.disconnect();
         vpnState.stopTimer();
         vpnState.setConnectionStatus(ConnectionStatus.disconnected);
         await _animationController.reverse();
         _animationController.stop();
       default:
+        // Handle error state by resetting to disconnected
+        if (vpnState.connectionStatus == ConnectionStatus.error) {
+          vpnState.setConnectionStatus(ConnectionStatus.disconnected);
+        }
     }
   }
 

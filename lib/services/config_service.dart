@@ -84,8 +84,8 @@ class ConfigService {
   }
 
   /// Получить настройки onboarding
-  static String get onboardingMode {
-    return dotenv.env['ONBOARDING']?.toUpperCase() ?? 'ALWAYS';
+  static bool get showOnboarding {
+    return dotenv.env['SHOW_ONBOARDING']?.toLowerCase() == 'true' ?? true;
   }
 
   /// Проверить, есть ли захардкоженная ссылка на подписку
@@ -118,18 +118,8 @@ class ConfigService {
       return true;
     }
     
-    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="HIDE", onboarding не показывается
-    if (hasHardcodedSubscription && onboardingMode == 'HIDE') {
-      return false;
-    }
-    
-    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="ALWAYS", можно пропустить onboarding
-    if (hasHardcodedSubscription && onboardingMode == 'ALWAYS') {
-      return true;
-    }
-    
-    // По умолчанию показываем onboarding
-    return true;
+    // Если SUBSCRIPTION_URL_MAIN настроен, используем настройку SHOW_ONBOARDING
+    return showOnboarding;
   }
 
   /// Проверить, можно ли пропустить onboarding
@@ -139,8 +129,8 @@ class ConfigService {
       return false;
     }
     
-    // Если SUBSCRIPTION_URL_MAIN настроен и ONBOARDING=="ALWAYS", можно пропустить
-    if (hasHardcodedSubscription && onboardingMode == 'ALWAYS') {
+    // Если SUBSCRIPTION_URL_MAIN настроен и SHOW_ONBOARDING=true, можно пропустить
+    if (hasHardcodedSubscription && showOnboarding) {
       return true;
     }
     
@@ -151,5 +141,10 @@ class ConfigService {
   /// Проверить, загружена ли конфигурация
   static bool get isConfigured {
     return dotenv.env.isNotEmpty;
+  }
+
+  /// Проверить, нужно ли отображать верхние виджеты со статистикой
+  static bool get showStatBar {
+    return dotenv.env['SHOW_STAT_BAR']?.toLowerCase() == 'true' ?? true;
   }
 } 
