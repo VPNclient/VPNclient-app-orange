@@ -115,6 +115,7 @@ ENABLE_LOGGING=true
 
 # Feature Flags
 ENABLE_ANALYTICS=false
+SHOW_STAT_BAR=true
 ```
 
 ### 3. Onboarding Configuration
@@ -126,12 +127,12 @@ The application supports flexible onboarding configuration based on your subscri
 - **Telegram Bot**: **Required** - users must get a unique subscription via Telegram bot
 - **User Flow**: Users cannot proceed without getting a unique subscription
 
-#### Scenario 2: SUBSCRIPTION_URL_MAIN Configured + ONBOARDING="ALWAYS"
+#### Scenario 2: SUBSCRIPTION_URL_MAIN Configured + SHOW_ONBOARDING=true
 - **Onboarding**: **Optional** - shows welcome screen but can be skipped
 - **Telegram Bot**: **Optional** - users can skip onboarding and use hardcoded subscription
 - **User Flow**: Users can either get a unique subscription via Telegram bot or proceed directly
 
-#### Scenario 3: SUBSCRIPTION_URL_MAIN Configured + ONBOARDING="HIDE"
+#### Scenario 3: SUBSCRIPTION_URL_MAIN Configured + SHOW_ONBOARDING=false
 - **Onboarding**: **Hidden** - onboarding screen is completely hidden
 - **Telegram Bot**: **Not shown** - users go directly to main app
 - **User Flow**: Users start directly with the hardcoded subscription
@@ -141,13 +142,14 @@ The application supports flexible onboarding configuration based on your subscri
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `SUBSCRIPTION_URL_MAIN` | Main VPN subscription URL | No* | - |
-| `ONBOARDING` | Onboarding behavior (ALWAYS/HIDE) | No | "ALWAYS" |
+| `SHOW_ONBOARDING` | Show onboarding screen (true/false) | No | true |
 | `DEFAULT_SERVER_AUTO` | Enable auto server selection | No | true |
 | `APP_NAME` | Application name | No | "VPN Client" |
 | `TELEGRAM_BOT_URL` | Telegram bot URL for onboarding | No | "t.me/vpnclientbot" |
 | `DEBUG_MODE` | Enable debug mode | No | false |
 | `ENABLE_LOGGING` | Enable logging | No | true |
 | `ENABLE_ANALYTICS` | Enable analytics | No | false |
+| `SHOW_STAT_BAR` | Show top statistics widgets (speed, traffic, ping) | No | true |
 
 *Note: If no subscription URLs are provided, onboarding becomes mandatory and the Telegram bot is required.
 

@@ -46,7 +46,8 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  flutter_v2ray: ^1.0.10
+  vpnclient_engine_flutter:
+    path: ../VPNclient-engine-flutter
   cupertino_icons: ^1.0.8
   url_launcher: ^6.3.1
   flutter_dotenv: ^5.1.0
