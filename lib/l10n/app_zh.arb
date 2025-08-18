@@ -3,231 +3,1138 @@
   "appTitle": "VPN 客户端",
   "appDescription": "安全快速的 VPN 连接",
   
+  "@connected": {
+    "description": "VPN connected status"
+  },
   "connected": "已连接",
+  
+  "@disconnected": {
+    "description": "VPN disconnected status"
+  },
   "disconnected": "已断开",
+  
+  "@connecting": {
+    "description": "VPN connecting status"
+  },
   "connecting": "正在连接",
+  
+  "@disconnecting": {
+    "description": "VPN disconnecting status"
+  },
   "disconnecting": "正在断开",
+  
+  "@all_apps": {
+    "description": "All applications text"
+  },
   "all_apps": "所有应用",
+  
+  "@home": {
+    "description": "Home tab"
+  },
   "home": "主页",
+  
+  "@servers": {
+    "description": "Servers tab"
+  },
   "servers": "服务器",
+  
+  "@settings": {
+    "description": "Settings tab"
+  },
   "settings": "设置",
+  
+  "@connect": {
+    "description": "Connect button"
+  },
   "connect": "连接",
+  
+  "@disconnect": {
+    "description": "Disconnect button"
+  },
   "disconnect": "断开",
+  
+  "@select_server": {
+    "description": "Select server text"
+  },
   "select_server": "选择服务器",
+  
+  "@auto_connect": {
+    "description": "Auto connect setting"
+  },
   "auto_connect": "自动连接",
+  
+  "@kill_switch": {
+    "description": "Kill switch setting"
+  },
   "kill_switch": "紧急断开",
+  
+  "@protocol": {
+    "description": "Protocol setting"
+  },
   "protocol": "协议",
+  
+  "@language": {
+    "description": "Language setting"
+  },
   "language": "语言",
+  
+  "@theme": {
+    "description": "Theme setting"
+  },
   "theme": "主题",
+  
+  "@dark_mode": {
+    "description": "Dark mode setting"
+  },
   "dark_mode": "深色模式",
+  
+  "@light_mode": {
+    "description": "Light mode setting"
+  },
   "light_mode": "浅色模式",
+  
+  "@system_theme": {
+    "description": "System theme setting"
+  },
   "system_theme": "系统主题",
+  
+  "@about": {
+    "description": "About text"
+  },
   "about": "关于",
+  
+  "@version": {
+    "description": "Version text"
+  },
   "version": "版本",
+  
+  "@back": {
+    "description": "Back button"
+  },
   "back": "返回",
+  
+  "@save": {
+    "description": "Save button"
+  },
   "save": "保存",
+  
+  "@cancel": {
+    "description": "Cancel button"
+  },
   "cancel": "取消",
+  
+  "@ok": {
+    "description": "OK button"
+  },
   "ok": "确定",
+  
+  "@error": {
+    "description": "Error text"
+  },
   "error": "错误",
+  
+  "@success": {
+    "description": "Success text"
+  },
   "success": "成功",
+  
+  "@loading": {
+    "description": "Loading text"
+  },
   "loading": "加载中...",
+  
+  "@no_data": {
+    "description": "No data text"
+  },
   "no_data": "暂无数据",
+  
+  "@retry": {
+    "description": "Retry text"
+  },
   "retry": "重试",
+  
+  "@close": {
+    "description": "Close text"
+  },
   "close": "关闭",
+  
+  "@help": {
+    "description": "Help text"
+  },
   "help": "帮助",
+  
+  "@tutorial": {
+    "description": "Tutorial text"
+  },
   "tutorial": "教程",
+  
+  "@tutorial_description": {
+    "description": "Tutorial description"
+  },
   "tutorial_description": "学习如何使用应用",
+  
+  "@connection_status": {
+    "description": "Connection status"
+  },
   "connection_status": "连接状态",
+  
+  "@current_server": {
+    "description": "Current server"
+  },
   "current_server": "当前服务器",
+  
+  "@ping": {
+    "description": "Ping text"
+  },
   "ping": "延迟",
+  
+  "@speed": {
+    "description": "Speed text"
+  },
   "speed": "速度",
+  
+  "@upload": {
+    "description": "Upload text"
+  },
   "upload": "上传",
+  
+  "@download": {
+    "description": "Download text"
+  },
   "download": "下载",
+  
+  "@data_usage": {
+    "description": "Data usage"
+  },
   "data_usage": "数据使用量",
+  
+  "@today": {
+    "description": "Today text"
+  },
   "today": "今天",
+  
+  "@this_month": {
+    "description": "This month text"
+  },
   "this_month": "本月",
+  
+  "@total": {
+    "description": "Total text"
+  },
   "total": "总计",
+  
+  "@server_list": {
+    "description": "Server list"
+  },
   "server_list": "服务器列表",
+  
+  "@recommended": {
+    "description": "Recommended servers"
+  },
   "recommended": "推荐",
+  
+  "@all_servers": {
+    "description": "All servers"
+  },
   "all_servers": "所有服务器",
+  
+  "@search_servers": {
+    "description": "Search servers placeholder"
+  },
   "search_servers": "搜索服务器...",
+  
+  "@no_servers": {
+    "description": "No servers available"
+  },
   "no_servers": "暂无服务器",
+  
+  "@server_offline": {
+    "description": "Server offline status"
+  },
   "server_offline": "离线",
+  
+  "@server_online": {
+    "description": "Server online status"
+  },
   "server_online": "在线",
+  
+  "@server_maintenance": {
+    "description": "Server maintenance status"
+  },
   "server_maintenance": "维护中",
+  
+  "@connection_failed": {
+    "description": "Connection failed message"
+  },
   "connection_failed": "连接失败",
+  
+  "@connection_successful": {
+    "description": "Connection successful message"
+  },
   "connection_successful": "连接成功",
+  
+  "@disconnection_successful": {
+    "description": "Disconnection successful message"
+  },
   "disconnection_successful": "断开成功",
+  
+  "@network_error": {
+    "description": "Network error message"
+  },
   "network_error": "网络错误",
+  
+  "@server_unreachable": {
+    "description": "Server unreachable message"
+  },
   "server_unreachable": "服务器不可达",
+  
+  "@timeout_error": {
+    "description": "Timeout error message"
+  },
   "timeout_error": "连接超时",
+  
+  "@permission_required": {
+    "description": "Permission required message"
+  },
   "permission_required": "需要权限",
+  
+  "@vpn_permission_required": {
+    "description": "VPN permission required message"
+  },
   "vpn_permission_required": "连接需要 VPN 权限",
+  
+  "@location_permission_required": {
+    "description": "Location permission required message"
+  },
   "location_permission_required": "最佳服务器选择需要位置权限",
+  
+  "@notification_permission_required": {
+    "description": "Notification permission required message"
+  },
   "notification_permission_required": "连接通知需要通知权限",
+  
+  "@privacy_policy": {
+    "description": "Privacy policy"
+  },
   "privacy_policy": "隐私政策",
+  
+  "@terms_of_service": {
+    "description": "Terms of service"
+  },
   "terms_of_service": "服务条款",
+  
+  "@support": {
+    "description": "Support text"
+  },
   "support": "支持",
+  
+  "@contact_support": {
+    "description": "Contact support"
+  },
   "contact_support": "联系支持",
+  
+  "@feedback": {
+    "description": "Feedback text"
+  },
   "feedback": "反馈",
+  
+  "@rate_app": {
+    "description": "Rate app"
+  },
   "rate_app": "评价应用",
+  
+  "@share_app": {
+    "description": "Share app"
+  },
   "share_app": "分享应用",
+  
+  "@export_logs": {
+    "description": "Export logs"
+  },
   "export_logs": "导出日志",
+  
+  "@clear_logs": {
+    "description": "Clear logs"
+  },
   "clear_logs": "清除日志",
+  
+  "@logs": {
+    "description": "Logs text"
+  },
   "logs": "日志",
+  
+  "@diagnostics": {
+    "description": "Diagnostics text"
+  },
   "diagnostics": "诊断",
+  
+  "@run_diagnostics": {
+    "description": "Run diagnostics"
+  },
   "run_diagnostics": "运行诊断",
+  
+  "@diagnostics_complete": {
+    "description": "Diagnostics complete"
+  },
   "diagnostics_complete": "诊断完成",
+  
+  "@diagnostics_failed": {
+    "description": "Diagnostics failed"
+  },
   "diagnostics_failed": "诊断失败",
+  
+  "@connection_test": {
+    "description": "Connection test"
+  },
   "connection_test": "连接测试",
+  
+  "@speed_test": {
+    "description": "Speed test"
+  },
   "speed_test": "速度测试",
+  
+  "@ping_test": {
+    "description": "Ping test"
+  },
   "ping_test": "延迟测试",
+  
+  "@test_results": {
+    "description": "Test results"
+  },
   "test_results": "测试结果",
+  
+  "@test_passed": {
+    "description": "Test passed"
+  },
   "test_passed": "测试通过",
+  
+  "@test_failed": {
+    "description": "Test failed"
+  },
   "test_failed": "测试失败",
+  
+  "@test_in_progress": {
+    "description": "Test in progress"
+  },
   "test_in_progress": "测试进行中",
+  
+  "@test_complete": {
+    "description": "Test complete"
+  },
   "test_complete": "测试完成",
+  
+  "@test_error": {
+    "description": "Test error"
+  },
   "test_error": "测试错误",
+  
+  "@test_timeout": {
+    "description": "Test timeout"
+  },
   "test_timeout": "测试超时",
+  
+  "@test_network_error": {
+    "description": "Test network error"
+  },
   "test_network_error": "测试网络错误",
+  
+  "@test_server_error": {
+    "description": "Test server error"
+  },
   "test_server_error": "测试服务器错误",
+  
+  "@test_unknown_error": {
+    "description": "Test unknown error"
+  },
   "test_unknown_error": "测试未知错误",
+  
+  "@test_retry": {
+    "description": "Test retry"
+  },
   "test_retry": "重试测试",
+  
+  "@test_cancel": {
+    "description": "Test cancel"
+  },
   "test_cancel": "取消测试",
+  
+  "@test_restart": {
+    "description": "Test restart"
+  },
   "test_restart": "重启测试",
+  
+  "@test_stop": {
+    "description": "Test stop"
+  },
   "test_stop": "停止测试",
+  
+  "@test_start": {
+    "description": "Test start"
+  },
   "test_start": "开始测试",
+  
+  "@test_reset": {
+    "description": "Test reset"
+  },
   "test_reset": "重置测试",
+  
+  "@test_clear": {
+    "description": "Test clear"
+  },
   "test_clear": "清除测试",
+  
+  "@test_export": {
+    "description": "Test export"
+  },
   "test_export": "导出测试",
+  
+  "@test_import": {
+    "description": "Test import"
+  },
   "test_import": "导入测试",
+  
+  "@test_backup": {
+    "description": "Test backup"
+  },
   "test_backup": "备份测试",
+  
+  "@test_restore": {
+    "description": "Test restore"
+  },
   "test_restore": "恢复测试",
+  
+  "@test_sync": {
+    "description": "Test sync"
+  },
   "test_sync": "同步测试",
+  
+  "@test_upload": {
+    "description": "Test upload"
+  },
   "test_upload": "上传测试",
+  
+  "@test_download": {
+    "description": "Test download"
+  },
   "test_download": "下载测试",
+  
+  "@test_install": {
+    "description": "Test install"
+  },
   "test_install": "安装测试",
+  
+  "@test_uninstall": {
+    "description": "Test uninstall"
+  },
   "test_uninstall": "卸载测试",
+  
+  "@test_update": {
+    "description": "Test update"
+  },
   "test_update": "更新测试",
+  
+  "@test_upgrade": {
+    "description": "Test upgrade"
+  },
   "test_upgrade": "升级测试",
+  
+  "@test_downgrade": {
+    "description": "Test downgrade"
+  },
   "test_downgrade": "降级测试",
+  
+  "@test_rollback": {
+    "description": "Test rollback"
+  },
   "test_rollback": "回滚测试",
+  
+  "@test_configure": {
+    "description": "Test configure"
+  },
   "test_configure": "配置测试",
+  
+  "@test_optimize": {
+    "description": "Test optimize"
+  },
   "test_optimize": "优化测试",
+  
+  "@test_repair": {
+    "description": "Test repair"
+  },
   "test_repair": "修复测试",
+  
+  "@test_clean": {
+    "description": "Test clean"
+  },
   "test_clean": "清理测试",
+  
+  "@test_validate": {
+    "description": "Test validate"
+  },
   "test_validate": "验证测试",
+  
+  "@test_verify": {
+    "description": "Test verify"
+  },
   "test_verify": "验证测试",
+  
+  "@test_check": {
+    "description": "Test check"
+  },
   "test_check": "检查测试",
+  
+  "@test_scan": {
+    "description": "Test scan"
+  },
   "test_scan": "扫描测试",
+  
+  "@test_monitor": {
+    "description": "Test monitor"
+  },
   "test_monitor": "监控测试",
+  
+  "@test_log": {
+    "description": "Test log"
+  },
   "test_log": "日志测试",
+  
+  "@test_debug": {
+    "description": "Test debug"
+  },
   "test_debug": "调试测试",
+  
+  "@test_trace": {
+    "description": "Test trace"
+  },
   "test_trace": "跟踪测试",
-  "test_profile": "配置文件测试",
+  
+  "@test_profile": {
+    "description": "Test profile"
+  },
+  "test_profile": "性能分析测试",
+  
+  "@test_benchmark": {
+    "description": "Test benchmark"
+  },
   "test_benchmark": "基准测试",
+  
+  "@test_stress": {
+    "description": "Test stress"
+  },
   "test_stress": "压力测试",
+  
+  "@test_load": {
+    "description": "Test load"
+  },
   "test_load": "负载测试",
+  
+  "@test_performance": {
+    "description": "Test performance"
+  },
   "test_performance": "性能测试",
+  
+  "@test_security": {
+    "description": "Test security"
+  },
   "test_security": "安全测试",
+  
+  "@test_compatibility": {
+    "description": "Test compatibility"
+  },
   "test_compatibility": "兼容性测试",
+  
+  "@test_reliability": {
+    "description": "Test reliability"
+  },
   "test_reliability": "可靠性测试",
+  
+  "@test_stability": {
+    "description": "Test stability"
+  },
   "test_stability": "稳定性测试",
+  
+  "@test_availability": {
+    "description": "Test availability"
+  },
   "test_availability": "可用性测试",
+  
+  "@test_scalability": {
+    "description": "Test scalability"
+  },
   "test_scalability": "可扩展性测试",
+  
+  "@test_maintainability": {
+    "description": "Test maintainability"
+  },
   "test_maintainability": "可维护性测试",
+  
+  "@test_portability": {
+    "description": "Test portability"
+  },
   "test_portability": "可移植性测试",
+  
+  "@test_usability": {
+    "description": "Test usability"
+  },
   "test_usability": "可用性测试",
+  
+  "@test_accessibility": {
+    "description": "Test accessibility"
+  },
   "test_accessibility": "可访问性测试",
+  
+  "@test_internationalization": {
+    "description": "Test internationalization"
+  },
   "test_internationalization": "国际化测试",
+  
+  "@test_localization": {
+    "description": "Test localization"
+  },
   "test_localization": "本地化测试",
+  
+  "@test_customization": {
+    "description": "Test customization"
+  },
   "test_customization": "自定义测试",
+  
+  "@test_configuration": {
+    "description": "Test configuration"
+  },
   "test_configuration": "配置测试",
+  
+  "@test_setup": {
+    "description": "Test setup"
+  },
   "test_setup": "设置测试",
+  
+  "@test_teardown": {
+    "description": "Test teardown"
+  },
   "test_teardown": "拆卸测试",
+  
+  "@test_initialization": {
+    "description": "Test initialization"
+  },
   "test_initialization": "初始化测试",
+  
+  "@test_cleanup": {
+    "description": "Test cleanup"
+  },
   "test_cleanup": "清理测试",
+  
+  "@test_finalization": {
+    "description": "Test finalization"
+  },
   "test_finalization": "完成测试",
+  
+  "@test_termination": {
+    "description": "Test termination"
+  },
   "test_termination": "终止测试",
+  
+  "@test_abort": {
+    "description": "Test abort"
+  },
   "test_abort": "中止测试",
+  
+  "@test_suspend": {
+    "description": "Test suspend"
+  },
   "test_suspend": "暂停测试",
+  
+  "@test_resume": {
+    "description": "Test resume"
+  },
   "test_resume": "恢复测试",
+  
+  "@test_pause": {
+    "description": "Test pause"
+  },
   "test_pause": "暂停测试",
+  
+  "@test_continue": {
+    "description": "Test continue"
+  },
   "test_continue": "继续测试",
+  
+  "@test_skip": {
+    "description": "Test skip"
+  },
   "test_skip": "跳过测试",
+  
+  "@test_ignore": {
+    "description": "Test ignore"
+  },
   "test_ignore": "忽略测试",
+  
+  "@test_disable": {
+    "description": "Test disable"
+  },
   "test_disable": "禁用测试",
+  
+  "@test_enable": {
+    "description": "Test enable"
+  },
   "test_enable": "启用测试",
+  
+  "@test_activate": {
+    "description": "Test activate"
+  },
   "test_activate": "激活测试",
+  
+  "@test_deactivate": {
+    "description": "Test deactivate"
+  },
   "test_deactivate": "停用测试",
+  
+  "@test_lock": {
+    "description": "Test lock"
+  },
   "test_lock": "锁定测试",
+  
+  "@test_unlock": {
+    "description": "Test unlock"
+  },
   "test_unlock": "解锁测试",
+  
+  "@test_secure": {
+    "description": "Test secure"
+  },
   "test_secure": "安全测试",
+  
+  "@test_unsecure": {
+    "description": "Test unsecure"
+  },
   "test_unsecure": "不安全测试",
+  
+  "@test_encrypt": {
+    "description": "Test encrypt"
+  },
   "test_encrypt": "加密测试",
+  
+  "@test_decrypt": {
+    "description": "Test decrypt"
+  },
   "test_decrypt": "解密测试",
+  
+  "@test_hash": {
+    "description": "Test hash"
+  },
   "test_hash": "哈希测试",
+  
+  "@test_sign": {
+    "description": "Test sign"
+  },
   "test_sign": "签名测试",
+  
+  "@test_verify_signature": {
+    "description": "Test verify signature"
+  },
   "test_verify_signature": "验证签名测试",
+  
+  "@test_authenticate": {
+    "description": "Test authenticate"
+  },
   "test_authenticate": "身份验证测试",
+  
+  "@test_authorize": {
+    "description": "Test authorize"
+  },
   "test_authorize": "授权测试",
+  
+  "@test_validate_token": {
+    "description": "Test validate token"
+  },
   "test_validate_token": "验证令牌测试",
+  
+  "@test_refresh_token": {
+    "description": "Test refresh token"
+  },
   "test_refresh_token": "刷新令牌测试",
+  
+  "@test_revoke_token": {
+    "description": "Test revoke token"
+  },
   "test_revoke_token": "撤销令牌测试",
+  
+  "@test_generate_key": {
+    "description": "Test generate key"
+  },
   "test_generate_key": "生成密钥测试",
+  
+  "@test_import_key": {
+    "description": "Test import key"
+  },
   "test_import_key": "导入密钥测试",
+  
+  "@test_export_key": {
+    "description": "Test export key"
+  },
   "test_export_key": "导出密钥测试",
+  
+  "@test_backup_key": {
+    "description": "Test backup key"
+  },
   "test_backup_key": "备份密钥测试",
+  
+  "@test_restore_key": {
+    "description": "Test restore key"
+  },
   "test_restore_key": "恢复密钥测试",
+  
+  "@test_delete_key": {
+    "description": "Test delete key"
+  },
   "test_delete_key": "删除密钥测试",
+  
+  "@test_rotate_key": {
+    "description": "Test rotate key"
+  },
   "test_rotate_key": "轮换密钥测试",
+  
+  "@test_expire_key": {
+    "description": "Test expire key"
+  },
   "test_expire_key": "过期密钥测试",
+  
+  "@test_renew_key": {
+    "description": "Test renew key"
+  },
   "test_renew_key": "续期密钥测试",
+  
+  "@test_revoke_key": {
+    "description": "Test revoke key"
+  },
   "test_revoke_key": "撤销密钥测试",
+  
+  "@test_suspend_key": {
+    "description": "Test suspend key"
+  },
   "test_suspend_key": "暂停密钥测试",
+  
+  "@test_resume_key": {
+    "description": "Test resume key"
+  },
   "test_resume_key": "恢复密钥测试",
+  
+  "@test_activate_key": {
+    "description": "Test activate key"
+  },
   "test_activate_key": "激活密钥测试",
+  
+  "@test_deactivate_key": {
+    "description": "Test deactivate key"
+  },
   "test_deactivate_key": "停用密钥测试",
+  
+  "@test_lock_key": {
+    "description": "Test lock key"
+  },
   "test_lock_key": "锁定密钥测试",
+  
+  "@test_unlock_key": {
+    "description": "Test unlock key"
+  },
   "test_unlock_key": "解锁密钥测试",
+  
+  "@test_secure_key": {
+    "description": "Test secure key"
+  },
   "test_secure_key": "安全密钥测试",
+  
+  "@test_unsecure_key": {
+    "description": "Test unsecure key"
+  },
   "test_unsecure_key": "不安全密钥测试",
+  
+  "@test_encrypt_key": {
+    "description": "Test encrypt key"
+  },
   "test_encrypt_key": "加密密钥测试",
+  
+  "@test_decrypt_key": {
+    "description": "Test decrypt key"
+  },
   "test_decrypt_key": "解密密钥测试",
+  
+  "@test_hash_key": {
+    "description": "Test hash key"
+  },
   "test_hash_key": "哈希密钥测试",
+  
+  "@test_sign_key": {
+    "description": "Test sign key"
+  },
   "test_sign_key": "签名密钥测试",
+  
+  "@test_verify_key_signature": {
+    "description": "Test verify key signature"
+  },
   "test_verify_key_signature": "验证密钥签名测试",
+  
+  "@test_authenticate_key": {
+    "description": "Test authenticate key"
+  },
   "test_authenticate_key": "身份验证密钥测试",
+  
+  "@test_authorize_key": {
+    "description": "Test authorize key"
+  },
   "test_authorize_key": "授权密钥测试",
+  
+  "@test_validate_key_token": {
+    "description": "Test validate key token"
+  },
   "test_validate_key_token": "验证密钥令牌测试",
+  
+  "@test_refresh_key_token": {
+    "description": "Test refresh key token"
+  },
   "test_refresh_key_token": "刷新密钥令牌测试",
+  
+  "@test_revoke_key_token": {
+    "description": "Test revoke key token"
+  },
   "test_revoke_key_token": "撤销密钥令牌测试",
+  
+  "@test_generate_key_pair": {
+    "description": "Test generate key pair"
+  },
   "test_generate_key_pair": "生成密钥对测试",
+  
+  "@test_import_key_pair": {
+    "description": "Test import key pair"
+  },
   "test_import_key_pair": "导入密钥对测试",
+  
+  "@test_export_key_pair": {
+    "description": "Test export key pair"
+  },
   "test_export_key_pair": "导出密钥对测试",
+  
+  "@test_backup_key_pair": {
+    "description": "Test backup key pair"
+  },
   "test_backup_key_pair": "备份密钥对测试",
+  
+  "@test_restore_key_pair": {
+    "description": "Test restore key pair"
+  },
   "test_restore_key_pair": "恢复密钥对测试",
+  
+  "@test_delete_key_pair": {
+    "description": "Test delete key pair"
+  },
   "test_delete_key_pair": "删除密钥对测试",
+  
+  "@test_rotate_key_pair": {
+    "description": "Test rotate key pair"
+  },
   "test_rotate_key_pair": "轮换密钥对测试",
+  
+  "@test_expire_key_pair": {
+    "description": "Test expire key pair"
+  },
   "test_expire_key_pair": "过期密钥对测试",
+  
+  "@test_renew_key_pair": {
+    "description": "Test renew key pair"
+  },
   "test_renew_key_pair": "续期密钥对测试",
+  
+  "@test_revoke_key_pair": {
+    "description": "Test revoke key pair"
+  },
   "test_revoke_key_pair": "撤销密钥对测试",
+  
+  "@test_suspend_key_pair": {
+    "description": "Test suspend key pair"
+  },
   "test_suspend_key_pair": "暂停密钥对测试",
+  
+  "@test_resume_key_pair": {
+    "description": "Test resume key pair"
+  },
   "test_resume_key_pair": "恢复密钥对测试",
+  
+  "@test_activate_key_pair": {
+    "description": "Test activate key pair"
+  },
   "test_activate_key_pair": "激活密钥对测试",
+  
+  "@test_deactivate_key_pair": {
+    "description": "Test deactivate key pair"
+  },
   "test_deactivate_key_pair": "停用密钥对测试",
+  
+  "@test_lock_key_pair": {
+    "description": "Test lock key pair"
+  },
   "test_lock_key_pair": "锁定密钥对测试",
+  
+  "@test_unlock_key_pair": {
+    "description": "Test unlock key pair"
+  },
   "test_unlock_key_pair": "解锁密钥对测试",
+  
+  "@test_secure_key_pair": {
+    "description": "Test secure key pair"
+  },
   "test_secure_key_pair": "安全密钥对测试",
+  
+  "@test_unsecure_key_pair": {
+    "description": "Test unsecure key pair"
+  },
   "test_unsecure_key_pair": "不安全密钥对测试",
+  
+  "@test_encrypt_key_pair": {
+    "description": "Test encrypt key pair"
+  },
   "test_encrypt_key_pair": "加密密钥对测试",
+  
+  "@test_decrypt_key_pair": {
+    "description": "Test decrypt key pair"
+  },
   "test_decrypt_key_pair": "解密密钥对测试",
+  
+  "@test_hash_key_pair": {
+    "description": "Test hash key pair"
+  },
   "test_hash_key_pair": "哈希密钥对测试",
+  
+  "@test_sign_key_pair": {
+    "description": "Test sign key pair"
+  },
   "test_sign_key_pair": "签名密钥对测试",
+  
+  "@test_verify_key_pair_signature": {
+    "description": "Test verify key pair signature"
+  },
   "test_verify_key_pair_signature": "验证密钥对签名测试",
+  
+  "@test_authenticate_key_pair": {
+    "description": "Test authenticate key pair"
+  },
   "test_authenticate_key_pair": "身份验证密钥对测试",
+  
+  "@test_authorize_key_pair": {
+    "description": "Test authorize key pair"
+  },
   "test_authorize_key_pair": "授权密钥对测试",
+  
+  "@test_validate_key_pair_token": {
+    "description": "Test validate key pair token"
+  },
   "test_validate_key_pair_token": "验证密钥对令牌测试",
+  
+  "@test_refresh_key_pair_token": {
+    "description": "Test refresh key pair token"
+  },
   "test_refresh_key_pair_token": "刷新密钥对令牌测试",
+  
+  "@test_revoke_key_pair_token": {
+    "description": "Test revoke key pair token"
+  },
   "test_revoke_key_pair_token": "撤销密钥对令牌测试"
 } 

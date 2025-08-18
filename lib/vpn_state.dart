@@ -6,19 +6,17 @@ class VpnState with ChangeNotifier {
   ConnectionStatus _connectionStatus = ConnectionStatus.disconnected;
   Timer? _timer;
   String _connectionTimeText = "00:00:00";
-  late VpnclientEngineFlutter _vpnEngine;
 
   ConnectionStatus get connectionStatus => _connectionStatus;
   String get connectionTimeText => _connectionTimeText;
-  VpnclientEngineFlutter get vpnEngine => _vpnEngine;
 
   VpnState() {
     // Initialize VPN client engine
-    _vpnEngine = VpnclientEngineFlutter.instance;
-    _vpnEngine.setStatusCallback((status) {
-      setConnectionStatus(status);
+    VpnclientEngineFlutter.instance.initialize().then((_) {
+      VpnclientEngineFlutter.instance.setStatusCallback((status) {
+        setConnectionStatus(status);
+      });
     });
-    _vpnEngine.initialize();
   }
 
   void setConnectionStatus(ConnectionStatus status) {
@@ -49,7 +47,6 @@ class VpnState with ChangeNotifier {
   @override
   void dispose() {
     _timer?.cancel();
-    _vpnEngine.dispose();
     super.dispose();
   }
 }

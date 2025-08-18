@@ -56,6 +56,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
 
   Future<void> _toggleConnection(BuildContext context) async {
     final vpnState = Provider.of<VpnState>(context, listen: false);
+    final vpnEngine = VpnclientEngineFlutter.instance;
 
     switch (vpnState.connectionStatus) {
       case ConnectionStatus.disconnected:
@@ -63,8 +64,8 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         _animationController.repeat(reverse: true);
         
         String link = ConfigService.mainSubscriptionUrl;
-        if (await vpnState.vpnEngine.requestPermissions(EngineType.v2ray)) {
-          bool success = await vpnState.vpnEngine.connect(EngineType.v2ray, link);
+        if (await vpnEngine.requestPermissions(EngineType.v2ray)) {
+          bool success = await vpnEngine.connect(EngineType.v2ray, link);
           
           if (success) {
             vpnState.startTimer();
@@ -83,7 +84,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       case ConnectionStatus.connected:
         vpnState.setConnectionStatus(ConnectionStatus.connecting);
         _animationController.repeat(reverse: true);
-        await vpnState.vpnEngine.disconnect();
+        await vpnEngine.disconnect();
         vpnState.stopTimer();
         vpnState.setConnectionStatus(ConnectionStatus.disconnected);
         await _animationController.reverse();
