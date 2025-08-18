@@ -23,6 +23,7 @@
     "reconnecting": "กำลังเชื่อมต่อใหม่",
     "connecting": "กำลังเชื่อมต่อ",
     "disconnecting": "กำลังตัดการเชื่อมต่อ",
+    "error": "ข้อผิดพลาด",
     "settings": "การตั้งค่า",
     "version": "เวอร์ชัน",
     "connection": "การเชื่อมต่อ",

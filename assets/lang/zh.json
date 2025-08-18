@@ -23,6 +23,7 @@
     "reconnecting": "重新连接",
     "connecting": "连接中",
     "disconnecting": "断开中",
+    "error": "错误",
     "settings": "设置",
     "version": "版本",
     "connection": "连接",

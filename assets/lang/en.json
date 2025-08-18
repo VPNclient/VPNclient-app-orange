@@ -23,6 +23,7 @@
   "reconnecting": "RECONNECTING",
   "connecting": "CONNECTING",
   "disconnecting": "DISCONNECTING",
+  "error": "ERROR",
   "settings": "Settings",
   "version": "Version",
   "connection": "Connection",

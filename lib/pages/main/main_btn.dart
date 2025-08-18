@@ -49,8 +49,6 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
     return {
       ConnectionStatus.connected: LocalizationService.to('connected'),
       ConnectionStatus.disconnected: LocalizationService.to('disconnected'),
-      ConnectionStatus.reconnecting: LocalizationService.to('reconnecting'),
-      ConnectionStatus.disconnecting: LocalizationService.to('disconnecting'),
       ConnectionStatus.connecting: LocalizationService.to('connecting'),
       ConnectionStatus.error: LocalizationService.to('error'),
     }[vpnState.connectionStatus]!;
@@ -65,8 +63,8 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
         _animationController.repeat(reverse: true);
         
         String link = ConfigService.mainSubscriptionUrl;
-        if (await VpnclientEngineFlutter.requestPermissions(EngineType.auto)) {
-          bool success = await VpnclientEngineFlutter.connect(EngineType.auto, link);
+        if (await vpnState.vpnEngine.requestPermissions(EngineType.v2ray)) {
+          bool success = await vpnState.vpnEngine.connect(EngineType.v2ray, link);
           
           if (success) {
             vpnState.startTimer();
@@ -85,7 +83,7 @@ class MainBtnState extends State<MainBtn> with SingleTickerProviderStateMixin {
       case ConnectionStatus.connected:
         vpnState.setConnectionStatus(ConnectionStatus.connecting);
         _animationController.repeat(reverse: true);
-        await VpnclientEngineFlutter.disconnect();
+        await vpnState.vpnEngine.disconnect();
         vpnState.stopTimer();
         vpnState.setConnectionStatus(ConnectionStatus.disconnected);
         await _animationController.reverse();
